@@ -4612,7 +4612,7 @@ function generateGuid() {
             n || (n = {});
             var u = {
                 type: r,
-                dataType: "json"
+                // dataType: "json"
             };
             return n.url || (u.url = C(t, "url") || k()), !n.data && t && (e == "create" || e == "update") && (u.contentType = "application/json", u.data = JSON.stringify(t.toJSON())), i.emulateJSON && (u.contentType = "application/x-www-form-urlencoded", u.data = u.data ? {
                 model: u.data
