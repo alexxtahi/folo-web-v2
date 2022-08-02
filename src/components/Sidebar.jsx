@@ -1,10 +1,13 @@
+import * as FeatherIcon from "react-feather";
 
 function SideBar() {
     return (
         // < !--Page Sidebar Start-- >
         <header className="main-nav">
             <div className="sidebar-user text-center"><a className="setting-primary"
-                href="#"><i data-feather="settings"></i></a><img
+                href="#">
+                <FeatherIcon.Settings />
+            </a><img
                     className="img-90 rounded-circle"
                     src={process.env.PUBLIC_URL + "/assets/images/dashboard/1.png"} alt="" />
                 <div className="badge-bottom"><span className="badge badge-primary">New</span></div><a
@@ -25,8 +28,8 @@ function SideBar() {
             </div>
             <nav>
                 <div className="main-navbar">
-                    <div className="left-arrow" id="left-arrow"><i
-                        data-feather="arrow-left"></i></div>
+                    <div className="left-arrow" id="left-arrow">
+                        <FeatherIcon.ArrowLeft /></div>
                     <div id="mainnav">
                         <ul className="nav-menu custom-scrollbar">
                             <li className="back-btn">
@@ -39,21 +42,23 @@ function SideBar() {
                                 </div>
                             </li>
                             <li className="dropdown"><a className="nav-link menu-title"
-                                href="#"><i data-feather="home"></i><span>Dashboard</span></a>
+                                href="#"><FeatherIcon.Home /><span>Dashboard</span></a>
                                 <ul className="nav-submenu menu-content">
                                     <li><a href="index.html">Default</a></li>
                                     <li><a href="dashboard-02.html">Ecommerce</a></li>
                                 </ul>
                             </li>
                             <li className="dropdown"><a className="nav-link menu-title"
-                                href="#"><i data-feather="airplay"></i><span>Widgets</span></a>
+                                href="#"><FeatherIcon.Airplay /><span>Widgets</span></a>
                                 <ul className="nav-submenu menu-content">
                                     <li><a href="general-widget.html">General</a></li>
                                     <li><a href="chart-widget.html">Chart</a></li>
                                 </ul>
                             </li>
                             <li className="dropdown"><a className="nav-link menu-title"
-                                href="#"><i data-feather="layout"></i><span>Page
+                                href="#">
+                                <FeatherIcon.Layout />
+                                <span>Page
                                     layout</span></a>
                                 <ul className="nav-submenu menu-content">
                                     <li><a href="box-layout.html">Boxed</a></li>
@@ -70,7 +75,7 @@ function SideBar() {
                                 </div>
                             </li>
                             <li className="dropdown"><a className="nav-link menu-title"
-                                href="#"><i data-feather="box"></i><span>Ui
+                                href="#"><FeatherIcon.Box /><span>Ui
                                     Kits</span></a>
                                 <ul className="nav-submenu menu-content">
                                     <li><a href="state-color.html">State color</a></li>
@@ -100,7 +105,7 @@ function SideBar() {
                                 </ul>
                             </li>
                             <li className="dropdown"><a className="nav-link menu-title"
-                                href="#"><i data-feather="folder-plus"></i><span>Bonus
+                                href="#"><FeatherIcon.FolderPlus /><span>Bonus
                                     Ui</span></a>
                                 <ul className="nav-submenu menu-content">
                                     <li><a href="scrollable.html">Scrollable</a></li>
@@ -133,7 +138,7 @@ function SideBar() {
                                 </ul>
                             </li>
                             <li className="dropdown"><a className="nav-link menu-title"
-                                href="#"><i data-feather="edit-3"></i><span>Builders</span></a>
+                                href="#"><FeatherIcon.Edit3 /><span>Builders</span></a>
                                 <ul className="nav-submenu menu-content">
                                     <li><a href="form-builder-1.html">Form Builder 1</a></li>
                                     <li><a href="form-builder-2.html">Form Builder 2</a></li>
@@ -142,7 +147,7 @@ function SideBar() {
                                 </ul>
                             </li>
                             <li className="dropdown"><a className="nav-link menu-title"
-                                href="#"><i data-feather="cloud-drizzle"></i><span>Animation</span></a>
+                                href="#"><FeatherIcon.CloudDrizzle /><span>Animation</span></a>
                                 <ul className="nav-submenu menu-content">
                                     <li><a href="animate.html">Animate</a></li>
                                     <li><a href="scroll-reval.html">Scroll Reveal</a></li>
@@ -150,9 +155,9 @@ function SideBar() {
                                     <li><a href="tilt.html">Tilt Animation</a></li>
                                     <li><a href="wow.html">Wow Animation</a></li>
                                 </ul>
-                            </li>
+                            </li >
                             <li className="dropdown"><a className="nav-link menu-title"
-                                href="#"><i data-feather="command"></i><span>Icons</span></a>
+                                href="#"><FeatherIcon.Command /><span>Icons</span></a>
                                 <ul className="nav-submenu menu-content">
                                     <li><a href="flag-icon.html">Flag icon</a></li>
                                     <li><a href="font-awesome.html">Fontawesome Icon</a></li>
@@ -161,9 +166,9 @@ function SideBar() {
                                     <li><a href="feather-icon.html">Feather icon</a></li>
                                     <li><a href="whether-icon.html">Whether Icon </a></li>
                                 </ul>
-                            </li>
+                            </li >
                             <li className="dropdown"><a className="nav-link menu-title"
-                                href="#"><i data-feather="cloud"></i><span>Buttons</span></a>
+                                href="#"><FeatherIcon.Cloud /><span>Buttons</span></a>
                                 <ul className="nav-submenu menu-content">
                                     <li><a href="buttons.html">Default Style</a></li>
                                     <li><a href="buttons-flat.html">Flat Style</a></li>
@@ -171,9 +176,9 @@ function SideBar() {
                                     <li><a href="raised-button.html">Raised Style</a></li>
                                     <li><a href="button-group.html">Button Group</a></li>
                                 </ul>
-                            </li>
+                            </li >
                             <li className="dropdown"><a className="nav-link menu-title"
-                                href="#"><i data-feather="bar-chart"></i><span>Charts</span></a>
+                                href="#"><FeatherIcon.BarChart /><span>Charts</span></a>
                                 <ul className="nav-submenu menu-content">
                                     <li><a href="chart-apex.html">Apex Chart</a></li>
                                     <li><a href="chart-google.html">Google Chart</a></li>
@@ -185,14 +190,14 @@ function SideBar() {
                                     <li><a href="chartist.html">Chartist Chart</a></li>
                                     <li><a href="chart-peity.html">Peity Chart</a></li>
                                 </ul>
-                            </li>
+                            </li >
                             <li className="sidebar-main-title">
                                 <div>
                                     <h6>Forms</h6>
                                 </div>
                             </li>
                             <li className="dropdown"> <a className="nav-link menu-title"
-                                href="#"><i data-feather="sliders"></i><span>Form
+                                href="#"><FeatherIcon.Sliders /><span>Form
                                     Controls </span></a>
                                 <ul className="nav-submenu menu-content">
                                     <li><a href="form-validation.html">Form Validation</a></li>
@@ -201,9 +206,9 @@ function SideBar() {
                                     <li><a href="input-group.html">Input Groups</a></li>
                                     <li><a href="megaoptions.html">Mega Options </a></li>
                                 </ul>
-                            </li>
+                            </li >
                             <li className="dropdown"> <a className="nav-link menu-title"
-                                href="#"><i data-feather="package"></i><span>Form
+                                href="#"><FeatherIcon.Package /><span>Form
                                     Widgets</span></a>
                                 <ul className="nav-submenu menu-content">
                                     <li><a href="datepicker.html">Datepicker</a></li>
@@ -216,9 +221,9 @@ function SideBar() {
                                     <li><a href="typeahead.html">Typeahead</a></li>
                                     <li><a href="clipboard.html">Clipboard </a></li>
                                 </ul>
-                            </li>
+                            </li >
                             <li className="dropdown"> <a className="nav-link menu-title"
-                                href="#"><i data-feather="layout"></i><span>Form
+                                href="#"><FeatherIcon.Layout /><span>Form
                                     layout</span></a>
                                 <ul className="nav-submenu menu-content">
                                     <li><a href="default-form.html">Default Forms</a></li>
@@ -226,14 +231,14 @@ function SideBar() {
                                     <li><a href="form-wizard-two.html">Form Wizard 2</a></li>
                                     <li><a href="form-wizard-three.html">Form Wizard 3</a></li>
                                 </ul>
-                            </li>
+                            </li >
                             <li className="sidebar-main-title">
                                 <div>
                                     <h6>Table</h6>
                                 </div>
                             </li>
                             <li className="dropdown"> <a className="nav-link menu-title"
-                                href="#"><i data-feather="server"></i><span>Bootstrap
+                                href="#"><FeatherIcon.Server /><span>Bootstrap
                                     Tables </span></a>
                                 <ul className="nav-submenu menu-content">
                                     <li><a href="bootstrap-basic-table.html">Basic Tables</a></li>
@@ -242,9 +247,9 @@ function SideBar() {
                                     <li><a href="bootstrap-styling-table.html">Styling Tables</a></li>
                                     <li><a href="table-components.html">Table components</a></li>
                                 </ul>
-                            </li>
+                            </li >
                             <li className="dropdown"> <a className="nav-link menu-title"
-                                href="#"><i data-feather="database"></i><span>Data
+                                href="#"><FeatherIcon.Database /><span>Data
                                     Tables </span></a>
                                 <ul className="nav-submenu menu-content">
                                     <li><a href="datatable-basic-init.html">Basic Init</a></li>
@@ -256,9 +261,9 @@ function SideBar() {
                                     <li><a href="datatable-API.html">API</a></li>
                                     <li><a href="datatable-data-source.html">Data Sources</a></li>
                                 </ul>
-                            </li>
+                            </li >
                             <li className="dropdown"> <a className="nav-link menu-title"
-                                href="#"><i data-feather="hard-drive"></i><span>Ex.
+                                href="#"><FeatherIcon.HardDrive /><span>Ex.
                                     Data Tables </span></a>
                                 <ul className="nav-submenu menu-content">
                                     <li><a href="datatable-ext-autofill.html">Auto Fill</a></li>
@@ -271,31 +276,31 @@ function SideBar() {
                                     <li><a href="datatable-ext-row-reorder.html">Row Reorder</a></li>
                                     <li><a href="datatable-ext-scroller.html">Scroller </a></li>
                                 </ul>
-                            </li>
+                            </li >
                             <li className="dropdown"><a className="nav-link menu-title link-nav"
-                                href="jsgrid-table.html"><i data-feather="file-text"></i><span>Js
-                                    Grid Table</span></a></li>
+                                href="jsgrid-table.html"><FeatherIcon.FileText /><span>Js
+                                    Grid Table</span></a></li >
                             <li className="sidebar-main-title">
                                 <div>
                                     <h6>Applications </h6>
                                 </div>
                             </li>
                             <li className="dropdown"> <a className="nav-link menu-title"
-                                href="#"><i data-feather="box"></i><span>Project
+                                href="#"><FeatherIcon.Box /><span>Project
                                 </span></a>
                                 <ul className="nav-submenu menu-content">
                                     <li><a href="projects.html">Project List</a></li>
                                     <li><a href="projectcreate.html">Create new </a></li>
                                 </ul>
-                            </li>
+                            </li >
                             <li className="dropdown"><a className="nav-link menu-title link-nav"
-                                href="file-manager.html"><i
-                                    data-feather="git-pull-request"></i><span>File manager</span></a></li>
+                                href="file-manager.html">
+                                <FeatherIcon.GitPullRequest /><span>File manager</span></a></li>
                             <li className="dropdown"><a className="nav-link menu-title link-nav"
-                                href="kanban.html"><i data-feather="monitor"></i><span>kanban
-                                    Board</span></a></li>
+                                href="kanban.html"><FeatherIcon.Monitor /><FeatherIcon.GitPullRequest /><span>kanban
+                                    Board</span></a></li >
                             <li className="dropdown"><a className="nav-link menu-title"
-                                href="#"><i data-feather="shopping-bag"></i><span>Ecommerce</span></a>
+                                href="#"><FeatherIcon.ShoppingBag /><span>Ecommerce</span></a>
                                 <ul className="nav-submenu menu-content">
                                     <li><a href="product.html">Product</a></li>
                                     <li><a href="product-page.html">Product page</a></li>
@@ -308,47 +313,46 @@ function SideBar() {
                                     <li><a href="checkout.html">Checkout</a></li>
                                     <li><a href="pricing.html">Pricing</a></li>
                                 </ul>
-                            </li>
+                            </li >
                             <li className="dropdown"><a className="nav-link menu-title"
-                                href="#"><i data-feather="mail"></i><span>Email</span></a>
+                                href="#"><FeatherIcon.Mail /><span>Email</span></a>
                                 <ul className="nav-submenu menu-content">
                                     <li><a href="email_inbox.html">Mail Inbox</a></li>
                                     <li><a href="email_read.html">Read mail</a></li>
                                     <li><a href="email_compose.html">Compose</a></li>
                                 </ul>
-                            </li>
+                            </li >
                             <li className="dropdown"><a className="nav-link menu-title"
-                                href="#"><i
-                                    data-feather="message-circle"></i><span>Chat</span></a>
+                                href="#"><FeatherIcon.MessageCircle /><span>Chat</span></a>
                                 <ul className="nav-submenu menu-content">
                                     <li><a href="chat.html">Chat App</a></li>
                                     <li><a href="chat-video.html">Video chat</a></li>
                                 </ul>
                             </li>
                             <li className="dropdown"><a className="nav-link menu-title"
-                                href="#"><i data-feather="users"></i><span>Users</span></a>
+                                href="#"><FeatherIcon.Users /><span>Users</span></a>
                                 <ul className="nav-submenu menu-content">
                                     <li><a href="user-profile.html">Users Profile</a></li>
                                     <li><a href="edit-profile.html">Users Edit</a></li>
                                     <li><a href="user-cards.html">Users Cards</a></li>
                                 </ul>
-                            </li>
+                            </li >
                             <li className="dropdown"><a className="nav-link menu-title link-nav"
-                                href="bookmark.html"><i data-feather="heart"></i><span>Bookmarks</span></a></li>
+                                href="bookmark.html"><FeatherIcon.Heart /><span>Bookmarks</span></a></li>
                             <li className="dropdown"><a className="nav-link menu-title link-nav"
-                                href="contacts.html"><i data-feather="list"></i><span>Contacts</span></a></li>
+                                href="contacts.html"><FeatherIcon.List /><span>Contacts</span></a></li>
                             <li className="dropdown"><a className="nav-link menu-title link-nav"
-                                href="task.html"><i data-feather="check-square"></i><span>Tasks</span></a></li>
+                                href="task.html"><FeatherIcon.CheckSquare /><span>Tasks</span></a></li>
                             <li className="dropdown"><a className="nav-link menu-title link-nav"
-                                href="calendar-basic.html"><i data-feather="calendar"></i><span>Calender
+                                href="calendar-basic.html"><FeatherIcon.Calendar /><span>Calender
                                 </span></a></li>
                             <li className="dropdown"><a className="nav-link menu-title link-nav"
-                                href="social-app.html"><i data-feather="zap"></i><span>Social
+                                href="social-app.html"><FeatherIcon.Zap /><span>Social
                                     App</span></a></li>
                             <li className="dropdown"><a className="nav-link menu-title link-nav"
-                                href="to-do.html"><i data-feather="clock"></i><span>To-Do</span></a></li>
+                                href="to-do.html"><FeatherIcon.Clock /><span>To-Do</span></a></li>
                             <li className="dropdown"><a className="nav-link menu-title link-nav"
-                                href="search.html"><i data-feather="search"></i><span>Search
+                                href="search.html"><FeatherIcon.Search /><span>Search
                                     Result</span></a></li>
                             <li className="sidebar-main-title">
                                 <div>
@@ -356,19 +360,18 @@ function SideBar() {
                                 </div>
                             </li>
                             <li><a className="nav-link menu-title link-nav"
-                                href="landing-page.html"><i data-feather="navigation-2"></i><span>Landing
+                                href="landing-page.html"><FeatherIcon.Navigation2 /><span>Landing
                                     page</span></a></li>
                             <li><a className="nav-link menu-title link-nav"
-                                href="sample-page.html"><i data-feather="file"></i><span>Sample
+                                href="sample-page.html"><FeatherIcon.File /><span>Sample
                                     page</span></a></li>
                             <li className="dropdown"><a className="nav-link menu-title link-nav"
-                                href="internationalization.html"><i
-                                    data-feather="aperture"></i><span>Internationalization</span></a></li>
+                                href="internationalization.html"><FeatherIcon.Aperture /><span>Internationalization</span></a></li>
                             <li className="dropdown"><a className="nav-link menu-title link-nav"
-                                href="../starter-kit/index.html"><i data-feather="anchor"></i><span>Starter
+                                href="../starter-kit/index.html"><FeatherIcon.Anchor /><span>Starter
                                     kit </span></a></li>
                             <li className="mega-menu"><a className="nav-link menu-title"
-                                href="#"><i data-feather="layers"></i><span>Others</span></a>
+                                href="#"><FeatherIcon.Layers /><span>Others</span></a>
                                 <div className="mega-menu-container menu-content">
                                     <div className="container">
                                         <div className="row">
@@ -476,7 +479,7 @@ function SideBar() {
                                 </div>
                             </li>
                             <li className="dropdown"><a className="nav-link menu-title"
-                                href="#"><i data-feather="image"></i><span>Gallery</span></a>
+                                href="#"><FeatherIcon.Image /><span>Gallery</span></a>
                                 <ul className="nav-submenu menu-content">
                                     <li><a href="gallery.html">Gallery Grid</a></li>
                                     <li><a href="gallery-with-description.html">Gallery Grid
@@ -488,17 +491,17 @@ function SideBar() {
                                 </ul>
                             </li>
                             <li className="dropdown"><a className="nav-link menu-title"
-                                href="#"><i data-feather="edit"></i><span>Blog</span></a>
+                                href="#"><FeatherIcon.Edit /><span>Blog</span></a>
                                 <ul className="nav-submenu menu-content">
                                     <li><a href="blog.html">Blog Details</a></li>
                                     <li><a href="blog-single.html">Blog Single</a></li>
                                     <li><a href="add-post.html">Add Post</a></li>
                                 </ul>
                             </li>
-                            <li><a className="nav-link menu-title link-nav" href="faq.html"><i
-                                data-feather="help-circle"></i><span>FAQ</span></a></li>
+                            <li><a className="nav-link menu-title link-nav" href="faq.html">
+                                <FeatherIcon.HelpCircle /><span>FAQ</span></a></li>
                             <li className="dropdown"><a className="nav-link menu-title"
-                                href="#"><i data-feather="user-check"></i><span>Job
+                                href="#"><FeatherIcon.UserCheck /><span>Job
                                     Search</span></a>
                                 <ul className="nav-submenu menu-content">
                                     <li><a href="job-cards-view.html">Cards view</a></li>
@@ -508,22 +511,21 @@ function SideBar() {
                                 </ul>
                             </li>
                             <li className="dropdown"><a className="nav-link menu-title"
-                                href="#"><i data-feather="layers"></i><span>Learning</span></a>
+                                href="#"><FeatherIcon.Layers /><span>Learning</span></a>
                                 <ul className="nav-submenu menu-content">
                                     <li><a href="learning-list-view.html">Learning List</a></li>
                                     <li><a href="learning-detailed.html">Detailed Course</a></li>
                                 </ul>
-                            </li>
+                            </li >
                             <li className="dropdown"><a className="nav-link menu-title"
-                                href="#"><i data-feather="map"></i><span>Maps</span></a>
+                                href="#"><FeatherIcon.Map /><span>Maps</span></a>
                                 <ul className="nav-submenu menu-content">
                                     <li><a href="map-js.html">Maps JS</a></li>
                                     <li><a href="vector-map.html">Vector Maps</a></li>
                                 </ul>
-                            </li>
+                            </li >
                             <li className="dropdown"><a className="nav-link menu-title"
-                                href="#"><i
-                                    data-feather="git-pull-request"></i><span>Editors</span></a>
+                                href="#"><FeatherIcon.GitPullRequest /><span>Editors</span></a>
                                 <ul className="nav-submenu menu-content">
                                     <li><a href="summernote.html">Summer Note</a></li>
                                     <li><a href="ckeditor.html">CK editor</a></li>
@@ -532,23 +534,23 @@ function SideBar() {
                                 </ul>
                             </li>
                             <li className="dropdown"><a className="nav-link menu-title"
-                                href="#"><i data-feather="database"></i><span>Knowledgebase</span></a>
+                                href="#"><FeatherIcon.Database /><FeatherIcon.GitPullRequest /><span>Knowledgebase</span></a>
                                 <ul className="nav-submenu menu-content">
                                     <li><a href="knowledgebase.html">Knowledgebase</a></li>
                                     <li><a href="knowledge-category.html">Knowledge category</a></li>
                                     <li><a href="knowledge-detail.html">Knowledge detail</a></li>
                                 </ul>
-                            </li>
+                            </li >
                             <li><a className="nav-link menu-title link-nav"
-                                href="support-ticket.html"><i data-feather="headphones"></i><span>Support
-                                    Ticket</span></a></li>
-                        </ul>
-                    </div>
-                    <div className="right-arrow" id="right-arrow"><i
-                        data-feather="arrow-right"></i></div>
-                </div>
-            </nav>
-        </header>
+                                href="support-ticket.html"><FeatherIcon.Headphones /><span>Support
+                                    Ticket</span></a></li >
+                        </ul >
+                    </div >
+                    <div className="right-arrow" id="right-arrow">
+                        <FeatherIcon.ArrowRight /></div>
+                </div >
+            </nav >
+        </header >
         // <!--Page Sidebar Ends-- >
     );
 }

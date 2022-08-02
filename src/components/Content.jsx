@@ -1,4 +1,3 @@
-
 function Content() {
     return (
         <div className="page-body">

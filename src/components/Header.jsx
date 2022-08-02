@@ -1,4 +1,5 @@
 
+import * as FeatherIcon from "react-feather";
 function Header() {
     return (
         // < !--Page Header Start-- >
@@ -10,8 +11,9 @@ function Header() {
                     <div className="dark-logo-wrapper"><a href="index.html"><img
                         className="img-fluid" src={process.env.PUBLIC_URL + "/assets/images/logo/dark-logo.png"}
                         alt="" /></a></div>
-                    <div className="toggle-sidebar"><i className="status_toggle middle"
-                        data-feather="align-center" id="sidebar-toggle"></i></div>
+                    <div className="toggle-sidebar">
+                        <FeatherIcon.AlignCenter className="status_toggle middle"
+                            id="sidebar-toggle" /></div>
                 </div>
                 <div className="left-menu-header col">
                     <ul>
@@ -30,10 +32,9 @@ function Header() {
                         <li><a className="text-dark" href="#!"
                         // onClick="javascript:toggleFullScreen()"
                         >
-                            <i
-                                data-feather="maximize"></i></a></li>
+                            <FeatherIcon.Maximize /></a></li>
                         <li className="onhover-dropdown">
-                            <div className="bookmark-box"><i data-feather="star"></i></div>
+                            <div className="bookmark-box"><FeatherIcon.Star /></div>
                             <div className="bookmark-dropdown onhover-show-div">
                                 <div className="form-group mb-0">
                                     <div className="input-group">
@@ -44,23 +45,23 @@ function Header() {
                                     </div>
                                 </div>
                                 <ul className="m-t-5">
-                                    <li className="add-to-bookmark"><i className="bookmark-icon"
-                                        data-feather="inbox"></i>Email<span className="pull-right"><i
-                                            data-feather="star"></i></span></li>
-                                    <li className="add-to-bookmark"><i className="bookmark-icon"
-                                        data-feather="message-square"></i>Chat<span
-                                            className="pull-right"><i data-feather="star"></i></span></li>
-                                    <li className="add-to-bookmark"><i className="bookmark-icon"
-                                        data-feather="command"></i>Feather Icon<span
-                                            className="pull-right"><i data-feather="star"></i></span></li>
-                                    <li className="add-to-bookmark"><i className="bookmark-icon"
-                                        data-feather="airplay"></i>Widgets<span
-                                            className="pull-right"><i data-feather="star"> </i></span></li>
+                                    <li className="add-to-bookmark">
+                                        <FeatherIcon.Inbox className="bookmark-icon" />Email<span className="pull-right">
+                                            <FeatherIcon.Star /></span></li>
+                                    <li className="add-to-bookmark"><FeatherIcon.MessageSquare className="bookmark-icon"
+                                    />Chat<span
+                                        className="pull-right"><FeatherIcon.Star /></span></li>
+                                    <li className="add-to-bookmark"><FeatherIcon.Command className="bookmark-icon"
+                                    />Feather Icon<span
+                                        className="pull-right"><FeatherIcon.Star /></span></li>
+                                    <li className="add-to-bookmark"><FeatherIcon.Airplay className="bookmark-icon"
+                                    />Widgets<span
+                                        className="pull-right"><FeatherIcon.Star /></span></li>
                                 </ul>
                             </div>
                         </li>
                         <li className="onhover-dropdown">
-                            <div className="notification-box"><i data-feather="bell"></i><span
+                            <div className="notification-box"><FeatherIcon.Bell /><span
                                 className="dot-animated"></span></div>
                             <ul className="notification-dropdown onhover-show-div">
                                 <li>
@@ -69,7 +70,7 @@ function Header() {
                                 </li>
                                 <li className="noti-primary">
                                     <div className="media"><span className="notification-bg
-                        bg-light-primary"><i data-feather="activity"> </i></span>
+                        bg-light-primary"><FeatherIcon.Activity /></span>
                                         <div className="media-body">
                                             <p>Delivery processing </p><span>10 minutes ago</span>
                                         </div>
@@ -77,7 +78,7 @@ function Header() {
                                 </li>
                                 <li className="noti-secondary">
                                     <div className="media"><span className="notification-bg
-                        bg-light-secondary"><i data-feather="check-circle"> </i></span>
+                        bg-light-secondary"><FeatherIcon.CheckCircle /></span>
                                         <div className="media-body">
                                             <p>Order Complete</p><span>1 hour ago</span>
                                         </div>
@@ -85,7 +86,7 @@ function Header() {
                                 </li>
                                 <li className="noti-success">
                                     <div className="media"><span className="notification-bg
-                        bg-light-success"><i data-feather="file-text"> </i></span>
+                        bg-light-success"><FeatherIcon.FileText /></span>
                                         <div className="media-body">
                                             <p>Tickets Generated</p><span>3 hour ago</span>
                                         </div>
@@ -93,7 +94,7 @@ function Header() {
                                 </li>
                                 <li className="noti-danger">
                                     <div className="media"><span className="notification-bg
-                        bg-light-danger"><i data-feather="user-check"> </i></span>
+                        bg-light-danger"><FeatherIcon.UserCheck /></span>
                                         <div className="media-body">
                                             <p>Delivery Complete</p><span>6 hour ago</span>
                                         </div>
@@ -104,7 +105,7 @@ function Header() {
                         <li>
                             <div className="mode"><i className="fa fa-moon-o"></i></div>
                         </li>
-                        <li className="onhover-dropdown"><i data-feather="message-square"></i>
+                        <li className="onhover-dropdown"><FeatherIcon.MessageSquare />
                             <ul className="chat-dropdown onhover-show-div">
                                 <li>
                                     <div className="media"><img className="img-fluid rounded-circle
@@ -142,14 +143,14 @@ function Header() {
                         </li>
                         <li className="onhover-dropdown p-0">
                             <button className="btn btn-primary-light" type="button"><a
-                                href="login_two.html"><i data-feather="log-out"></i>Log out</a></button>
+                                href="login_two.html"><FeatherIcon.LogOut />Log out</a></button>
                         </li>
                     </ul>
-                </div>
-                <div className="d-lg-none mobile-toggle pull-right w-auto"><i
-                    data-feather="more-horizontal"></i></div>
-            </div>
-        </div>
+                </div >
+                <div className="d-lg-none mobile-toggle pull-right w-auto">
+                    <FeatherIcon.MoreHorizontal /></div>
+            </div >
+        </div >
         //   <!--Page Header Ends-- >
     );
 }
