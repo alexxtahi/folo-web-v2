@@ -6,6 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ResetPasswordView from './views/auth/ResetPasswordView';
 import LoginView from './views/auth/LoginView';
+import NoMatchView from './views/NoMatchView';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -15,6 +16,8 @@ root.render(
         <Route path="/" element={<App />} />
         <Route path="/login" element={<LoginView />} />
         <Route path="/reset-password" element={<ResetPasswordView />} />
+        {/* No match route */}
+        <Route path="*" element={<NoMatchView />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
