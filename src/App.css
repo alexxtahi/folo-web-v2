@@ -32,7 +32,15 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
+}
+
+/* Btn component */
+.btn-primary:hover {
+  background-color: white !important;
+  border: 1px solid #24695c;
+  color: #24695c;
 }

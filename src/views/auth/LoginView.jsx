@@ -1,43 +1,104 @@
+import { useState } from "react";
 import * as FeatherIcon from "react-feather";
 import { Link } from "react-router-dom";
+import Btn from "../../components/Btn";
+import Loader from "../../components/Loader";
+import User from "../../models/User";
+import { SERVER_URL, apiEndpoints } from "../../utils/constants";
 
 function LoginView() {
-    return (
+    // Properties
+    const [identity, setIdentity] = useState("testeur@testeur.com");
+    const [password, setPassword] = useState("testeur");
+    const [loginBtnPressed, setLoginBtnPressed] = useState(false);
+    // Methods
+    const login = async (event) => { // Send login request to server
+        setLoginBtnPressed(true);
+        event.preventDefault();
+        const url = apiEndpoints.auth.login;
+        await fetch(
+            url,
+            {
+                method: 'POST',
+                headers: {
+                    'Content-type': 'application/json',
+                },
+                body: JSON.stringify({
+                    identity: identity,
+                    password: password
+                }),
+
+            })
+            .then((response) => response.json())
+            .then((json) => {
+                let responseJson = json;
+                // Store authenticated user datas
+                User.authUser = new User(responseJson);
+                console.log(User.authUser);
+                setLoginBtnPressed(false);
+            });
+
+    }
+    // Render
+    return loginBtnPressed ? (
+        <section>
+            <div className="container-fluid p-0">
+                <div className="row">
+                    <div className="col-12">
+                        <div className="login-card">
+                            <div className="theme-form login-form">
+                                <Loader />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    ) : (
         // < !--page - wrapper Start-- >
         <section>
             <div className="container-fluid p-0">
                 <div className="row">
                     <div className="col-12">
                         <div className="login-card">
-                            <form className="theme-form login-form">
+                            <form className="theme-form login-form" id="login-form" onSubmit={login}>
                                 <h4>FOLO Education</h4>
                                 <h6>Bon retour parmi nous ! Connectez vous ici.</h6>
                                 <div className="form-group">
-                                    <label>Identifiant</label>
+                                    <label htmlFor="identity">Identifiant</label>
                                     <div className="input-group"><span className="input-group-text">
                                         <FeatherIcon.Mail />
                                     </span>
-                                        <input className="form-control" type="email" required="" placeholder="Email / Nom d'utilisateur" />
+                                        <input required className="form-control" type="email" name="identity" value={identity} onChange={(event) => setIdentity(event.target.value)} placeholder="Email / Nom d'utilisateur" />
                                     </div>
                                 </div>
                                 <div className="form-group">
-                                    <label>Mot de passe</label>
+                                    <label htmlFor="password">Mot de passe</label>
                                     <div className="input-group">
                                         <span className="input-group-text">
                                             <FeatherIcon.Lock />
                                         </span>
-                                        <input className="form-control" type="password" name="login[password]" required="" placeholder="*********" />
-                                        <div className="show-hide"><span className="show">                         </span></div>
+                                        <input className="form-control" type="password" name="password" required value={password} onChange={(event) => setPassword(event.target.value)} placeholder="*********" />
+                                        <div className="show-hide">
+                                            <span className="show"></span>
+                                        </div>
                                     </div>
                                 </div>
                                 <div className="form-group">
                                     <div className="checkbox">
                                         <input id="checkbox1" type="checkbox" />
-                                        <label for="checkbox1">Rester connecté</label>
+                                        <label htmlFor="checkbox1">Rester connecté</label>
                                     </div><Link className="link" to="/reset-password">Mot de passe oublié ?</Link>
                                 </div>
                                 <div className="form-group">
-                                    <button className="btn btn-primary btn-block" type="submit">Se connecter</button>
+                                    <Btn
+                                        text="Se connecter"
+                                        bootstrapType={!loginBtnPressed ? "btn-primary" : "btn-light"}
+                                        form="login-form"
+                                        type="submit"
+                                        isPressed={loginBtnPressed}
+                                    />
+                                    {/* <button className="btn btn-primary btn-block" type="submit" form="login-form">Se connecter</button> */}
                                 </div>
                                 <div className="login-social-title">
                                     <h5>Suivez nous</h5>
