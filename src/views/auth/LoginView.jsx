@@ -1,21 +1,27 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import * as FeatherIcon from "react-feather";
 import { Link } from "react-router-dom";
+import Alert from "../../components/Alert";
 import Btn from "../../components/Btn";
 import Loader from "../../components/Loader";
+import AuthMiddleware from "../../middleware/AuthMiddleware";
 import User from "../../models/User";
-import { SERVER_URL, apiEndpoints } from "../../utils/constants";
+import { apiEndpoints } from "../../utils/constants";
 
 function LoginView() {
     // Properties
     const [identity, setIdentity] = useState("testeur@testeur.com");
     const [password, setPassword] = useState("testeur");
+    const [remember, setRemember] = useState(false);
     const [loginBtnPressed, setLoginBtnPressed] = useState(false);
+    const [errorHappend, setErrorHappend] = useState(false);
     // Methods
     const login = async (event) => { // Send login request to server
+        // Configs
         setLoginBtnPressed(true);
         event.preventDefault();
         const url = apiEndpoints.auth.login;
+        // Send request
         await fetch(
             url,
             {
@@ -25,19 +31,31 @@ function LoginView() {
                 },
                 body: JSON.stringify({
                     identity: identity,
-                    password: password
+                    password: password,
+                    remember: remember
                 }),
 
             })
-            .then((response) => response.json())
-            .then((json) => {
-                let responseJson = json;
-                // Store authenticated user datas
-                User.authUser = new User(responseJson);
-                console.log(User.authUser);
-                setLoginBtnPressed(false);
-            });
+            .then(response => response.json())
+            .then(jsonData => {
+                // Check the response
+                if (jsonData.success) {
+                    // Store authenticated user datas
+                    User.authUser = new User(jsonData);
+                    localStorage.setItem('authUser', JSON.stringify(User.authUser));
+                    window.location.replace('/');
+                    console.log(User.authUser); //! debug
+                } else {
+                    setErrorHappend(true);
+                }
 
+            }).catch(error => {
+                // Show error alert
+                setErrorHappend(true);
+                console.log(error); //! debug
+            });
+        // Enable login button
+        setLoginBtnPressed(false);
     }
     // Render
     return loginBtnPressed ? (
@@ -62,6 +80,7 @@ function LoginView() {
                     <div className="col-12">
                         <div className="login-card">
                             <form className="theme-form login-form" id="login-form" onSubmit={login}>
+                                {errorHappend ? <Alert message="Une erreur est survenue." onCloseBtnClick={() => setErrorHappend(false)} /> : null}
                                 <h4>FOLO Education</h4>
                                 <h6>Bon retour parmi nous ! Connectez vous ici.</h6>
                                 <div className="form-group">
@@ -86,7 +105,7 @@ function LoginView() {
                                 </div>
                                 <div className="form-group">
                                     <div className="checkbox">
-                                        <input id="checkbox1" type="checkbox" />
+                                        <input id="checkbox1" type="checkbox" checked={remember} onChange={(event) => setRemember(event.target.checked)} />
                                         <label htmlFor="checkbox1">Rester connecté</label>
                                     </div><Link className="link" to="/reset-password">Mot de passe oublié ?</Link>
                                 </div>

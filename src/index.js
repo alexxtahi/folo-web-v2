@@ -7,13 +7,17 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ResetPasswordView from './views/auth/ResetPasswordView';
 import LoginView from './views/auth/LoginView';
 import NoMatchView from './views/NoMatchView';
+import AuthMiddleware from './middleware/AuthMiddleware';
 
+// Auth middleware call
+// AuthMiddleware.checkAuthState();
+// DOM Render
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<App />} />
+        <Route path="/" element={AuthMiddleware.makePrivate(<App />)} />
         <Route path="/login" element={<LoginView />} />
         <Route path="/reset-password" element={<ResetPasswordView />} />
         {/* No match route */}

@@ -16,7 +16,7 @@ class User {
         this.address = json.user.address ?? null;
     }
     // Statics
-    static authUser = null;
+    static authUser = localStorage.getItem('authUser') !== null ? JSON.parse(localStorage.getItem('authUser')) : null;
     // Methods
 
 };
