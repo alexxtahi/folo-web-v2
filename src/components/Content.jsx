@@ -1,213 +1,614 @@
 function Content() {
     return (
         <div className="page-body">
+            <div className="container-fluid">
+                <div className="page-header">
+                    <div className="row">
+                        <div className="col-sm-6">
+                            <h3>General</h3>
+                            <ol className="breadcrumb">
+                                <li className="breadcrumb-item"><a href="index.html">Home</a></li>
+                                <li className="breadcrumb-item">Widgets</li>
+                                <li className="breadcrumb-item active">General</li>
+                            </ol>
+                        </div>
+                        <div className="col-sm-6">
+                            {/* <!-- Bookmark Start--> */}
+                            <div className="bookmark">
+                                <ul>
+                                    <li><a href="#" datacontainer="body"
+                                        databstoggle="popover" dataplacement="top" title=""
+                                        data-original-title="Tables"><i data-feather="inbox"></i></a></li>
+                                    <li><a href="#" datacontainer="body"
+                                        databstoggle="popover" dataplacement="top" title=""
+                                        data-original-title="Chat"><i
+                                            data-feather="message-square"></i></a></li>
+                                    <li><a href="#" datacontainer="body"
+                                        databstoggle="popover" dataplacement="top" title=""
+                                        data-original-title="Icons"><i data-feather="command"></i></a></li>
+                                    <li><a href="#" datacontainer="body"
+                                        databstoggle="popover" dataplacement="top" title=""
+                                        data-original-title="Learning"><i
+                                            data-feather="layers"></i></a></li>
+                                    <li><a href="#"><i
+                                        className="bookmark-search" data-feather="star"></i></a>
+                                        <form className="form-inline search-form">
+                                            <div className="form-group form-control-search">
+                                                <input type="text" placeholder="Search.." />
+                                            </div>
+                                        </form>
+                                    </li>
+                                </ul>
+                            </div>
+                            {/* <!-- Bookmark Ends--> */}
+                        </div>
+                    </div>
+                </div>
+            </div>
             {/* <!-- Container-fluid starts--> */}
-            <div className="container-fluid dashboard-default-sec">
+            <div className="container-fluid general-widget">
                 <div className="row">
-                    <div className="col-xl-5 box-col-12 des-xl-100">
-                        <div className="row">
-                            <div className="col-xl-12 col-md-6 box-col-6 des-xl-50">
-                                <div className="card profile-greeting">
-                                    <div className="card-header">
-                                        <div className="header-top">
-                                            <div className="setting-list bg-primary position-unset">
-                                                <ul className="list-unstyled setting-option">
-                                                    <li>
-                                                        <div className="setting-white"><i
-                                                            className="icon-settings"></i></div>
-                                                    </li>
-                                                    <li><i className="view-html fa fa-code font-white"></i></li>
-                                                    <li><i className="icofont icofont-maximize full-card
-                                  font-white"></i></li>
-                                                    <li><i className="icofont icofont-minus minimize-card
-                                  font-white"></i></li>
-                                                    <li><i className="icofont icofont-refresh reload-card
-                                  font-white"></i></li>
-                                                    <li><i className="icofont icofont-error close-card
-                                  font-white"> </i></li>
-                                                </ul>
+                    <div className="col-sm-6 col-xl-3 col-lg-6">
+                        <div className="card o-hidden border-0">
+                            <div className="bg-primary b-r-4 card-body">
+                                <div className="media static-top-widget">
+                                    <div className="align-self-center text-center"><i
+                                        data-feather="database"></i></div>
+                                    <div className="media-body"><span className="m-0">Earnings</span>
+                                        <h4 className="mb-0 counter">6659</h4><i className="icon-bg"
+                                            data-feather="database"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="col-sm-6 col-xl-3 col-lg-6">
+                        <div className="card o-hidden border-0">
+                            <div className="bg-secondary b-r-4 card-body">
+                                <div className="media static-top-widget">
+                                    <div className="align-self-center text-center"><i
+                                        data-feather="shopping-bag"></i></div>
+                                    <div className="media-body"><span className="m-0">Products</span>
+                                        <h4 className="mb-0 counter">9856</h4><i className="icon-bg"
+                                            data-feather="shopping-bag"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="col-sm-6 col-xl-3 col-lg-6">
+                        <div className="card o-hidden border-0">
+                            <div className="bg-primary b-r-4 card-body">
+                                <div className="media static-top-widget">
+                                    <div className="align-self-center text-center"><i
+                                        data-feather="message-circle"></i></div>
+                                    <div className="media-body"><span className="m-0">Messages</span>
+                                        <h4 className="mb-0 counter">893</h4><i className="icon-bg"
+                                            data-feather="message-circle"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="col-sm-6 col-xl-3 col-lg-6">
+                        <div className="card o-hidden border-0">
+                            <div className="bg-primary b-r-4 card-body">
+                                <div className="media static-top-widget">
+                                    <div className="align-self-center text-center"><i
+                                        data-feather="user-plus"></i></div>
+                                    <div className="media-body"><span className="m-0">New Use</span>
+                                        <h4 className="mb-0 counter">4531</h4><i className="icon-bg"
+                                            data-feather="user-plus"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="col-xl-6 xl-100 box-col-12">
+                        <div className="card">
+                            <div className="cal-date-widget card-body">
+                                <div className="row">
+                                    <div className="col-xl-6 col-xs-12 col-md-6 col-sm-6">
+                                        <div className="cal-info text-center">
+                                            <div>
+                                                <h2>24</h2>
+                                                <div className="d-inline-block"><span className="b-r-dark
+                                pe-3">March</span><span className="ps-3">2018</span></div>
+                                                <p className="f-16">There is no minimum donation, any
+                                                    sum is appreciated</p>
                                             </div>
                                         </div>
                                     </div>
-                                    <div className="card-body text-center p-t-0">
-                                        <h3 className="font-light">Wellcome Back, John!!</h3>
-                                        <p>Welcome to the viho Family! we are glad that you are
-                                            visite this dashboard. we will be happy to help you
-                                            grow your business.</p>
-                                        <button className="btn btn-light">Update</button>
-                                    </div>
-                                    <div className="confetti">
-                                        <div className="confetti-piece"></div>
-                                        <div className="confetti-piece"></div>
-                                        <div className="confetti-piece"></div>
-                                        <div className="confetti-piece"></div>
-                                        <div className="confetti-piece"></div>
-                                        <div className="confetti-piece"></div>
-                                        <div className="confetti-piece"></div>
-                                        <div className="confetti-piece"></div>
-                                        <div className="confetti-piece"></div>
-                                        <div className="confetti-piece"></div>
-                                        <div className="confetti-piece"></div>
-                                        <div className="confetti-piece"></div>
-                                        <div className="confetti-piece"></div>
-                                        <div className="code-box-copy">
-                                            <button className="code-box-copy__btn btn-clipboard"
-                                                data-clipboard-target="#profile-greeting"
-                                                title="Copy"><i className="icofont icofont-copy-alt"></i></button>
-                                            <pre><code className="language-html" id="profile-greeting">                                     &lt;div className="card profile-greeting"&gt;
-                                                &lt;div className="card-header"&gt;
-                                                &lt;div className="header-top"&gt;
-                                                &lt;div className="setting-list bg-primary"&gt;
-                                                &lt;ul className="list-unstyled setting-option"&gt;
-                                                &lt;li&gt;&lt;div className="setting-white"&gt;&lt;i className="icon-settings"&gt;&lt;/i&gt;&lt;/div&gt;&lt;/li&gt;
-                                                &lt;li&gt;&lt;i className="view-html fa fa-code font-white"&gt;&lt;/i&gt;&lt;/li&gt;
-                                                &lt;li&gt;&lt;i className="icofont icofont-maximize full-card font-white"&gt;&lt;/i&gt;&lt;/li&gt;
-                                                &lt;li&gt;&lt;i className="icofont icofont-minus minimize-card font-white"&gt;&lt;/i&gt;&lt;/li&gt;
-                                                &lt;li&gt;&lt;i className="icofont icofont-refresh reload-card font-white"&gt;&lt;/i&gt;&lt;/li&gt;
-                                                &lt;li&gt;&lt;i className="icofont icofont-error close-card font-white"&gt; &lt;/i&gt;&lt;/li&gt;
-                                                &lt;/ul&gt;
-                                                &lt;/div&gt;
-                                                &lt;/div&gt;
-                                                &lt;/div&gt;
-                                                &lt;div className="card-body text-center"&gt;
-                                                &lt;h3 className="font-light"&gt;Wellcome Back, John!!&lt;/h3&gt;
-                                                &lt;p&gt;Lorem ipsum is simply dummy text of the printing and typesetting industry.Lorem ipsum has been&lt;/p&gt;
-                                                &lt;button className="btn btn-light"&gt;Update &lt;/button&gt;
-                                                &lt;/div&gt;
-                                                &lt;/div&gt;</code></pre>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-xl-6 col-md-3 col-sm-6 box-col-3 des-xl-25
-                    rate-sec">
-                                <div className="card income-card card-primary">
-                                    <div className="card-body text-center">
-                                        <div className="round-box">
-                                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
-                                                xmlnsXlink="http://www.w3.org/1999/xlink" x="0px"
-                                                y="0px" viewBox="0 0 448.057 448.057"
-                                                // style="enable-background:new 0 0 448.057 448.057;"
-                                                xmlSpace="preserve">
-                                                <g>
-                                                    <g>
-                                                        <path
-                                                            d="M404.562,7.468c-0.021-0.017-0.041-0.034-0.062-0.051c-13.577-11.314-33.755-9.479-45.069,4.099
-                                  c-0.017,0.02-0.034,0.041-0.051,0.062l-135.36,162.56L88.66,11.577C77.35-2.031,57.149-3.894,43.54,7.417
-                                  c-13.608,11.311-15.471,31.512-4.16,45.12l129.6,155.52h-40.96c-17.673,0-32,14.327-32,32s14.327,32,32,32h64v144
-                                  c0,17.673,14.327,32,32,32c17.673,0,32-14.327,32-32v-180.48l152.64-183.04C419.974,38.96,418.139,18.782,404.562,7.468z"></path>
-                                                    </g>
-                                                </g>
-                                                <g>
-                                                    <g>
-                                                        <path
-                                                            d="M320.02,208.057h-16c-17.673,0-32,14.327-32,32s14.327,32,32,32h16c17.673,0,32-14.327,32-32
-                                  S337.694,208.057,320.02,208.057z"></path>
-                                                    </g>
-                                                </g>
-                                            </svg>
-                                        </div>
-                                        <h5>8,50,49</h5>
-                                        <p>Our Annual Income</p><a className="btn-arrow
-                          arrow-primary" href="#"><i
-                                                className="toprightarrow-primary fa fa-arrow-up me-2"></i>95.54%
-                                        </a>
-                                        <div className="parrten">
-                                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
-                                                xmlnsXlink="http://www.w3.org/1999/xlink" x="0px"
-                                                y="0px" viewBox="0 0 448.057 448.057"
-                                                // style="enable-background:new 0 0 448.057 448.057;"
-                                                xmlSpace="preserve">
-                                                <g>
-                                                    <g>
-                                                        <path
-                                                            d="M404.562,7.468c-0.021-0.017-0.041-0.034-0.062-0.051c-13.577-11.314-33.755-9.479-45.069,4.099
-                                  c-0.017,0.02-0.034,0.041-0.051,0.062l-135.36,162.56L88.66,11.577C77.35-2.031,57.149-3.894,43.54,7.417
-                                  c-13.608,11.311-15.471,31.512-4.16,45.12l129.6,155.52h-40.96c-17.673,0-32,14.327-32,32s14.327,32,32,32h64v144
-                                  c0,17.673,14.327,32,32,32c17.673,0,32-14.327,32-32v-180.48l152.64-183.04C419.974,38.96,418.139,18.782,404.562,7.468z"></path>
-                                                    </g>
-                                                </g>
-                                                <g>
-                                                    <g>
-                                                        <path
-                                                            d="M320.02,208.057h-16c-17.673,0-32,14.327-32,32s14.327,32,32,32h16c17.673,0,32-14.327,32-32
-                                  S337.694,208.057,320.02,208.057z"> </path>
-                                                    </g>
-                                                </g>
-                                            </svg>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-xl-6 col-md-3 col-sm-6 box-col-3 des-xl-25
-                    rate-sec">
-                                <div className="card income-card card-secondary">
-                                    <div className="card-body text-center">
-                                        <div className="round-box">
-                                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
-                                                xmlnsXlink="http://www.w3.org/1999/xlink" x="0px"
-                                                y="0px" viewBox="0 0 512 512"
-                                                // style="enable-background:new 0 0 512 512;"
-                                                xmlSpace="preserve">
-                                                <g>
-                                                    <g>
-                                                        <path
-                                                            d="M256,0C114.615,0,0,114.615,0,256s114.615,256,256,256s256-114.615,256-256S397.385,0,256,0z
-                                  M96,100.16
-                                  c50.315,35.939,80.124,94.008,80,155.84c0.151,61.839-29.664,119.919-80,155.84C11.45,325.148,11.45,186.851,96,100.16z
-                                  M256,480
-                                  c-49.143,0.007-96.907-16.252-135.84-46.24C175.636,391.51,208.14,325.732,208,256c0.077-69.709-32.489-135.434-88-177.6
-                                  c80.1-61.905,191.9-61.905,272,0c-98.174,75.276-116.737,215.885-41.461,314.059c11.944,15.577,25.884,29.517,41.461,41.461
-                                  C353.003,463.884,305.179,480.088,256,480z
-                                  M416,412v-0.16c-86.068-61.18-106.244-180.548-45.064-266.616
-                                  c12.395-17.437,27.627-32.669,45.064-45.064C500.654,186.871,500.654,325.289,416,412z"></path>
-                                                    </g>
-                                                </g>
-                                            </svg>
-                                        </div>
-                                        <h5>2,03,59</h5>
-                                        <p>our Annual losses</p><a className="btn-arrow
-                          arrow-secondary" href="#"><i
-                                                className="toprightarrow-secondary fa fa-arrow-up me-2"></i>90.54%
-                                        </a>
-                                        <div className="parrten">
-                                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
-                                                xmlnsXlink="http://www.w3.org/1999/xlink" x="0px"
-                                                y="0px" viewBox="0 0 512 512"
-                                                // style="enable-background:new 0 0 512 512;"
-                                                xmlSpace="preserve">
-                                                <g>
-                                                    <g>
-                                                        <path
-                                                            d="M256,0C114.615,0,0,114.615,0,256s114.615,256,256,256s256-114.615,256-256S397.385,0,256,0z
-                                  M96,100.16
-                                  c50.315,35.939,80.124,94.008,80,155.84c0.151,61.839-29.664,119.919-80,155.84C11.45,325.148,11.45,186.851,96,100.16z
-                                  M256,480
-                                  c-49.143,0.007-96.907-16.252-135.84-46.24C175.636,391.51,208.14,325.732,208,256c0.077-69.709-32.489-135.434-88-177.6
-                                  c80.1-61.905,191.9-61.905,272,0c-98.174,75.276-116.737,215.885-41.461,314.059c11.944,15.577,25.884,29.517,41.461,41.461
-                                  C353.003,463.884,305.179,480.088,256,480z
-                                  M416,412v-0.16c-86.068-61.18-106.244-180.548-45.064-266.616
-                                  c12.395-17.437,27.627-32.669,45.064-45.064C500.654,186.871,500.654,325.289,416,412z"></path>
-                                                    </g>
-                                                </g>
-                                            </svg>
+                                    <div className="col-xl-6 col-xs-12 col-md-6 col-sm-6">
+                                        <div className="cal-datepicker">
+                                            <div className="datepicker-here float-sm-end"
+                                                data-language="en"> </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div className="col-xl-7 box-col-12 des-xl-100 dashboard-sec">
-                        <div className="card income-card">
-                            <div className="card-header">
-                                <div className="header-top d-sm-flex align-items-center">
-                                    <h5>Sales overview</h5>
-                                    <div className="center-content">
-                                        <p className="d-sm-flex align-items-center"><span
-                                            className="font-primary m-r-10 f-w-700">$859.25k</span><i
-                                                className="toprightarrow-primary fa fa-arrow-up m-r-10"></i>86%
-                                            More than last year</p>
+                    <div className="col-xl-3 xl-50 col-sm-6 box-col-6">
+                        <div className="card">
+                            <div className="mobile-clock-widget">
+                                <div className="bg-svg">
+                                    <svg className="climacon climacon_cloudLightningMoon"
+                                        id="cloudLightningMoon" version="1.1" viewBox="15 15 70
+                        70">
+                                        <clippath id="moonCloudFillClipfill11">
+                                            <path d="M0,0v100h100V0H0z
+                            M60.943,46.641c-4.418,0-7.999-3.582-7.999-7.999c0-3.803,2.655-6.979,6.211-7.792c0.903,4.854,4.726,8.676,9.579,9.58C67.922,43.986,64.745,46.641,60.943,46.641z"></path>
+                                        </clippath>
+                                        <clippath id="cloudFillClipfill19">
+                                            <path d="M15,15v70h70V15H15z
+                            M59.943,61.639c-3.02,0-12.381,0-15.999,0c-6.626,0-11.998-5.371-11.998-11.998c0-6.627,5.372-11.999,11.998-11.999c5.691,0,10.434,3.974,11.665,9.29c1.252-0.81,2.733-1.291,4.334-1.291c4.418,0,8,3.582,8,8C67.943,58.057,64.361,61.639,59.943,61.639z"></path>
+                                        </clippath>
+                                        <g className="climacon_iconWrap
+                          climacon_iconWrap-cloudLightningMoon">
+                                            <g clipPath="url(#cloudFillClip)">
+                                                <g className="climacon_wrapperComponent
+                              climacon_wrapperComponent-moon
+                              climacon_componentWrap-moon_cloud"
+                                                    clipPath="url(#moonCloudFillClip)">
+                                                    <path className="climacon_component
+                                climacon_component-stroke
+                                climacon_component-stroke_sunBody"
+                                                        d="M61.023,50.641c-6.627,0-11.999-5.372-11.999-11.998c0-6.627,5.372-11.999,11.999-11.999c0.755,0,1.491,0.078,2.207,0.212c-0.132,0.576-0.208,1.173-0.208,1.788c0,4.418,3.582,7.999,8,7.999c0.614,0,1.212-0.076,1.788-0.208c0.133,0.717,0.211,1.452,0.211,2.208C73.021,45.269,67.649,50.641,61.023,50.641z"></path>
+                                                </g>
+                                            </g>
+                                            <g className="climacon_wrapperComponent
+                            climacon_wrapperComponent-lightning">
+                                                <polygon className="climacon_component
+                              climacon_component-stroke
+                              climacon_component-stroke_lightning"
+                                                    points="48.001,51.641 57.999,51.641 52,61.641
+                              58.999,61.641 46.001,77.639 49.601,65.641
+                              43.001,65.641 "></polygon>
+                                            </g>
+                                            <g className="climacon_wrapperComponent
+                            climacon_wrapperComponent-cloud">
+                                                <path className="climacon_component
+                              climacon_component-stroke
+                              climacon_component-stroke_cloud"
+                                                    d="M59.999,65.641c-0.28,0-0.649,0-1.062,0l3.584-4.412c3.182-1.057,5.478-4.053,5.478-7.588c0-4.417-3.581-7.998-7.999-7.998c-1.602,0-3.083,0.48-4.333,1.29c-1.231-5.316-5.974-9.29-11.665-9.29c-6.626,0-11.998,5.372-11.998,12c0,5.446,3.632,10.039,8.604,11.503l-1.349,3.777c-6.52-2.021-11.255-8.098-11.255-15.282c0-8.835,7.163-15.999,15.998-15.999c6.004,0,11.229,3.312,13.965,8.204c0.664-0.114,1.338-0.205,2.033-0.205c6.627,0,11.999,5.371,11.999,11.999C71.999,60.268,66.626,65.641,59.999,65.641z"></path>
+                                            </g>
+                                        </g>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <ul className="clock" id="clock">
+                                        <li className="hour" id="hour"></li>
+                                        <li className="min" id="min"></li>
+                                        <li className="sec" id="sec"></li>
+                                    </ul>
+                                    <div className="date f-24 mb-2" id="date"><span id="monthDay"></span><span
+                                        id="year">, </span></div>
+                                    <div>
+                                        <p className="m-0 f-14 text-light">kolkata, India </p>
                                     </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="col-xl-3 xl-50 col-sm-6 box-col-6">
+                        <div className="card">
+                            <div className="weather-widget-two">
+                                <div className="card-body">
+                                    <div className="media">
+                                        <svg className="climacon climacon_cloudDrizzleMoonAlt"
+                                            id="cloudDrizzleMoonAlt" version="1.1" viewBox="15 15
+                          70 70">
+                                            <clippath id="cloudFillClip">
+                                                <path d="M15,15v70h70V15H15z
+                              M59.943,61.639c-3.02,0-12.381,0-15.999,0c-6.626,0-11.998-5.371-11.998-11.998c0-6.627,5.372-11.999,11.998-11.999c5.691,0,10.434,3.974,11.665,9.29c1.252-0.81,2.733-1.291,4.334-1.291c4.418,0,8,3.582,8,8C67.943,58.057,64.361,61.639,59.943,61.639z"></path>
+                                            </clippath>
+                                            <clippath id="moonCloudFillClip">
+                                                <path d="M0,0v100h100V0H0z
+                              M60.943,46.641c-4.418,0-7.999-3.582-7.999-7.999c0-3.803,2.655-6.979,6.211-7.792c0.903,4.854,4.726,8.676,9.579,9.58C67.922,43.986,64.745,46.641,60.943,46.641z"></path>
+                                            </clippath>
+                                            <g className="climacon_iconWrap
+                            climacon_iconWrap-cloudDrizzleMoonAlt">
+                                                <g clipPath="url(#cloudFillClip)">
+                                                    <g className="climacon_wrapperComponent
+                                climacon_wrapperComponent-moon
+                                climacon_componentWrap-moon_cloud"
+                                                        clipPath="url(#moonCloudFillClip)">
+                                                        <path className="climacon_component
+                                  climacon_component-stroke
+                                  climacon_component-stroke_sunBody"
+                                                            d="M61.023,50.641c-6.627,0-11.999-5.372-11.999-11.998c0-6.627,5.372-11.999,11.999-11.999c0.755,0,1.491,0.078,2.207,0.212c-0.132,0.576-0.208,1.173-0.208,1.788c0,4.418,3.582,7.999,8,7.999c0.614,0,1.212-0.076,1.788-0.208c0.133,0.717,0.211,1.452,0.211,2.208C73.021,45.269,67.649,50.641,61.023,50.641z"></path>
+                                                    </g>
+                                                </g>
+                                                <g className="climacon_wrapperComponent
+                              climacon_wrapperComponent-drizzle">
+                                                    <path className="climacon_component
+                                climacon_component-stroke
+                                climacon_component-stroke_drizzle
+                                climacon_component-stroke_drizzle-left"
+                                                        id="Drizzle-Left_1_"
+                                                        d="M56.969,57.672l-2.121,2.121c-1.172,1.172-1.172,3.072,0,4.242c1.17,1.172,3.07,1.172,4.24,0c1.172-1.17,1.172-3.07,0-4.242L56.969,57.672z"></path>
+                                                    <path className="climacon_component
+                                climacon_component-stroke
+                                climacon_component-stroke_drizzle
+                                climacon_component-stroke_drizzle-middle"
+                                                        d="M50.088,57.672l-2.119,2.121c-1.174,1.172-1.174,3.07,0,4.242c1.17,1.172,3.068,1.172,4.24,0s1.172-3.07,0-4.242L50.088,57.672z"></path>
+                                                    <path className="climacon_component
+                                climacon_component-stroke
+                                climacon_component-stroke_drizzle
+                                climacon_component-stroke_drizzle-right"
+                                                        d="M43.033,57.672l-2.121,2.121c-1.172,1.172-1.172,3.07,0,4.242s3.07,1.172,4.244,0c1.172-1.172,1.172-3.07,0-4.242L43.033,57.672z"></path>
+                                                </g>
+                                                <g className="climacon_wrapperComponent
+                              climacon_wrapperComponent-cloud"
+                                                    clipPath="url(#cloudFillClip)">
+                                                    <path className="climacon_component
+                                climacon_component-stroke
+                                climacon_component-stroke_cloud"
+                                                        d="M59.943,41.642c-0.696,0-1.369,0.092-2.033,0.205c-2.736-4.892-7.961-8.203-13.965-8.203c-8.835,0-15.998,7.162-15.998,15.997c0,5.992,3.3,11.207,8.177,13.947c0.276-1.262,0.892-2.465,1.873-3.445l0.057-0.057c-3.644-2.061-6.106-5.963-6.106-10.445c0-6.626,5.372-11.998,11.998-11.998c5.691,0,10.433,3.974,11.666,9.29c1.25-0.81,2.732-1.291,4.332-1.291c4.418,0,8,3.581,8,7.999c0,3.443-2.182,6.371-5.235,7.498c0.788,1.146,1.194,2.471,1.222,3.807c4.666-1.645,8.014-6.077,8.014-11.305C71.941,47.014,66.57,41.642,59.943,41.642z"></path>
+                                                </g>
+                                            </g>
+                                        </svg>
+                                        {/* <!-- cloudDrizzleMoonAlt--> */}
+                                        <div className="media-body align-self-center text-white">
+                                            <h4 className="m-0 f-w-600 num">25°C</h4>
+                                            <p className="m-0 f-14">Newyork</p>
+                                        </div>
+                                    </div>
+                                    <div className="media">
+                                        <svg className="climacon climacon_cloudRainMoon"
+                                            id="cloudRainMoon" version="1.1" viewBox="15 15 70
+                          70">
+                                            <clippath id="cloudFillClip1">
+                                                <path d="M15,15v70h70V15H15z
+                              M59.943,61.639c-3.02,0-12.381,0-15.999,0c-6.626,0-11.998-5.371-11.998-11.998c0-6.627,5.372-11.999,11.998-11.999c5.691,0,10.434,3.974,11.665,9.29c1.252-0.81,2.733-1.291,4.334-1.291c4.418,0,8,3.582,8,8C67.943,58.057,64.361,61.639,59.943,61.639z"></path>
+                                            </clippath>
+                                            <clippath id="moonCloudFillClip1">
+                                                <path d="M0,0v100h100V0H0z
+                              M60.943,46.641c-4.418,0-7.999-3.582-7.999-7.999c0-3.803,2.655-6.979,6.211-7.792c0.903,4.854,4.726,8.676,9.579,9.58C67.922,43.986,64.745,46.641,60.943,46.641z"></path>
+                                            </clippath>
+                                            <g className="climacon_iconWrap
+                            climacon_iconWrap-cloudRainMoon">
+                                                <g clipPath="url(#cloudFillClip1)">
+                                                    <g className="climacon_wrapperComponent
+                                climacon_wrapperComponent-moon
+                                climacon_componentWrap-moon_cloud"
+                                                        clipPath="url(#moonCloudFillClip1)">
+                                                        <path className="climacon_component
+                                  climacon_component-stroke
+                                  climacon_component-stroke_sunBody"
+                                                            d="M61.023,50.641c-6.627,0-11.999-5.372-11.999-11.998c0-6.627,5.372-11.999,11.999-11.999c0.755,0,1.491,0.078,2.207,0.212c-0.132,0.576-0.208,1.173-0.208,1.788c0,4.418,3.582,7.999,8,7.999c0.614,0,1.212-0.076,1.788-0.208c0.133,0.717,0.211,1.452,0.211,2.208C73.021,45.269,67.649,50.641,61.023,50.641z"></path>
+                                                    </g>
+                                                </g>
+                                                <g className="climacon_wrapperComponent
+                              climacon_wrapperComponent-rain">
+                                                    <path className="climacon_component
+                                climacon_component-stroke
+                                climacon_component-stroke_rain
+                                climacon_component-stroke_rain- left"
+                                                        d="M41.946,53.641c1.104,0,1.999,0.896,1.999,2v15.998c0,1.105-0.895,2-1.999,2s-2-0.895-2-2V55.641C39.946,54.537,40.842,53.641,41.946,53.641z"></path>
+                                                    <path className="climacon_component
+                                climacon_component-stroke
+                                climacon_component-stroke_rain
+                                climacon_component-stroke_rain- middle"
+                                                        d="M49.945,57.641c1.104,0,2,0.896,2,2v15.998c0,1.104-0.896,2-2,2s-2-0.896-2-2V59.641C47.945,58.535,48.841,57.641,49.945,57.641z"></path>
+                                                    <path className="climacon_component
+                                climacon_component-stroke
+                                climacon_component-stroke_rain
+                                climacon_component-stroke_rain- right"
+                                                        d="M57.943,53.641c1.104,0,2,0.896,2,2v15.998c0,1.105-0.896,2-2,2c-1.104,0-2-0.895-2-2V55.641C55.943,54.537,56.84,53.641,57.943,53.641z"></path>
+                                                    <path className="climacon_component
+                                climacon_component-stroke
+                                climacon_component-stroke_rain
+                                climacon_component-stroke_rain- left"
+                                                        d="M41.946,53.641c1.104,0,1.999,0.896,1.999,2v15.998c0,1.105-0.895,2-1.999,2s-2-0.895-2-2V55.641C39.946,54.537,40.842,53.641,41.946,53.641z"></path>
+                                                    <path className="climacon_component
+                                climacon_component-stroke
+                                climacon_component-stroke_rain
+                                climacon_component-stroke_rain- middle"
+                                                        d="M49.945,57.641c1.104,0,2,0.896,2,2v15.998c0,1.104-0.896,2-2,2s-2-0.896-2-2V59.641C47.945,58.535,48.841,57.641,49.945,57.641z"></path>
+                                                    <path className="climacon_component
+                                climacon_component-stroke
+                                climacon_component-stroke_rain
+                                climacon_component-stroke_rain- right"
+                                                        d="M57.943,53.641c1.104,0,2,0.896,2,2v15.998c0,1.105-0.896,2-2,2c-1.104,0-2-0.895-2-2V55.641C55.943,54.537,56.84,53.641,57.943,53.641z"></path>
+                                                </g>
+                                                <g className="climacon_wrapperComponent
+                              climacon_wrapperComponent-cloud"
+                                                    clipPath="url(#cloudFillClip1)">
+                                                    <path className="climacon_component
+                                climacon_component-stroke
+                                climacon_component-stroke_cloud"
+                                                        d="M59.943,41.642c-0.696,0-1.369,0.092-2.033,0.205c-2.736-4.892-7.961-8.203-13.965-8.203c-8.835,0-15.998,7.162-15.998,15.997c0,5.992,3.3,11.207,8.177,13.947c0.276-1.262,0.892-2.465,1.873-3.445l0.057-0.057c-3.644-2.061-6.106-5.963-6.106-10.445c0-6.626,5.372-11.998,11.998-11.998c5.691,0,10.433,3.974,11.666,9.29c1.25-0.81,2.732-1.291,4.332-1.291c4.418,0,8,3.581,8,7.999c0,3.443-2.182,6.371-5.235,7.498c0.788,1.146,1.194,2.471,1.222,3.807c4.666-1.645,8.014-6.077,8.014-11.305C71.941,47.014,66.57,41.642,59.943,41.642z"></path>
+                                                </g>
+                                            </g>
+                                        </svg>
+                                        {/* <!-- cloudRainMoon--> */}
+                                        <div className="media-body align-self-center text-white">
+                                            <h4 className="m-0 f-w-600 num">95°F</h4>
+                                            <p className="m-0 f-14">Peris</p>
+                                        </div>
+                                    </div>
+                                    <div className="media">
+                                        <svg className="climacon climacon_cloudDrizzle"
+                                            id="cloudDrizzle" version="1.1" viewBox="15 15 70 70">
+                                            <g className="climacon_iconWrap
+                            climacon_iconWrap-cloudDrizzle">
+                                                <g className="climacon_wrapperComponent
+                              climacon_wrapperComponent-drizzle">
+                                                    <path className="climacon_component
+                                climacon_component-stroke
+                                climacon_component-stroke_drizzle
+                                climacon_component-stroke_drizzle-left"
+                                                        d="M42.001,53.644c1.104,0,2,0.896,2,2v3.998c0,1.105-0.896,2-2,2c-1.105,0-2.001-0.895-2.001-2v-3.998C40,54.538,40.896,53.644,42.001,53.644z"></path>
+                                                    <path className="climacon_component
+                                climacon_component-stroke
+                                climacon_component-stroke_drizzle
+                                climacon_component-stroke_drizzle-middle"
+                                                        d="M49.999,53.644c1.104,0,2,0.896,2,2v4c0,1.104-0.896,2-2,2s-1.998-0.896-1.998-2v-4C48.001,54.54,48.896,53.644,49.999,53.644z"></path>
+                                                    <path className="climacon_component
+                                climacon_component-stroke
+                                climacon_component-stroke_drizzle
+                                climacon_component-stroke_drizzle-right"
+                                                        d="M57.999,53.644c1.104,0,2,0.896,2,2v3.998c0,1.105-0.896,2-2,2c-1.105,0-2-0.895-2-2v-3.998C55.999,54.538,56.894,53.644,57.999,53.644z"></path>
+                                                </g>
+                                                <g className="climacon_wrapperComponent
+                              climacon_wrapperComponent-cloud">
+                                                    <path className="climacon_component
+                                climacon_component-stroke
+                                climacon_component-stroke_cloud"
+                                                        d="M63.999,64.944v-4.381c2.387-1.386,3.998-3.961,3.998-6.92c0-4.418-3.58-8-7.998-8c-1.603,0-3.084,0.481-4.334,1.291c-1.232-5.316-5.973-9.29-11.664-9.29c-6.628,0-11.999,5.372-11.999,12c0,3.549,1.55,6.729,3.998,8.926v4.914c-4.776-2.769-7.998-7.922-7.998-13.84c0-8.836,7.162-15.999,15.999-15.999c6.004,0,11.229,3.312,13.965,8.203c0.664-0.113,1.336-0.205,2.033-0.205c6.627,0,11.998,5.373,11.998,12C71.997,58.864,68.655,63.296,63.999,64.944z"></path>
+                                                </g>
+                                            </g>
+                                        </svg>
+                                        {/* <!-- cloudDrizzle--> */}
+                                        <div className="media-body align-self-center text-white">
+                                            <h4 className="m-0 f-w-600 num">50°C</h4>
+                                            <p className="m-0 f-14">India</p>
+                                        </div>
+                                    </div>
+                                    <div className="top-bg-whether">
+                                        <svg className="climacon climacon_cloudHailAltFill"
+                                            id="cloudHailAltFill" version="1.1" viewBox="15 15 70
+                          70">
+                                            <g className="climacon_iconWrap
+                            climacon_iconWrap-cloudHailAltFill">
+                                                <g className="climacon_wrapperComponent
+                              climacon_wrapperComponent-hailAlt">
+                                                    <g className="climacon_component
+                                climacon_component-stroke
+                                climacon_component-stroke_hailAlt
+                                climacon_component-stroke_hailAlt-left">
+                                                        <circle cx="42" cy="65.498" r="2"></circle>
+                                                    </g>
+                                                    <g className="climacon_component
+                                climacon_component-stroke
+                                climacon_component-stroke_hailAlt
+                                climacon_component-stroke_hailAlt-middle">
+                                                        <circle cx="49.999" cy="65.498" r="2"></circle>
+                                                    </g>
+                                                    <g className="climacon_component
+                                climacon_component-stroke
+                                climacon_component-stroke_hailAlt
+                                climacon_component-stroke_hailAlt-right">
+                                                        <circle cx="57.998" cy="65.498" r="2"></circle>
+                                                    </g>
+                                                    <g className="climacon_component
+                                climacon_component-stroke
+                                climacon_component-stroke_hailAlt
+                                climacon_component-stroke_hailAlt-left">
+                                                        <circle cx="42" cy="65.498" r="2"></circle>
+                                                    </g>
+                                                    <g className="climacon_component
+                                climacon_component-stroke
+                                climacon_component-stroke_hailAlt
+                                climacon_component-stroke_hailAlt-middle">
+                                                        <circle cx="49.999" cy="65.498" r="2"></circle>
+                                                    </g>
+                                                    <g className="climacon_component
+                                climacon_component-stroke
+                                climacon_component-stroke_hailAlt
+                                climacon_component-stroke_hailAlt-right">
+                                                        <circle cx="57.998" cy="65.498" r="2"></circle>
+                                                    </g>
+                                                </g>
+                                                <g className="climacon_componentWrap
+                              climacon_componentWrap_cloud">
+                                                    <path className="climacon_component
+                                climacon_component-stroke
+                                climacon_component-stroke_cloud"
+                                                        d="M43.945,65.639c-8.835,0-15.998-7.162-15.998-15.998c0-8.836,7.163-15.998,15.998-15.998c6.004,0,11.229,3.312,13.965,8.203c0.664-0.113,1.338-0.205,2.033-0.205c6.627,0,11.998,5.373,11.998,12c0,6.625-5.371,11.998-11.998,11.998C57.168,65.639,47.143,65.639,43.945,65.639z"></path>
+                                                    <path className="climacon_component
+                                climacon_component-fill
+                                climacon_component-fill_cloud" fill="#FFFFFF"
+                                                        d="M59.943,61.639c4.418,0,8-3.582,8-7.998c0-4.417-3.582-8-8-8c-1.601,0-3.082,0.481-4.334,1.291c-1.23-5.316-5.973-9.29-11.665-9.29c-6.626,0-11.998,5.372-11.998,11.999c0,6.626,5.372,11.998,11.998,11.998C47.562,61.639,56.924,61.639,59.943,61.639z"></path>
+                                                </g>
+                                            </g>
+                                        </svg>
+                                    </div>
+                                    <div className="bottom-whetherinfo">
+                                        <div className="row">
+                                            <div className="col-6"><i data-feather="cloud-drizzle"></i></div>
+                                            <div className="col-6">
+                                                <div className="whether-content"><span>India, Surat</span>
+                                                    <h4 className="num mb-0">36°F </h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="col-xl-6 xl-50 box-col-12">
+                        <div className="widget-joins card widget-arrow">
+                            <div className="row">
+                                <div className="col-sm-6 pe-0">
+                                    <div className="media border-after-xs">
+                                        <div className="align-self-center me-3 text-start"><span
+                                            className="widget-t mb-1">Sale</span>
+                                            <h5 className="mb-0">Today</h5>
+                                        </div>
+                                        <div className="media-body align-self-center"><i
+                                            className="font-primary" data-feather="arrow-down"></i></div>
+                                        <div className="media-body">
+                                            <h5 className="mb-0">$<span className="counter">25698</span></h5><span
+                                                className="mb-1">-$2658(36%)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="col-sm-6 ps-0">
+                                    <div className="media">
+                                        <div className="align-self-center me-3 text-start"><span
+                                            className="widget-t mb-1">Sale</span>
+                                            <h5 className="mb-0">Month</h5>
+                                        </div>
+                                        <div className="media-body align-self-center"><i
+                                            className="font-primary" data-feather="arrow-up"></i></div>
+                                        <div className="media-body ps-2">
+                                            <h5 className="mb-0">$<span className="counter">6954</span></h5><span
+                                                className="mb-1">+$369(15%)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="col-sm-6 pe-0">
+                                    <div className="media border-after-xs">
+                                        <div className="align-self-center me-3 text-start"><span
+                                            className="widget-t mb-1">Sale</span>
+                                            <h5 className="mb-0">Week</h5>
+                                        </div>
+                                        <div className="media-body align-self-center"><i
+                                            className="font-primary" data-feather="arrow-up"></i></div>
+                                        <div className="media-body">
+                                            <h5 className="mb-0">$<span className="counter">63147</span></h5><span
+                                                className="mb-1">+$69(65%)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="col-sm-6 ps-0">
+                                    <div className="media">
+                                        <div className="align-self-center me-3 text-start"><span
+                                            className="widget-t mb-1">Sale</span>
+                                            <h5 className="mb-0">Year</h5>
+                                        </div>
+                                        <div className="media-body align-self-center ps-3"><i
+                                            className="font-primary" data-feather="arrow-up"></i></div>
+                                        <div className="media-body ps-2">
+                                            <h5 className="mb-0">$<span className="counter">963198</span></h5><span
+                                                className="mb-1">+$3654(90%) </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="col-xl-6 xl-50 box-col-12">
+                        <div className="widget-joins card">
+                            <div className="row">
+                                <div className="col-sm-6 pe-0">
+                                    <div className="media border-after-xs">
+                                        <div className="align-self-center me-3">68%<i className="fa
+                            fa-angle-up ms-2"></i></div>
+                                        <div className="media-body details ps-3"><span className="mb-1">New</span>
+                                            <h5 className="mb-0 counter">6982</h5>
+                                        </div>
+                                        <div className="media-body align-self-center"><i
+                                            className="font-primary float-end ms-2"
+                                            data-feather="shopping-bag"></i></div>
+                                    </div>
+                                </div>
+                                <div className="col-sm-6 ps-0">
+                                    <div className="media">
+                                        <div className="align-self-center me-3">12%<i className="fa
+                            fa-angle-down ms-2"></i></div>
+                                        <div className="media-body details ps-3"><span className="mb-1">Pending</span>
+                                            <h5 className="mb-0 counter">783</h5>
+                                        </div>
+                                        <div className="media-body align-self-center"><i
+                                            className="font-primary float-end ms-3"
+                                            data-feather="layers"></i></div>
+                                    </div>
+                                </div>
+                                <div className="col-sm-6 pe-0">
+                                    <div className="media border-after-xs">
+                                        <div className="align-self-center me-3">68%<i className="fa
+                            fa-angle-up ms-2"></i></div>
+                                        <div className="media-body details ps-3 pt-0"><span
+                                            className="mb-1">Done</span>
+                                            <h5 className="mb-0 counter">3674</h5>
+                                        </div>
+                                        <div className="media-body align-self-center"><i
+                                            className="font-primary float-end ms-2"
+                                            data-feather="shopping-cart"></i></div>
+                                    </div>
+                                </div>
+                                <div className="col-sm-6 ps-0">
+                                    <div className="media">
+                                        <div className="align-self-center me-3">68%<i className="fa
+                            fa-angle-up ms-2"></i></div>
+                                        <div className="media-body details ps-3 pt-0"><span
+                                            className="mb-1">Cancel</span>
+                                            <h5 className="mb-0 counter">069</h5>
+                                        </div>
+                                        <div className="media-body align-self-center"><i
+                                            className="font-primary float-end ms-2"
+                                            data-feather="dollar-sign"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="col-xl-4 box-col-6">
+                        <div className="card testimonial text-center">
+                            <div className="card-body">
+                                <div>
+                                    <div className="item"><i className="fa fa-quote-left"></i>
+                                        <p>Contrary to popular belief, Lorem Ipsum is not simply
+                                            random text. It has roots in a piece of classical
+                                            Latin literature from 45 BC, making it over 2000 years
+                                            old. Richard McClintock.</p><img className="img-80"
+                                                src="../assets/images/dashboard/boy-2.png" alt="" />
+                                        <h5 className="font-primary">Poio klot</h5><span>Developer</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="card xl-none">
+                            <div className="ecommerce-widget card-body">
+                                <div className="row">
+                                    <div className="col-6"><span>New Order</span>
+                                        <h3 className="total-num counter">25639</h3>
+                                    </div>
+                                    <div className="col-6">
+                                        <div className="text-end">
+                                            <ul>
+                                                <li>Profit<span className="product-stts font-primary
+                                m-l-10">8989<i className="icon-angle-up f-12
+                                  m-l-10"></i></span></li>
+                                                <li>Loss<span className="product-stts font-primary
+                                m-l-10">2560<i className="icon-angle-down f-12
+                                  m-l-10"></i></span></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="progress-showcase">
+                                    <div className="progress sm-progress-bar">
+                                        <div className="progress-bar bg-primary" role="progressbar"
+                                            style={{ width: '70%' }}
+                                            aria-valuenow="25"
+                                            aria-valuemin="0" aria-valuemax="100"> </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="col-xl-4 col-md-6 box-col-12">
+                        <div>
+                            <div className="card card-activity">
+                                <div className="card-header pb-0 d-flex justify-content-between
+                      align-items-center">
+                                    <h5 className="text-uppercase">Recent Activity</h5>
                                     <div className="setting-list">
                                         <ul className="list-unstyled setting-option">
                                             <li>
@@ -226,1076 +627,913 @@ function Content() {
                                         </ul>
                                     </div>
                                 </div>
+                                <div className="card-body">
+                                    <ul className="crm-activity">
+                                        <li className="media"><span className="me-3 font-primary">A</span>
+                                            <div className="align-self-center media-body">
+                                                <h6 className="mt-0">Any desktop publishing.</h6>
+                                                <ul className="dates">
+                                                    <li>25 July 2017</li>
+                                                    <li>20 hours ago</li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li className="media"><span className="me-3 font-secondary">C</span>
+                                            <div className="align-self-center media-body">
+                                                <h6 className="mt-0">Contrary to popular belief. </h6>
+                                                <ul className="dates">
+                                                    <li>25 July 2017</li>
+                                                    <li>20 hours ago </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li className="media"><span className="me-3 font-primary">E</span>
+                                            <div className="align-self-center media-body">
+                                                <h6 className="mt-0">Established fact that a reader.</h6>
+                                                <ul className="dates">
+                                                    <li>25 July 2017</li>
+                                                    <li>20 hours ago</li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li className="media"><span className="me-3 font-secondary">H</span>
+                                            <div className="align-self-center media-body">
+                                                <h6 className="mt-0">H-Code - A premium portfolio.</h6>
+                                                <ul className="dates">
+                                                    <li>25 July 2017</li>
+                                                    <li>20 hours ago </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li className="media"><span className="me-3 font-primary">T</span>
+                                            <div className="align-self-center media-body">
+                                                <h6 className="mt-0">There isn't any hidden.</h6>
+                                                <ul className="dates">
+                                                    <li>25 July 2017</li>
+                                                    <li>20 hours ago</li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li className="media">
+                                            <div className="align-self-center media-body">
+                                                <ul className="dates">
+                                                    <li>25 July 2017</li>
+                                                    <li>20 hours ago</li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <div className="code-box-copy">
+                                        <button className="code-box-copy__btn btn-clipboard"
+                                            data-clipboard-target="#recent-activity" title="Copy"><i
+                                                className="icofont icofont-copy-alt"></i></button>
+                                        <pre><code className="language-html" id="recent-activity">&lt;div className="card"&gt;
+                                            &lt;div className="card-header pb-0 d-flex justify-content-between align-items-center"&gt;
+                                            &lt;h5 className="text-uppercase"&gt;Recent Activity&lt;/h5&gt;
+                                            &lt;div className="setting-list"&gt;
+                                            &lt;ul className="list-unstyled setting-option"&gt;
+                                            &lt;li&gt;&lt;div className="setting-primary"&gt;&lt;i className="icon-settings"&gt;&lt;/i&gt;&lt;/div&gt;&lt;/li&gt;
+                                            &lt;li&gt;&lt;i className="view-html fa fa-code font-primary"&gt;&lt;/i&gt;&lt;/li&gt;
+                                            &lt;li&gt;&lt;i className="icofont icofont-maximize full-card font-primary"&gt;&lt;/i&gt;&lt;/li&gt;
+                                            &lt;li&gt;&lt;i className="icofont icofont-minus minimize-card font-primary"&gt;&lt;/i&gt;&lt;/li&gt;
+                                            &lt;li&gt;&lt;i className="icofont icofont-refresh reload-card font-primary"&gt;&lt;/i&gt;&lt;/li&gt;
+                                            &lt;li&gt;&lt;i className="icofont icofont-error close-card font-primary"&gt;&lt;/i&gt;&lt;/li&gt;
+                                            &lt;/ul&gt;
+                                            &lt;/div&gt;
+                                            &lt;/div&gt;
+                                            &lt;div className="card-body"&gt;
+                                            &lt;ul className="crm-activity"&gt;
+                                            &lt;li className="media"&gt;&lt;span className="me-3 font-primary"&gt;A&lt;/span&gt;
+                                            &lt;div className="align-self-center media-body"&gt;
+                                            &lt;h6 className="mt-0"&gt;Any desktop publishing packages and web page editors.&lt;/h6&gt;
+                                            &lt;ul className="dates"&gt;
+                                            &lt;li&gt;25 July 2017&lt;/li&gt;
+                                            &lt;li&gt;20 hours ago&lt;/li&gt;
+                                            &lt;/ul&gt;
+                                            &lt;/div&gt;
+                                            &lt;/li&gt;
+                                            &lt;li className="media"&gt;
+                                            &lt;span className="me-3 font-secondary"&gt;C&lt;/span&gt;
+                                            &lt;div className="align-self-center media-body"&gt;
+                                            &lt;h6 className="mt-0"&gt;Contrary to popular belief, Lorem Ipsum is not simply. &lt;/h6&gt;
+                                            &lt;ul className="dates"&gt;
+                                            &lt;li&gt;25 July 2017&lt;/li&gt;
+                                            &lt;li&gt;20 hours ago &lt;/li&gt;
+                                            &lt;/ul&gt;
+                                            &lt;/div&gt;
+                                            &lt;/li&gt;
+                                            &lt;li className="media"&gt;
+                                            &lt;span className="me-3 font-primary"&gt;E&lt;/span&gt;
+                                            &lt;div className="align-self-center media-body"&gt;
+                                            &lt;h6 className="mt-0"&gt;Established fact that a reader will be distracted &lt;/h6&gt;
+                                            &lt;ul className="dates"&gt;
+                                            &lt;li&gt;25 July 2017&lt;/li&gt;
+                                            &lt;li&gt;20 hours ago&lt;/li&gt;
+                                            &lt;/ul&gt;
+                                            &lt;/div&gt;
+                                            &lt;/li&gt;
+                                            &lt;li className="media"&gt;
+                                            &lt;span className="me-3 font-secondary"&gt;H&lt;/span&gt;
+                                            &lt;div className="align-self-center media-body"&gt;
+                                            &lt;h6 className="mt-0"&gt;H-Code - A premium portfolio template from ThemeZaa &lt;/h6&gt;
+                                            &lt;ul className="dates"&gt;
+                                            &lt;li&gt;25 July 2017&lt;/li&gt;
+                                            &lt;li&gt;20 hours ago &lt;/li&gt;
+                                            &lt;/ul&gt;
+                                            &lt;/div&gt;
+                                            &lt;/li&gt;
+                                            &lt;li className="media"&gt;
+                                            &lt;span className="me-3 font-primary"&gt;T&lt;/span&gt;
+                                            &lt;div className="align-self-center media-body"&gt;
+                                            &lt;h6 className="mt-0"&gt;There isn't anything embarrassing hidden.&lt;/h6&gt;
+                                            &lt;ul className="dates"&gt;
+                                            &lt;li&gt;25 July 2017&lt;/li&gt;
+                                            &lt;li&gt;20 hours ago&lt;/li&gt;
+                                            &lt;/ul&gt;
+                                            &lt;/div&gt;
+                                            &lt;/li&gt;
+                                            &lt;li className="media"&gt;
+                                            &lt;div className="align-self-center media-body"&gt;
+                                            &lt;ul className="dates"&gt;
+                                            &lt;li&gt;25 July 2017&lt;/li&gt;
+                                            &lt;li&gt;20 hours ago&lt;/li&gt;
+                                            &lt;/ul&gt;
+                                            &lt;/div&gt;
+                                            &lt;/li&gt;
+                                            &lt;/ul&gt;
+                                            &lt;/div&gt;
+                                            &lt;/div&gt;</code></pre>
+                                    </div>
+                                </div>
                             </div>
-                            <div className="card-body p-0">
-                                <div id="chart-timeline-dashbord"></div>
+                        </div>
+                    </div>
+                    <div className="col-xl-4 col-md-6 box-col-6">
+                        <div className="card custom-card">
+                            <div className="card-header pb-0"><img className="img-fluid"
+                                src="../assets/images/user-card/3.jpg" alt="" /></div>
+                            <div className="card-profile"><img className="rounded-circle"
+                                src="../assets/images/avtar/3.jpg" alt="" /></div>
+                            <ul className="card-social">
+                                <li><a href="#"><i className="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i className="fa fa-google-plus"></i></a></li>
+                                <li><a href="#"><i className="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i className="fa fa-instagram"></i></a></li>
+                                <li><a href="#"><i className="fa fa-rss"></i></a></li>
+                            </ul>
+                            <div className="text-center profile-details">
+                                <h4><a href="social-app.html" alt="">Scarlett john</a></h4>
+                                <h6>Manager</h6>
+                            </div>
+                            <div className="card-footer row">
+                                <div className="col-4 col-sm-4">
+                                    <h6>Follower</h6>
+                                    <h3 className="counter">9564</h3>
+                                </div>
+                                <div className="col-4 col-sm-4">
+                                    <h6>Following</h6>
+                                    <h3><span className="counter">49</span>K</h3>
+                                </div>
+                                <div className="col-4 col-sm-4">
+                                    <h6>Total Post</h6>
+                                    <h3><span className="counter">96</span>M</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="col-sm-6 col-xl-3 xl-25 col-lg-6 box-col-6">
+                        <div className="card social-widget-card">
+                            <div className="card-body">
+                                <div className="redial-social-widget radial-bar-70"
+                                    data-label="50%"><i className="fa fa-facebook font-primary"></i></div>
+                                <h5 className="b-b-light">Facebook</h5>
+                                <div className="row">
+                                    <div className="col text-center b-r-light"><span>Post</span>
+                                        <h4 className="counter mb-0">6589</h4>
+                                    </div>
+                                    <div className="col text-center"><span>Like</span>
+                                        <h4 className="counter mb-0">75269</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="col-sm-6 col-xl-3 xl-25 col-lg-6 box-col-6">
+                        <div className="card social-widget-card">
+                            <div className="card-body">
+                                <div className="redial-social-widget radial-bar-70"
+                                    data-label="50%"><i className="fa fa-twitter font-primary"></i></div>
+                                <h5 className="b-b-light">Twitter</h5>
+                                <div className="row">
+                                    <div className="col text-center b-r-light"><span>Post</span>
+                                        <h4 className="counter mb-0">6589</h4>
+                                    </div>
+                                    <div className="col text-center"><span>Follower</span>
+                                        <h4 className="counter mb-0">75269</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="col-sm-6 col-xl-3 xl-25 col-lg-6 box-col-6">
+                        <div className="card social-widget-card">
+                            <div className="card-body">
+                                <div className="redial-social-widget radial-bar-70"
+                                    data-label="50%"><i className="fa fa-linkedin font-primary"></i></div>
+                                <h5 className="b-b-light">linkedin</h5>
+                                <div className="row">
+                                    <div className="col text-center b-r-light"><span>Post</span>
+                                        <h4 className="counter mb-0">1234</h4>
+                                    </div>
+                                    <div className="col text-center"><span>linkedin</span>
+                                        <h4 className="counter mb-0">4369</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="col-sm-6 col-xl-3 xl-25 col-lg-6 box-col-6">
+                        <div className="card social-widget-card">
+                            <div className="card-body">
+                                <div className="redial-social-widget radial-bar-70"
+                                    data-label="50%"><i className="fa fa-google-plus
+                        font-primary"></i></div>
+                                <h5 className="b-b-light">Google +</h5>
+                                <div className="row">
+                                    <div className="col text-center b-r-light"><span>Post</span>
+                                        <h4 className="counter mb-0">369</h4>
+                                    </div>
+                                    <div className="col text-center"><span>Follower</span>
+                                        <h4 className="counter mb-0">3458</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="col-xl-4 col-sm-6 col-sm-12">
+                        <div className="card browser-widget">
+                            <div className="media card-body">
+                                <div className="media-img"><img
+                                    src="../assets/images/dashboard/chrome.png" alt="" /></div>
+                                <div className="media-body align-self-center">
+                                    <div>
+                                        <p>Daily </p>
+                                        <h4><span className="counter">36</span>%</h4>
+                                    </div>
+                                    <div>
+                                        <p>Month </p>
+                                        <h4><span className="counter">96</span>%</h4>
+                                    </div>
+                                    <div>
+                                        <p>Week </p>
+                                        <h4><span className="counter">46</span>%</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="col-xl-4 col-sm-6">
+                        <div className="card browser-widget">
+                            <div className="media card-body">
+                                <div className="media-img"><img
+                                    src="../assets/images/dashboard/firefox.png" alt="" /></div>
+                                <div className="media-body align-self-center">
+                                    <div>
+                                        <p>Daily </p>
+                                        <h4><span className="counter">36</span>%</h4>
+                                    </div>
+                                    <div>
+                                        <p>Month </p>
+                                        <h4><span className="counter">96</span>%</h4>
+                                    </div>
+                                    <div>
+                                        <p>Week </p>
+                                        <h4><span className="counter">46</span>%</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="col-xl-4 col-sm-6">
+                        <div className="card browser-widget">
+                            <div className="media card-body">
+                                <div className="media-img"><img
+                                    src="../assets/images/dashboard/safari.png" alt="" /></div>
+                                <div className="media-body align-self-center">
+                                    <div>
+                                        <p>Daily </p>
+                                        <h4><span className="counter">36</span>%</h4>
+                                    </div>
+                                    <div>
+                                        <p>Month </p>
+                                        <h4><span className="counter">96</span>%</h4>
+                                    </div>
+                                    <div>
+                                        <p>Week </p>
+                                        <h4><span className="counter">46</span>%</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="col-xl-6 xl-100 box-col-12">
+                        <div className="card">
+                            <div className="card-header pb-0 d-flex justify-content-between
+                    align-items-center">
+                                <h5>PRODUCTS CART</h5>
+                                <div className="setting-list">
+                                    <ul className="list-unstyled setting-option">
+                                        <li>
+                                            <div className="setting-primary"><i className="icon-settings"></i></div>
+                                        </li>
+                                        <li><i className="view-html fa fa-code font-primary"></i></li>
+                                        <li><i className="icofont icofont-maximize full-card
+                            font-primary"></i></li>
+                                        <li><i className="icofont icofont-minus minimize-card
+                            font-primary"></i></li>
+                                        <li><i className="icofont icofont-refresh reload-card
+                            font-primary"></i></li>
+                                        <li><i className="icofont icofont-error close-card
+                            font-primary"></i></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div className="card-body">
+                                <div className="user-status table-responsive">
+                                    <table className="table table-bordernone">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">Details</th>
+                                                <th scope="col">Quantity</th>
+                                                <th scope="col">Status</th>
+                                                <th scope="col">Price</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td className="f-w-600">Simply dummy text of the
+                                                    printing</td>
+                                                <td>1</td>
+                                                <td className="font-primary">Pending</td>
+                                                <td>
+                                                    <div className="span badge rounded-pill
+                                pill-badge-secondary">6523</div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td className="f-w-600">Long established</td>
+                                                <td>5</td>
+                                                <td className="font-secondary">Cancle</td>
+                                                <td>
+                                                    <div className="span badge rounded-pill
+                                pill-badge-success">6523</div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td className="f-w-600">sometimes by accident</td>
+                                                <td>10</td>
+                                                <td className="font-secondary">Cancle</td>
+                                                <td>
+                                                    <div className="span badge rounded-pill
+                                pill-badge-warning">6523</div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td className="f-w-600">Classical Latin literature</td>
+                                                <td>9</td>
+                                                <td className="font-primary">Return</td>
+                                                <td>
+                                                    <div className="span badge rounded-pill
+                                pill-badge-primary">6523</div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td className="f-w-600">keep the site on the Internet</td>
+                                                <td>8</td>
+                                                <td className="font-primary">Pending</td>
+                                                <td>
+                                                    <div className="span badge rounded-pill
+                                pill-badge-danger">6523</div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td className="f-w-600">Molestiae consequatur</td>
+                                                <td>3</td>
+                                                <td className="font-secondary">Cancle</td>
+                                                <td>
+                                                    <div className="span badge rounded-pill
+                                pill-badge-info">6523</div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td className="f-w-600">Pain can procure</td>
+                                                <td>8</td>
+                                                <td className="font-primary">Return</td>
+                                                <td>
+                                                    <div className="span badge rounded-pill
+                                pill-badge-primary">6523</div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
                                 <div className="code-box-copy">
                                     <button className="code-box-copy__btn btn-clipboard"
-                                        data-clipboard-target="#yearly-overview" title="Copy"><i
+                                        data-clipboard-target="#products-cart" title="Copy"><i
                                             className="icofont icofont-copy-alt"></i></button>
-                                    <pre><code className="language-html" id="yearly-overview">&lt;div className="card income-card"&gt;
-                                        &lt;div className="card-header"&gt;
-                                        &lt;div className="header-top d-sm-flex align-items-center"&gt;
-                                        &lt;h5&gt; yearly overview  &lt;/h5&gt;
-                                        &lt;div className="center-content" &gt;
-                                        &lt;p&gt;
-                                        &lt;span className="font-primary fontbold-600" &gt; $859.25k &lt;/span&gt;
-                                        &lt;i className="toprightarrow-primary fa fa-arrow-up m-l-10 m-r-10" &gt; &lt;/i&gt;
-                                        86% More than last year
-                                        &lt;/p&gt;
-                                        &lt;/div&gt;
+                                    <pre><code className="language-html" id="products-cart">&lt;div className="card"&gt;
+                                        &lt;div className="card-header pb-0 d-flex justify-content-between align-items-center"&gt;
+                                        &lt;h5&gt;PRODUCTS CART&lt;/h5&gt;
                                         &lt;div className="setting-list"&gt;
                                         &lt;ul className="list-unstyled setting-option"&gt;
-                                        &lt;li&gt;&lt;div className="setting-primary"&gt;&lt;i className="icon-settings"&gt;&lt;/i&gt;&lt;/div&gt;&lt;/li&gt;
+                                        &lt;li&gt;
+                                        &lt;div className="setting-primary"&gt;&lt;i className="icon-settings"&gt;&lt;/i&gt;&lt;/div&gt;
+                                        &lt;/li&gt;
                                         &lt;li&gt;&lt;i className="view-html fa fa-code font-primary"&gt;&lt;/i&gt;&lt;/li&gt;
                                         &lt;li&gt;&lt;i className="icofont icofont-maximize full-card font-primary"&gt;&lt;/i&gt;&lt;/li&gt;
                                         &lt;li&gt;&lt;i className="icofont icofont-minus minimize-card font-primary"&gt;&lt;/i&gt;&lt;/li&gt;
                                         &lt;li&gt;&lt;i className="icofont icofont-refresh reload-card font-primary"&gt;&lt;/i&gt;&lt;/li&gt;
-                                        &lt;li&gt;&lt;i className="icofont icofont-error close-card font-primary"&gt; &lt;/i&gt;&lt;/li&gt;
+                                        &lt;li&gt;&lt;i className="icofont icofont-error close-card font-primary"&gt;&lt;/i&gt;&lt;/li&gt;
                                         &lt;/ul&gt;
                                         &lt;/div&gt;
                                         &lt;/div&gt;
+                                        &lt;div className="card-body"&gt;
+                                        &lt;div className="user-status table-responsive"&gt;
+                                        &lt;table className="table table-bordernone"&gt;
+                                        &lt;thead&gt;
+                                        &lt;tr&gt;
+                                        &lt;th scope="col"&gt;Details&lt;/th&gt;
+                                        &lt;th scope="col"&gt;Quantity&lt;/th&gt;
+                                        &lt;th scope="col"&gt;Status&lt;/th&gt;
+                                        &lt;th scope="col"&gt;Price&lt;/th&gt;
+                                        &lt;/tr&gt;
+                                        &lt;/thead&gt;
+                                        &lt;tbody&gt;
+                                        &lt;tr&gt;
+                                        &lt;td className="f-w-600"&gt;Simply dummy text of the printing&lt;/td&gt;
+                                        &lt;td&gt;1&lt;/td&gt;
+                                        &lt;td className="font-primary"&gt;Pending&lt;/td&gt;
+                                        &lt;td&gt;
+                                        &lt;div className="span badge rounded-pill pill-badge-secondary"&gt;6523&lt;/div&gt;
+                                        &lt;/td&gt;
+                                        &lt;/tr&gt;
+                                        &lt;tr&gt;
+                                        &lt;td className="f-w-600"&gt;Long established&lt;/td&gt;
+                                        &lt;td&gt;5&lt;/td&gt;
+                                        &lt;td className="font-secondary"&gt;Cancle&lt;/td&gt;
+                                        &lt;td&gt;
+                                        &lt;div className="span badge rounded-pill pill-badge-success"&gt;6523&lt;/div&gt;
+                                        &lt;/td&gt;
+                                        &lt;/tr&gt;
+                                        &lt;tr&gt;
+                                        &lt;td className="f-w-600"&gt;sometimes by accident&lt;/td&gt;
+                                        &lt;td&gt;10&lt;/td&gt;
+                                        &lt;td className="font-secondary"&gt;Cancle&lt;/td&gt;
+                                        &lt;td&gt;
+                                        &lt;div className="span badge rounded-pill pill-badge-warning"&gt;6523&lt;/div&gt;
+                                        &lt;/td&gt;
+                                        &lt;/tr&gt;
+                                        &lt;tr&gt;
+                                        &lt;td className="f-w-600"&gt;Classical Latin literature&lt;/td&gt;
+                                        &lt;td&gt;9&lt;/td&gt;
+                                        &lt;td className="font-primary"&gt;Return&lt;/td&gt;
+                                        &lt;td&gt;
+                                        &lt;div className="span badge rounded-pill pill-badge-primary"&gt;6523&lt;/div&gt;
+                                        &lt;/td&gt;
+                                        &lt;/tr&gt;
+                                        &lt;tr&gt;
+                                        &lt;td className="f-w-600"&gt;keep the site on the Internet&lt;/td&gt;
+                                        &lt;td&gt;8&lt;/td&gt;
+                                        &lt;td className="font-primary"&gt;Pending&lt;/td&gt;
+                                        &lt;td&gt;
+                                        &lt;div className="span badge rounded-pill pill-badge-danger"&gt;6523&lt;/div&gt;
+                                        &lt;/td&gt;
+                                        &lt;/tr&gt;
+                                        &lt;tr&gt;
+                                        &lt;td className="f-w-600"&gt;Molestiae consequatur&lt;/td&gt;
+                                        &lt;td&gt;3&lt;/td&gt;
+                                        &lt;td className="font-secondary"&gt;Cancle&lt;/td&gt;
+                                        &lt;td&gt;
+                                        &lt;div className="span badge rounded-pill pill-badge-info"&gt;6523&lt;/div&gt;
+                                        &lt;/td&gt;
+                                        &lt;/tr&gt;
+                                        &lt;tr&gt;
+                                        &lt;td className="f-w-600"&gt;Pain can procure&lt;/td&gt;
+                                        &lt;td&gt;8&lt;/td&gt;
+                                        &lt;td className="font-primary"&gt;Return&lt;/td&gt;
+                                        &lt;td&gt;
+                                        &lt;div className="span badge rounded-pill pill-badge-primary"&gt;6523&lt;/div&gt;
+                                        &lt;/td&gt;
+                                        &lt;/tr&gt;
+                                        &lt;/tbody&gt;
+                                        &lt;/table&gt;
                                         &lt;/div&gt;
-                                        &lt;div className="card-body p-0"&gt;
-                                        &lt;div id="chart-timeline-dashbord"&gt;&lt;/div&gt;
                                         &lt;/div&gt;
                                         &lt;/div&gt;</code></pre>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div className="col-xl-8 box-col-12 des-xl-100">
-                        <div className="row">
-                            <div className="col-xl-6 col-50 box-col-6 des-xl-50">
-                                <div className="card">
-                                    <div className="card-header">
-                                        <div className="header-top d-sm-flex align-items-center">
-                                            <h5>Growth Overview</h5>
-                                            <div className="center-content">
-                                                <p className="d-flex align-items-center"><i
-                                                    className="toprightarrow-primary fa fa-arrow-up
-                                me-2"></i>80% Growth</p>
-                                            </div>
-                                            <div className="setting-list">
-                                                <ul className="list-unstyled setting-option">
-                                                    <li>
-                                                        <div className="setting-primary"><i
-                                                            className="icon-settings"> </i></div>
-                                                    </li>
-                                                    <li><i className="view-html fa fa-code font-primary"></i></li>
-                                                    <li><i className="icofont icofont-maximize full-card
-                                  font-primary"></i></li>
-                                                    <li><i className="icofont icofont-minus minimize-card
-                                  font-primary"></i></li>
-                                                    <li><i className="icofont icofont-refresh reload-card
-                                  font-primary"></i></li>
-                                                    <li><i className="icofont icofont-error close-card
-                                  font-primary"></i></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="card-body p-0">
-                                        <div id="chart-dashbord"></div>
-                                        <div className="code-box-copy">
-                                            <button className="code-box-copy__btn btn-clipboard"
-                                                data-clipboard-target="#sell-overview" title="Copy"><i
-                                                    className="icofont icofont-copy-alt"></i></button>
-                                            <pre><code className="language-html" id="sell-overview">                                     &lt;div className="card"&gt;
-                                                &lt;div className="card-header"&gt;
-                                                &lt;div className="header-top d-sm-flex align-items-center"&gt;
-                                                &lt;h5&gt; Sell Overview &lt;/h5&gt;
-                                                &lt;div className="center-content" &gt;
-                                                &lt;p className="d-flex align-items-center"&gt;
-                                                &lt;i className="toprightarrow-primary fa fa-arrow-up me-2" &gt; &lt;/i&gt;
-                                                86% Growth
-                                                &lt;/p&gt;
-                                                &lt;/div&gt;
-                                                &lt;div className="setting-list"&gt;
-                                                &lt;ul className="list-unstyled setting-option"&gt;
-                                                &lt;li&gt;&lt;div className="setting-primary"&gt;&lt;i className="icon-settings"&gt;&lt;/i&gt;&lt;/div&gt;&lt;/li&gt;
-                                                &lt;li&gt;&lt;i className="view-html fa fa-code font-primary"&gt;&lt;/i&gt;&lt;/li&gt;
-                                                &lt;li&gt;&lt;i className="icofont icofont-maximize full-card font-primary"&gt;&lt;/i&gt;&lt;/li&gt;
-                                                &lt;li&gt;&lt;i className="icofont icofont-minus minimize-card font-primary"&gt;&lt;/i&gt;&lt;/li&gt;
-                                                &lt;li&gt;&lt;i className="icofont icofont-refresh reload-card font-primary"&gt;&lt;/i&gt;&lt;/li&gt;
-                                                &lt;li&gt;&lt;i className="icofont icofont-error close-card font-primary"&gt; &lt;/i&gt;&lt;/li&gt;
-                                                &lt;/ul&gt;
-                                                &lt;/div&gt;
-                                                &lt;/div&gt;
-                                                &lt;/div&gt;
-                                                &lt;div className="card-body p-0"&gt;
-                                                &lt;div id="chart-dashbord"&gt;&lt;/div&gt;
-                                                &lt;/div&gt;
-                                                &lt;/div&gt;</code></pre>
-                                        </div>
-                                    </div>
+                    <div className="col-xl-6 xl-100 box-col-12">
+                        <div className="card employee-status">
+                            <div className="card-header pb-0 d-flex justify-content-between
+                    align-items-center">
+                                <h5>EMPLOYEE STATUS</h5>
+                                <div className="setting-list">
+                                    <ul className="list-unstyled setting-option">
+                                        <li>
+                                            <div className="setting-primary"><i className="icon-settings"></i></div>
+                                        </li>
+                                        <li><i className="view-html fa fa-code font-primary"></i></li>
+                                        <li><i className="icofont icofont-maximize full-card
+                            font-primary"></i></li>
+                                        <li><i className="icofont icofont-minus minimize-card
+                            font-primary"></i></li>
+                                        <li><i className="icofont icofont-refresh reload-card
+                            font-primary"></i></li>
+                                        <li><i className="icofont icofont-error close-card
+                            font-primary"></i></li>
+                                    </ul>
                                 </div>
                             </div>
-                            <div className="col-xl-6 col-50 box-col-6 des-xl-50">
-                                <div className="card latest-update-sec">
-                                    <div className="card-header">
-                                        <div className="header-top d-sm-flex align-items-center">
-                                            <h5>Latest activity</h5>
-                                            <div className="center-content">
-                                                <ul className="week-date">
-                                                    <li className="font-primary">Today</li>
-                                                    <li>Month </li>
-                                                </ul>
-                                            </div>
-                                            <div className="setting-list">
-                                                <ul className="list-unstyled setting-option">
-                                                    <li>
-                                                        <div className="setting-primary"><i
-                                                            className="icon-settings"></i></div>
-                                                    </li>
-                                                    <li><i className="view-html fa fa-code font-primary"></i></li>
-                                                    <li><i className="icofont icofont-maximize full-card
-                                  font-primary"></i></li>
-                                                    <li><i className="icofont icofont-minus minimize-card
-                                  font-primary"></i></li>
-                                                    <li><i className="icofont icofont-refresh reload-card
-                                  font-primary"></i></li>
-                                                    <li><i className="icofont icofont-error close-card
-                                  font-primary"> </i></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="card-body">
-                                        <div className="table-responsive">
-                                            <table className="table table-bordernone">
-                                                <tbody>
-                                                    <tr>
-                                                        <td>
-                                                            <div className="media">
-                                                                <svg version="1.1"
-                                                                    xmlns="http://www.w3.org/2000/svg"
-                                                                    xmlnsXlink="http://www.w3.org/1999/xlink"
-                                                                    x="0px" y="0px" viewBox="0 0 512.001
-                                      512.001"
-                                                                    // style="enable-background:new 0 0                                      512.001 512.001;" 
-                                                                    xmlSpace="preserve">
-                                                                    <g>
-                                                                        <g>
-                                                                            <path
-                                                                                d="M506.35,80.699c-7.57-7.589-19.834-7.609-27.43-0.052L331.662,227.31l-42.557-42.557c-7.577-7.57-19.846-7.577-27.423,0
-                                            L89.076,357.36c-7.577,7.57-7.577,19.853,0,27.423c3.782,3.788,8.747,5.682,13.712,5.682c4.958,0,9.93-1.894,13.711-5.682
-                                            l158.895-158.888l42.531,42.524c7.57,7.57,19.808,7.577,27.397,0.032l160.97-160.323
-                                            C513.881,100.571,513.907,88.288,506.35,80.699z"></path>
-                                                                        </g>
-                                                                    </g>
-                                                                    <g>
-                                                                        <g>
-                                                                            <path
-                                                                                d="M491.96,449.94H38.788V42.667c0-10.712-8.682-19.394-19.394-19.394S0,31.955,0,42.667v426.667
-                                            c0,10.712,8.682,19.394,19.394,19.394H491.96c10.712,0,19.394-8.682,19.394-19.394C511.354,458.622,502.672,449.94,491.96,449.94z
-                                            "></path>
-                                                                        </g>
-                                                                    </g>
-                                                                    <g>
-                                                                        <g>
-                                                                            <path
-                                                                                d="M492.606,74.344H347.152c-10.712,0-19.394,8.682-19.394,19.394s8.682,19.394,19.394,19.394h126.061v126.067
-                                            c0,10.705,8.682,19.394,19.394,19.394S512,249.904,512,239.192V93.738C512,83.026,503.318,74.344,492.606,74.344z"></path>
-                                                                        </g>
-                                                                    </g>
-                                                                </svg>
-                                                                <div className="media-body"><span>Google project
-                                                                    Apply Review</span>
-                                                                    <p>Complete in 3 Hours</p>
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                        <td><a href="index.html" target="_blank">Edit</a></td>
-                                                        <td><a href="index.html" target="_blank">Delete</a></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            <div className="media">
-                                                                <svg enableBackground="new 0 0 512 512"
-                                                                    viewBox="0 0 512 512"
-                                                                    xmlns="http://www.w3.org/2000/svg">
-                                                                    <path d="m362
-                                        91v-60h-212v60h-150v390h512c0-16.889
-                                        0-372.29 0-390zm-182-30h152v30h-152zm302
-                                        390h-452v-202.844l90
-                                        36v46.844h90v-30h92v30h90v-46.844l90-36zm-302-150h-30v-60h30zm152-60h30v60h-30c0-7.259
-                                        0-52.693 0-60zm150-25.156-90
-                                        36v-40.844h-90v60h-92v-60h-90v40.844l-90-36c0-14.163
-                                        0-84.634 0-94.844h452z"></path>
-                                                                </svg>
-                                                                <div className="media-body"><span>Business Logo
-                                                                    Create</span>
-                                                                    <p>Complete in 2 Days</p>
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                        <td><a href="index.html" target="_blank">Edit</a></td>
-                                                        <td><a href="index.html" target="_blank">Delete</a></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            <div className="media">
-                                                                <svg enableBackground="new 0 0 512 512"
-                                                                    viewBox="0 0 512 512"
-                                                                    xmlns="http://www.w3.org/2000/svg">
-                                                                    <g>
-                                                                        <path d="m345.622
-                                          126.038c-50.748-45.076-130.482-46.914-183.244
-                                          3.903-21.262 20.478-35.375
-                                          47.381-39.737 75.754-5.454 35.471
-                                          2.872 70.834 23.444 99.576 56.271
-                                          78.616 49.132 141.058 49.915 145.691 0
-                                          16.435 6.211 31.795 17.491 43.253
-                                          11.289 11.469 26.386 17.785 42.509
-                                          17.785 33.084 0 60-26.916 60-60
-                                          .686-4.269-6.11-72.81 47.676-143.691
-                                          17.875-23.557 27.324-51.673
-                                          27.324-81.309
-                                          0-38.547-16.54-75.347-45.378-100.962zm-89.622
-                                          355.962c-16.486
-                                          0-29.462-13.096-29.975-30h59.975c0
-                                          16.542-13.458 30-30
-                                          30zm83.777-191.826c-30.015
-                                          39.554-47.946 84.707-52.569
-                                          131.826h-62.57c-4.961-45.331-23.43-91.26-54.157-134.19-15.985-22.333-22.444-49.876-18.188-77.556
-                                          7.293-47.43 49.733-88.262
-                                          103.846-88.262 58.661 0 104.861 47.891
-                                          104.861 105.008 0 23.032-7.339
-                                          44.877-21.223 63.174z"></path>
-                                                                        <path d="m256 62c8.284 0 15-6.716
-                                          15-15v-32c0-8.284-6.716-15-15-15s-15
-                                          6.716-15 15v32c0 8.284 6.716 15 15
-                                          15z"></path>
-                                                                        <path d="m419.385 149.99
-                                          25.98-15c7.174-4.142 9.632-13.316
-                                          5.49-20.49-4.142-7.175-13.316-9.633-20.49-5.49l-25.98
-                                          15c-7.174 4.142-9.632 13.316-5.49
-                                          20.49 4.162 7.21 13.349 9.613 20.49
-                                          5.49z"></path>
-                                                                        <path d="m92.615 304.01-25.98 15c-7.174
-                                          4.142-9.632 13.316-5.49 20.49 4.163
-                                          7.21 13.35 9.613 20.49
-                                          5.49l25.98-15c7.174-4.142 9.632-13.316
-                                          5.49-20.49-4.141-7.175-13.316-9.632-20.49-5.49z"></path>
-                                                                        <path d="m338.5 84.105c7.141 4.124 16.33
-                                          1.716 20.49-5.49l15-25.98c4.142-7.174
-                                          1.684-16.348-5.49-20.49-7.174-4.144-16.349-1.685-20.49
-                                          5.49l-15 25.98c-4.142 7.175-1.684
-                                          16.348 5.49 20.49z"></path>
-                                                                        <path d="m153.01 78.615c4.163 7.21 13.35
-                                          9.613 20.49 5.49 7.174-4.142
-                                          9.632-13.316
-                                          5.49-20.49l-15-25.98c-4.142-7.174-13.315-9.633-20.49-5.49-7.174
-                                          4.142-9.632 13.316-5.49 20.49z"></path>
-                                                                        <path d="m445.365
-                                          319.01-25.98-15c-7.175-4.143-16.349-1.684-20.49
-                                          5.49-4.142 7.174-1.684 16.348 5.49
-                                          20.49l25.98 15c7.141 4.124 16.33 1.716
-                                          20.49-5.49 4.143-7.174
-                                          1.685-16.348-5.49-20.49z"></path>
-                                                                        <path d="m107.615
-                                          124.01-25.98-15c-7.175-4.144-16.348-1.684-20.49
-                                          5.49s-1.684 16.348 5.49 20.49l25.98
-                                          15c7.141 4.124 16.33 1.716 20.49-5.49
-                                          4.143-7.174 1.685-16.348-5.49-20.49z"></path>
-                                                                        <path d="m466 212h-30c-8.284 0-15
-                                          6.716-15 15s6.716 15 15 15h30c8.284 0
-                                          15-6.716 15-15s-6.716-15-15-15z"></path>
-                                                                        <path d="m91
-                                          227c0-8.284-6.716-15-15-15h-30c-8.284
-                                          0-15 6.716-15 15s6.716 15 15
-                                          15h30c8.284 0 15-6.716 15-15z"></path>
-                                                                        <path d="m275.394 216.394-19.394
-                                          19.393-19.394-19.393c-5.857-5.858-15.355-5.858-21.213
-                                          0s-5.858 15.355 0 21.213l25.607
-                                          25.606v53.787c0 8.284 6.716 15 15
-                                          15s15-6.716
-                                          15-15v-53.787l25.606-25.606c5.858-5.858
-                                          5.858-15.355
-                                          0-21.213-5.857-5.859-15.355-5.859-21.212
-                                          0z"></path>
-                                                                    </g>
-                                                                </svg>
-                                                                <div className="media-body"><span>Business
-                                                                    Project Research</span>
-                                                                    <p>Due in 1 hour</p>
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                        <td><a href="index.html" target="_blank">Edit</a></td>
-                                                        <td><a href="index.html" target="_blank">Delete</a></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            <div className="media">
-                                                                <svg enableBackground="new 0 0 512 512"
-                                                                    viewBox="0 0 512 512"
-                                                                    xmlns="http://www.w3.org/2000/svg">
-                                                                    <g>
-                                                                        <path d="m512
-                                          390v-390h-512v390h241v32h-15c-41.355
-                                          0-75 33.645-75
-                                          75v15h210v-15c0-41.355-33.645-75-75-75h-15v-32zm-226
-                                          62c19.556 0 36.239 12.539 42.43
-                                          30h-144.86c6.191-17.461 22.874-30
-                                          42.43-30zm-256-92v-330h452v330c-12.164
-                                          0-438.947 0-452 0z"></path>
-                                                                        <path d="m136 180c24.813 0 45-20.187
-                                          45-45s-20.187-45-45-45-45 20.187-45 45
-                                          20.187 45 45 45zm0-60c8.271 0 15 6.729
-                                          15 15s-6.729 15-15 15-15-6.729-15-15
-                                          6.729-15 15-15z"></path>
-                                                                        <path d="m184.568
-                                          197.848c-28.678-24.39-60.953-16.827-61.054-16.833-35.639
-                                          5.799-62.514 38.985-62.514
-                                          77.196v41.789h150v-45c0-22.034-9.634-42.865-26.432-57.152zm-3.568
-                                          72.152h-90v-11.789c0-23.666
-                                          16.049-44.122 37.332-47.584
-                                          13.509-2.198 26.578 1.38 36.801 10.074
-                                          10.083 8.577 15.867 21.078 15.867
-                                          34.299z"></path>
-                                                                        <path d="m241 270h120v30h-120z"></path>
-                                                                        <path d="m241 210h210v30h-210z"></path>
-                                                                        <path d="m241 150h210v30h-210z"></path>
-                                                                        <path d="m331 90h120v30h-120z"></path>
-                                                                        <path d="m241 90h60v30h-60z"></path>
-                                                                        <path d="m391 270h60v30h-60z"></path>
-                                                                    </g>
-                                                                </svg>
-                                                                <div className="media-body"><span>Recruitment in
-                                                                    IT Depertment</span>
-                                                                    <p>Complete in 3 Hours</p>
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                        <td><a href="index.html" target="_blank">Edit</a></td>
-                                                        <td><a href="index.html" target="_blank">Delete</a></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            <div className="media">
-                                                                <svg version="1.1"
-                                                                    xmlns="http://www.w3.org/2000/svg"
-                                                                    xmlnsXlink="http://www.w3.org/1999/xlink"
-                                                                    x="0px" y="0px" viewBox="0 0 512 512"
-                                                                    // style="enable-background:new 0 0 512 512;"
-                                                                    xmlSpace="preserve">
-                                                                    <g>
-                                                                        <g>
-                                                                            <path
-                                                                                d="M256,0C114.848,0,0,114.848,0,256s114.848,256,256,256s256-114.848,256-256S397.152,0,256,0z
-                                            M256,480
-                                            C132.48,480,32,379.52,32,256S132.48,32,256,32s224,100.48,224,224S379.52,480,256,480z"></path>
-                                                                        </g>
-                                                                    </g>
-                                                                    <g>
-                                                                        <g>
-                                                                            <path
-                                                                                d="M340.688,292.688L272,361.376V96h-32v265.376l-68.688-68.688l-22.624,22.624l96,96c3.12,3.12,7.216,4.688,11.312,4.688
-                                            s8.192-1.568,11.312-4.688l96-96L340.688,292.688z"></path>
-                                                                        </g>
-                                                                    </g>
-                                                                </svg>
-                                                                <div className="media-body"><span>Submit
-                                                                    Riverfront Project</span>
-                                                                    <p>Complete in 2 Days</p>
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                        <td><a href="index.html" target="_blank">Edit</a></td>
-                                                        <td><a href="index.html" target="_blank">Delete
-                                                        </a></td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                        <div className="code-box-copy">
-                                            <button className="code-box-copy__btn btn-clipboard"
-                                                data-clipboard-target="#latest-update-sec"
-                                                title="Copy"><i className="icofont icofont-copy-alt"></i></button>
-                                            <pre><code className="language-html" id="latest-update-sec">                                     &lt;div className="card latest-update-sec"&gt;
-                                                &lt;div className="card-header"&gt;
-                                                &lt;div className="header-top d-sm-flex align-items-center"&gt;
-                                                &lt;h5&gt; Latest Update &lt;/h5&gt;
-                                                &lt;div className="center-content" &gt;
-                                                &lt;ul className="week-date" &gt;
-                                                &lt;li className="font-primary"&gt; Today &lt;/li&gt;
-                                                &lt;li &gt; Month &lt;/li&gt;
-                                                &lt;/ul&gt;
-                                                &lt;/div&gt;
-                                                &lt;div className="setting-list"&gt;
-                                                &lt;ul className="list-unstyled setting-option"&gt;
-                                                &lt;li&gt;&lt;div className="setting-primary"&gt;&lt;i className="icon-settings"&gt;&lt;/i&gt;&lt;/div&gt;&lt;/li&gt;
-                                                &lt;li&gt;&lt;i className="view-html fa fa-code font-primary"&gt;&lt;/i&gt;&lt;/li&gt;
-                                                &lt;li&gt;&lt;i className="icofont icofont-maximize full-card font-primary"&gt;&lt;/i&gt;&lt;/li&gt;
-                                                &lt;li&gt;&lt;i className="icofont icofont-minus minimize-card font-primary"&gt;&lt;/i&gt;&lt;/li&gt;
-                                                &lt;li&gt;&lt;i className="icofont icofont-refresh reload-card font-primary"&gt;&lt;/i&gt;&lt;/li&gt;
-                                                &lt;li&gt;&lt;i className="icofont icofont-error close-card font-primary"&gt; &lt;/i&gt;&lt;/li&gt;
-                                                &lt;/ul&gt;
-                                                &lt;/div&gt;
-                                                &lt;/div&gt;
-                                                &lt;/div&gt;
-                                                &lt;div className="card-body px-0"&gt;
-                                                &lt;div className="table-responsive"&gt;
-                                                &lt;table className="table table-bordernone"&gt;
-                                                &lt;tbody&gt;
-                                                &lt;tr&gt;
-                                                &lt;td&gt;
-                                                &lt;div className="media"&gt;
-                                                &lt;svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512.001 512.001" style="enable-background:new 0 0 512.001 512.001;" xmlSpace="preserve"&gt;
-                                                &lt;g&gt;
-                                                &lt;g&gt;
-                                                &lt;path d="M506.35,80.699c-7.57-7.589-19.834-7.609-27.43-0.052L331.662,227.31l-42.557-42.557c-7.577-7.57-19.846-7.577-27.423,0 L89.076,357.36c-7.577,7.57-7.577,19.853,0,27.423c3.782,3.788,8.747,5.682,13.712,5.682c4.958,0,9.93-1.894,13.711-5.682 l158.895-158.888l42.531,42.524c7.57,7.57,19.808,7.577,27.397,0.032l160.97-160.323 C513.881,100.571,513.907,88.288,506.35,80.699z"&gt;&lt;/path&gt;
-                                                &lt;/g&gt;
-                                                &lt;/g&gt;
-                                                &lt;g&gt;
-                                                &lt;g&gt;
-                                                &lt;path d="M491.96,449.94H38.788V42.667c0-10.712-8.682-19.394-19.394-19.394S0,31.955,0,42.667v426.667 c0,10.712,8.682,19.394,19.394,19.394H491.96c10.712,0,19.394-8.682,19.394-19.394C511.354,458.622,502.672,449.94,491.96,449.94z "&gt;&lt;/path&gt;
-                                                &lt;/g&gt;
-                                                &lt;/g&gt;
-                                                &lt;g&gt;
-                                                &lt;g&gt;
-                                                &lt;path d="M492.606,74.344H347.152c-10.712,0-19.394,8.682-19.394,19.394s8.682,19.394,19.394,19.394h126.061v126.067 c0,10.705,8.682,19.394,19.394,19.394S512,249.904,512,239.192V93.738C512,83.026,503.318,74.344,492.606,74.344z"&gt;&lt;/path&gt;
-                                                &lt;/g&gt;
-                                                &lt;/g&gt;
-                                                &lt;/svg&gt;
-                                                &lt;div className="media-body"&gt;
-                                                &lt;span&gt; Google project Apply Review&lt;/span&gt;
-                                                &lt;p&gt; Complete in 3 Hours&lt;/p&gt;
-                                                &lt;/div&gt;
-                                                &lt;/div&gt;
-                                                &lt;/td&gt;
-                                                &lt;td&gt;
-                                                &lt;a href='index.html' target='_blank'&gt; Edit
-                                                &lt;/a&gt;
-                                                &lt;/td&gt;
-                                                &lt;td&gt;
-                                                &lt;a href='index.html' target='_blank'&gt; Detete
-                                                &lt;/a&gt;
-                                                &lt;/td&gt;
-                                                &lt;/tr&gt;
-                                                &lt;tr&gt;
-                                                &lt;td&gt;
-                                                &lt;div className="media"&gt;
-                                                &lt;svg enableBackground="new 0 0 512 512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"&gt;
-                                                &lt;path d="m362 91v-60h-212v60h-150v390h512c0-16.889 0-372.29 0-390zm-182-30h152v30h-152zm302 390h-452v-202.844l90 36v46.844h90v-30h92v30h90v-46.844l90-36zm-302-150h-30v-60h30zm152-60h30v60h-30c0-7.259 0-52.693 0-60zm150-25.156-90 36v-40.844h-90v60h-92v-60h-90v40.844l-90-36c0-14.163 0-84.634 0-94.844h452z"&gt;&lt;/path&gt;
-                                                &lt;/svg&gt;
-                                                &lt;div className="media-body"&gt;
-                                                &lt;span&gt; Business Logo Create&lt;/span&gt;
-                                                &lt;p&gt; Complete in 2 Days&lt;/p&gt;
-                                                &lt;/div&gt;
-                                                &lt;/div&gt;
-                                                &lt;/td&gt;
-                                                &lt;td&gt;
-                                                &lt;a href='index.html' target='_blank'&gt; Edit
-                                                &lt;/a&gt;
-                                                &lt;/td&gt;
-                                                &lt;td&gt;
-                                                &lt;a href='index.html' target='_blank'&gt; Detete
-                                                &lt;/a&gt;
-                                                &lt;/td&gt;
-                                                &lt;/tr&gt;
-                                                &lt;tr&gt;
-                                                &lt;td&gt;
-                                                &lt;div className="media"&gt;
-                                                &lt;svg enableBackground="new 0 0 512 512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"&gt;
-                                                &lt;g&gt;
-                                                &lt;path d="m345.622 126.038c-50.748-45.076-130.482-46.914-183.244 3.903-21.262 20.478-35.375 47.381-39.737 75.754-5.454 35.471 2.872 70.834 23.444 99.576 56.271 78.616 49.132 141.058 49.915 145.691 0 16.435 6.211 31.795 17.491 43.253 11.289 11.469 26.386 17.785 42.509 17.785 33.084 0 60-26.916 60-60 .686-4.269-6.11-72.81 47.676-143.691 17.875-23.557 27.324-51.673 27.324-81.309 0-38.547-16.54-75.347-45.378-100.962zm-89.622 355.962c-16.486 0-29.462-13.096-29.975-30h59.975c0 16.542-13.458 30-30 30zm83.777-191.826c-30.015 39.554-47.946 84.707-52.569 131.826h-62.57c-4.961-45.331-23.43-91.26-54.157-134.19-15.985-22.333-22.444-49.876-18.188-77.556 7.293-47.43 49.733-88.262 103.846-88.262 58.661 0 104.861 47.891 104.861 105.008 0 23.032-7.339 44.877-21.223 63.174z"&gt;&lt;/path&gt;<br />&lt;path d="m256 62c8.284 0 15-6.716 15-15v-32c0-8.284-6.716-15-15-15s-15 6.716-15 15v32c0 8.284 6.716 15 15 15z"&gt;&lt;/path&gt;<br />&lt;path d="m419.385 149.99 25.98-15c7.174-4.142 9.632-13.316 5.49-20.49-4.142-7.175-13.316-9.633-20.49-5.49l-25.98 15c-7.174 4.142-9.632 13.316-5.49 20.49 4.162 7.21 13.349 9.613 20.49 5.49z"&gt;&lt;/path&gt;<br />&lt;path d="m92.615 304.01-25.98 15c-7.174 4.142-9.632 13.316-5.49 20.49 4.163 7.21 13.35 9.613 20.49 5.49l25.98-15c7.174-4.142 9.632-13.316 5.49-20.49-4.141-7.175-13.316-9.632-20.49-5.49z"&gt;&lt;/path&gt;<br />&lt;path d="m338.5 84.105c7.141 4.124 16.33 1.716 20.49-5.49l15-25.98c4.142-7.174 1.684-16.348-5.49-20.49-7.174-4.144-16.349-1.685-20.49 5.49l-15 25.98c-4.142 7.175-1.684 16.348 5.49 20.49z"&gt;&lt;/path&gt;<br />&lt;path d="m153.01 78.615c4.163 7.21 13.35 9.613 20.49 5.49 7.174-4.142 9.632-13.316 5.49-20.49l-15-25.98c-4.142-7.174-13.315-9.633-20.49-5.49-7.174 4.142-9.632 13.316-5.49 20.49z"&gt;&lt;/path&gt;<br />&lt;path d="m445.365 319.01-25.98-15c-7.175-4.143-16.349-1.684-20.49 5.49-4.142 7.174-1.684 16.348 5.49 20.49l25.98 15c7.141 4.124 16.33 1.716 20.49-5.49 4.143-7.174 1.685-16.348-5.49-20.49z"&gt;&lt;/path&gt;<br />&lt;path d="m107.615 124.01-25.98-15c-7.175-4.144-16.348-1.684-20.49 5.49s-1.684 16.348 5.49 20.49l25.98 15c7.141 4.124 16.33 1.716 20.49-5.49 4.143-7.174 1.685-16.348-5.49-20.49z"&gt;&lt;/path&gt;<br />&lt;path d="m466 212h-30c-8.284 0-15 6.716-15 15s6.716 15 15 15h30c8.284 0 15-6.716 15-15s-6.716-15-15-15z"&gt;&lt;/path&gt;<br />&lt;path d="m91 227c0-8.284-6.716-15-15-15h-30c-8.284 0-15 6.716-15 15s6.716 15 15 15h30c8.284 0 15-6.716 15-15z"&gt;&lt;/path&gt;<br />&lt;path d="m275.394 216.394-19.394 19.393-19.394-19.393c-5.857-5.858-15.355-5.858-21.213 0s-5.858 15.355 0 21.213l25.607 25.606v53.787c0 8.284 6.716 15 15 15s15-6.716 15-15v-53.787l25.606-25.606c5.858-5.858 5.858-15.355 0-21.213-5.857-5.859-15.355-5.859-21.212 0z"&gt;&lt;/path&gt;
-                                                &lt;/g&gt;
-                                                &lt;/svg&gt;
-                                                &lt;div className="media-body"&gt;
-                                                &lt;span&gt; Business Project Research&lt;/span&gt;
-                                                &lt;p&gt; Due in 1 hour&lt;/p&gt;
-                                                &lt;/div&gt;
-                                                &lt;/div&gt;
-                                                &lt;/td&gt;
-                                                &lt;td&gt;
-                                                &lt;a href='index.html' target='_blank'&gt; Edit
-                                                &lt;/a&gt;
-                                                &lt;/td&gt;
-                                                &lt;td&gt;
-                                                &lt;a href='index.html' target='_blank'&gt; Detete
-                                                &lt;/a&gt;
-                                                &lt;/td&gt;
-                                                &lt;/tr&gt;
-                                                &lt;tr&gt;
-                                                &lt;td&gt;
-                                                &lt;div className="media"&gt;
-                                                &lt;svg enableBackground="new 0 0 512 512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"&gt;
-                                                &lt;g&gt;
-                                                &lt;path d="m512 390v-390h-512v390h241v32h-15c-41.355 0-75 33.645-75 75v15h210v-15c0-41.355-33.645-75-75-75h-15v-32zm-226 62c19.556 0 36.239 12.539 42.43 30h-144.86c6.191-17.461 22.874-30 42.43-30zm-256-92v-330h452v330c-12.164 0-438.947 0-452 0z"&gt;&lt;/path&gt;
-                                                &lt;path d="m136 180c24.813 0 45-20.187 45-45s-20.187-45-45-45-45 20.187-45 45 20.187 45 45 45zm0-60c8.271 0 15 6.729 15 15s-6.729 15-15 15-15-6.729-15-15 6.729-15 15-15z"&gt;&lt;/path&gt;<br />&lt;path d="m184.568 197.848c-28.678-24.39-60.953-16.827-61.054-16.833-35.639 5.799-62.514 38.985-62.514 77.196v41.789h150v-45c0-22.034-9.634-42.865-26.432-57.152zm-3.568 72.152h-90v-11.789c0-23.666 16.049-44.122 37.332-47.584 13.509-2.198 26.578 1.38 36.801 10.074 10.083 8.577 15.867 21.078 15.867 34.299z"&gt;&lt;/path&gt;
-                                                &lt;path d="m241 270h120v30h-120z"&gt;&lt;/path&gt;
-                                                &lt;path d="m241 210h210v30h-210z"&gt;&lt;/path&gt;
-                                                &lt;path d="m241 150h210v30h-210z"&gt;&lt;/path&gt;
-                                                &lt;path d="m331 90h120v30h-120z"&gt;&lt;/path&gt;
-                                                &lt;path d="m241 90h60v30h-60z"&gt;&lt;/path&gt;
-                                                &lt;path d="m391 270h60v30h-60z"&gt;&lt;/path&gt;
-                                                &lt;/g&gt;
-                                                &lt;/svg&gt;
-                                                &lt;div className="media-body"&gt;
-                                                &lt;span&gt; Recruitment in IT Depertment&lt;/span&gt;
-                                                &lt;p&gt; Complete in 3 Hours&lt;/p&gt;
-                                                &lt;/div&gt;
-                                                &lt;/div&gt;
-                                                &lt;/td&gt;
-                                                &lt;td&gt;
-                                                &lt;a href='index.html' target='_blank'&gt; Edit
-                                                &lt;/a&gt;
-                                                &lt;/td&gt;
-                                                &lt;td&gt;
-                                                &lt;a href='index.html' target='_blank'&gt; Detete
-                                                &lt;/a&gt;
-                                                &lt;/td&gt;
-                                                &lt;/tr&gt;
-                                                &lt;tr&gt;
-                                                &lt;td&gt;
-                                                &lt;div className="media"&gt;
-                                                &lt;svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xmlSpace="preserve"&gt;
-                                                &lt;g&gt;
-                                                &lt;g&gt;
-                                                &lt;path d="M256,0C114.848,0,0,114.848,0,256s114.848,256,256,256s256-114.848,256-256S397.152,0,256,0z M256,480 C132.48,480,32,379.52,32,256S132.48,32,256,32s224,100.48,224,224S379.52,480,256,480z"&gt;&lt;/path&gt;
-                                                &lt;/g&gt;
-                                                &lt;/g&gt;
-                                                &lt;g&gt;
-                                                &lt;g&gt;
-                                                &lt;path d="M340.688,292.688L272,361.376V96h-32v265.376l-68.688-68.688l-22.624,22.624l96,96c3.12,3.12,7.216,4.688,11.312,4.688 s8.192-1.568,11.312-4.688l96-96L340.688,292.688z"&gt;&lt;/path&gt;
-                                                &lt;/g&gt;
-                                                &lt;/g&gt;
-                                                &lt;/svg&gt;
-                                                &lt;div className="media-body"&gt;
-                                                &lt;span&gt; Submit Riverfront Project&lt;/span&gt;
-                                                &lt;p&gt; Complete in 2 Days&lt;/p&gt;
-                                                &lt;/div&gt;
-                                                &lt;/div&gt;
-                                                &lt;/td&gt;
-                                                &lt;td&gt;
-                                                &lt;a href='index.html' target='_blank'&gt; Edit
-                                                &lt;/a&gt;
-                                                &lt;/td&gt;
-                                                &lt;td&gt;
-                                                &lt;a href='index.html' target='_blank'&gt; Detete
-                                                &lt;/a&gt;
-                                                &lt;/td&gt;
-                                                &lt;/tr&gt;
-                                                &lt;/tbody&gt;
-                                                &lt;/table&gt;
-                                                &lt;/div&gt;
-                                                &lt;/div&gt;
-                                                &lt;/div&gt;</code></pre>
-                                        </div>
-                                    </div>
+                            <div className="card-body">
+                                <div className="user-status table-responsive">
+                                    <table className="table table-bordernone">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">Name</th>
+                                                <th scope="col">Designation</th>
+                                                <th scope="col">Skill Level</th>
+                                                <th scope="col">Experience</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td className="bd-t-none u-s-tb">
+                                                    <div className="align-middle image-sm-size"><img
+                                                        className="img-radius align-top m-r-15
+                                  rounded-circle"
+                                                        src="../assets/images/user/4.jpg" alt="" />
+                                                        <div className="d-inline-block">
+                                                            <h6>John Deo <span className="text-muted">(14+
+                                                                Online)</span></h6>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>Designer</td>
+                                                <td>
+                                                    <div className="progress-showcase">
+                                                        <div className="progress" style={{ height: 8 }}>
+                                                            <div className="progress-bar bg-primary"
+                                                                role="progressbar" style={{ width: '30%' }}
+                                                                aria-valuenow="50" aria-valuemin="0"
+                                                                aria-valuemax="100"></div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>2 Year</td>
+                                            </tr>
+                                            <tr>
+                                                <td className="bd-t-none u-s-tb">
+                                                    <div className="align-middle image-sm-size d-flex
+                                align-items-center"><img className="img-radius
+                                  align-top m-r-15 rounded-circle"
+                                                            src="../assets/images/user/1.jpg" alt="" />
+                                                        <div className="d-inline-block">
+                                                            <h6>Holio Mako <span className="text-muted">(250+
+                                                                Online)</span></h6>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>Developer</td>
+                                                <td>
+                                                    <div className="progress-showcase">
+                                                        <div className="progress" style={{ height: 8 }}>
+                                                            <div className="progress-bar bg-secondary"
+                                                                role="progressbar" style={{ width: '70%' }}
+                                                                aria-valuenow="50" aria-valuemin="0"
+                                                                aria-valuemax="100"></div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>3 Year</td>
+                                            </tr>
+                                            <tr>
+                                                <td className="bd-t-none u-s-tb">
+                                                    <div className="align-middle image-sm-size"><img
+                                                        className="img-radius align-top m-r-15
+                                  rounded-circle"
+                                                        src="../assets/images/user/5.jpg" alt="" />
+                                                        <div className="d-inline-block">
+                                                            <h6>Mohsib lara<span className="text-muted">(99+
+                                                                Online)</span></h6>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>Tester</td>
+                                                <td>
+                                                    <div className="progress-showcase">
+                                                        <div className="progress" style={{ height: 8 }}>
+                                                            <div className="progress-bar bg-primary"
+                                                                role="progressbar" style={{ width: '60%' }}
+                                                                aria-valuenow="50" aria-valuemin="0"
+                                                                aria-valuemax="100"></div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>5 Month</td>
+                                            </tr>
+                                            <tr>
+                                                <td className="bd-t-none u-s-tb">
+                                                    <div className="align-middle image-sm-size"><img
+                                                        className="img-radius align-top m-r-15
+                                  rounded-circle"
+                                                        src="../assets/images/user/6.jpg" alt="" />
+                                                        <div className="d-inline-block">
+                                                            <h6>Hileri Soli <span className="text-muted">(150+
+                                                                Online)</span></h6>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>Designer</td>
+                                                <td>
+                                                    <div className="progress-showcase">
+                                                        <div className="progress" style={{ height: 8 }}>
+                                                            <div className="progress-bar bg-secondary"
+                                                                role="progressbar" style={{ width: '30%' }}
+                                                                aria-valuenow="50" aria-valuemin="0"
+                                                                aria-valuemax="100"></div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>3 Month</td>
+                                            </tr>
+                                            <tr>
+                                                <td className="bd-t-none u-s-tb">
+                                                    <div className="align-middle image-sm-size"><img
+                                                        className="img-radius align-top m-r-15
+                                  rounded-circle"
+                                                        src="../assets/images/user/7.jpg" alt="" />
+                                                        <div className="d-inline-block">
+                                                            <h6>Pusiz bia <span className="text-muted">(14+
+                                                                Online)</span></h6>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>Designer</td>
+                                                <td>
+                                                    <div className="progress-showcase">
+                                                        <div className="progress" style={{ height: 8 }}>
+                                                            <div className="progress-bar bg-primary"
+                                                                role="progressbar" style={{ width: '90%' }}
+                                                                aria-valuenow="50" aria-valuemin="0"
+                                                                aria-valuemax="100"></div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>5 Year</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
                                 </div>
-                            </div>
-                            <div className="col-xl-12 recent-order-sec">
-                                <div className="card">
-                                    <div className="card-body">
-                                        <div className="table-responsive">
-                                            <h5>Recent Orders</h5>
-                                            <table className="table table-bordernone">
-                                                <thead>
-                                                    <tr>
-                                                        <th>Name</th>
-                                                        <th>Date</th>
-                                                        <th>Quantity</th>
-                                                        <th>Value</th>
-                                                        <th>Rate</th>
-                                                        <th>
-                                                            <div className="setting-list">
-                                                                <ul className="list-unstyled setting-option">
-                                                                    <li>
-                                                                        <div className="setting-primary"><i
-                                                                            className="icon-settings"> </i></div>
-                                                                    </li>
-                                                                    <li><i className="view-html fa fa-code
-                                          font-primary"></i></li>
-                                                                    <li><i className="icofont icofont-maximize
-                                          full-card font-primary"></i></li>
-                                                                    <li><i className="icofont icofont-minus
-                                          minimize-card font-primary"></i></li>
-                                                                    <li><i className="icofont icofont-refresh
-                                          reload-card font-primary"></i></li>
-                                                                    <li><i className="icofont icofont-error
-                                          close-card font-primary"></i></li>
-                                                                </ul>
-                                                            </div>
-                                                        </th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <td>
-                                                            <div className="media"><img className="img-fluid
-                                      rounded-circle"
-                                                                src={process.env.PUBLIC_URL + "/assets/images/dashboard/product-1.png"}
-                                                                alt="" data-original-title="" title="" />
-                                                                <div className="media-body"><a
-                                                                    href="product-page.html"><span>Yellow
-                                                                        New Nike shoes</span></a></div>
-                                                            </div>
-                                                        </td>
-                                                        <td>
-                                                            <p>16 August</p>
-                                                        </td>
-                                                        <td>
-                                                            <p>54146</p>
-                                                        </td>
-                                                        <td><img className="img-fluid"
-                                                            src={process.env.PUBLIC_URL + "/assets/images/dashboard/graph-1.png"}
-                                                            alt="" data-original-title="" title="" /></td>
-                                                        <td>
-                                                            <p>$210326</p>
-                                                        </td>
-                                                        <td>
-                                                            <p>Done</p>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            <div className="media"><img className="img-fluid
-                                      rounded-circle"
-                                                                src={process.env.PUBLIC_URL + "/assets/images/dashboard/product-2.png"}
-                                                                alt="" data-original-title="" title="" />
-                                                                <div className="media-body"><a
-                                                                    href="product-page.html"><span>Sony
-                                                                        Brand New Headphone</span></a></div>
-                                                            </div>
-                                                        </td>
-                                                        <td>
-                                                            <p>2 October</p>
-                                                        </td>
-                                                        <td>
-                                                            <p>32015</p>
-                                                        </td>
-                                                        <td><img className="img-fluid"
-                                                            src={process.env.PUBLIC_URL + "/assets/images/dashboard/graph-2.png"}
-                                                            alt="" data-original-title="" title="" /></td>
-                                                        <td>
-                                                            <p>$548526</p>
-                                                        </td>
-                                                        <td>
-                                                            <p>Done</p>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            <div className="media"><img className="img-fluid
-                                      rounded-circle"
-                                                                src={process.env.PUBLIC_URL + "/assets/images/dashboard/product-3.png"}
-                                                                alt="" data-original-title="" title="" />
-                                                                <div className="media-body"><a
-                                                                    href="product-page.html"><span>Beautiful
-                                                                        Golden Tree plant</span></a></div>
-                                                            </div>
-                                                        </td>
-                                                        <td>
-                                                            <p>21 March</p>
-                                                        </td>
-                                                        <td>
-                                                            <p>12548</p>
-                                                        </td>
-                                                        <td><img className="img-fluid"
-                                                            src={process.env.PUBLIC_URL + "/assets/images/dashboard/graph-3.png"}
-                                                            alt="" data-original-title="" title="" /></td>
-                                                        <td>
-                                                            <p>$589565</p>
-                                                        </td>
-                                                        <td>
-                                                            <p>Done</p>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            <div className="media"><img className="img-fluid
-                                      rounded-circle"
-                                                                src={process.env.PUBLIC_URL + "/assets/images/dashboard/product-4.png"}
-                                                                alt="" data-original-title="" title="" />
-                                                                <div className="media-body"><a
-                                                                    href="product-page.html"><span>Marco M
-                                                                        Kely Handbeg</span></a></div>
-                                                            </div>
-                                                        </td>
-                                                        <td>
-                                                            <p>31 December</p>
-                                                        </td>
-                                                        <td>
-                                                            <p>15495</p>
-                                                        </td>
-                                                        <td><img className="img-fluid"
-                                                            src={process.env.PUBLIC_URL + "/assets/images/dashboard/graph-4.png"}
-                                                            alt="" data-original-title="" title="" /></td>
-                                                        <td>
-                                                            <p>$125424 </p>
-                                                        </td>
-                                                        <td>
-                                                            <p>Done</p>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            <div className="media"><img className="img-fluid
-                                      rounded-circle"
-                                                                src={process.env.PUBLIC_URL + "/assets/images/dashboard/product-5.png"}
-                                                                alt="" data-original-title="" title="" />
-                                                                <div className="media-body"><a
-                                                                    href="product-page.html"><span>Being
-                                                                        Human Branded T-Shirt </span></a></div>
-                                                            </div>
-                                                        </td>
-                                                        <td>
-                                                            <p>26 January</p>
-                                                        </td>
-                                                        <td>
-                                                            <p>56625</p>
-                                                        </td>
-                                                        <td><img className="img-fluid"
-                                                            src={process.env.PUBLIC_URL + "/assets/images/dashboard/graph-5.png"}
-                                                            alt="" data-original-title="" title="" /></td>
-                                                        <td>
-                                                            <p>$112103</p>
-                                                        </td>
-                                                        <td>
-                                                            <p>Done</p>
-                                                        </td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                        <div className="code-box-copy">
-                                            <button className="code-box-copy__btn btn-clipboard"
-                                                data-clipboard-target="#recent-order" title="Copy"><i
-                                                    className="icofont icofont-copy-alt"></i></button>
-                                            <pre><code className="language-html" id="recent-order">&lt;div className="card"&gt;
-                                                &lt;div className="card-body"&gt;
-                                                &lt;div className="table-responsive"&gt;
-                                                &lt;table className="table table-bordernone"&gt;
-                                                &lt;thead&gt;
-                                                &lt;tr&gt;
-                                                &lt;th&gt;Name&lt;/th&gt;
-                                                &lt;th&gt;Date&lt;/th&gt;
-                                                &lt;th&gt;Quantity&lt;/th&gt;
-                                                &lt;th&gt;Value&lt;/th&gt;
-                                                &lt;th&gt;Rate&lt;/th&gt;
-                                                &lt;th&gt;
-                                                &lt;div className="setting-list"&gt;
-                                                &lt;ul className="list-unstyled setting-option"&gt;
-                                                &lt;li&gt;
-                                                &lt;div className="setting-primary"&gt;&lt;i className="icon-settings"&gt; &lt;/i&gt;&lt;/div&gt;
-                                                &lt;/li&gt;
-                                                &lt;li&gt;&lt;i className="view-html fa fa-code font-primary"&gt;&lt;/i&gt;&lt;/li&gt;
-                                                &lt;li&gt;&lt;i className="icofont icofont-maximize full-card font-primary"&gt;&lt;/i&gt;&lt;/li&gt;
-                                                &lt;li&gt;&lt;i className="icofont icofont-minus minimize-card font-primary"&gt;&lt;/i&gt;&lt;/li&gt;
-                                                &lt;li&gt;&lt;i className="icofont icofont-refresh reload-card font-primary"&gt;&lt;/i&gt;&lt;/li&gt;
-                                                &lt;li&gt;&lt;i className="icofont icofont-error close-card font-primary"&gt;&lt;/i&gt;&lt;/li&gt;
-                                                &lt;/ul&gt;
-                                                &lt;/div&gt;
-                                                &lt;/th&gt;
-                                                &lt;/tr&gt;
-                                                &lt;/thead&gt;
-                                                &lt;tbody&gt;
-                                                &lt;tr&gt;
-                                                &lt;td&gt;
-                                                &lt;div className="media"&gt;
-                                                &lt;img className="img-fluid rounded-circle" src={process.env.PUBLIC_URL + "/assets/images/dashboard/product-1.png"} alt="" data-original-title="" title=""&gt;
-                                                &lt;div className="media-body"&gt;
-                                                &lt;span&gt;Yellow New Nike shoes&lt;/span&gt;
-                                                &lt;/div&gt;
-                                                &lt;/div&gt;
-                                                &lt;/td&gt;
-                                                &lt;td&gt;
-                                                &lt;p&gt;16 August&lt;/p&gt;
-                                                &lt;/td&gt;
-                                                &lt;td&gt;
-                                                &lt;p&gt;54146&lt;/p&gt;
-                                                &lt;/td&gt;
-                                                &lt;td&gt;
-                                                &lt;img className="img-fluid" src={process.env.PUBLIC_URL + "/assets/images/dashboard/graph-1.png"} alt="" data-original-title="" title=""&gt;
-                                                &lt;/td&gt;
-                                                &lt;td&gt;
-                                                &lt;p&gt;$210326&lt;/p&gt;
-                                                &lt;/td&gt;
-                                                &lt;td&gt;
-                                                &lt;p&gt;Done&lt;/p&gt;
-                                                &lt;/td&gt;
-                                                &lt;/tr&gt;
-                                                &lt;tr&gt;
-                                                &lt;td&gt;
-                                                &lt;div className="media"&gt;
-                                                &lt;img className="img-fluid rounded-circle" src={process.env.PUBLIC_URL + "/assets/images/dashboard/product-2.png"} alt="" data-original-title="" title=""&gt;
-                                                &lt;div className="media-body"&gt;
-                                                &lt;span&gt;Sony Brand New Headphone&lt;/span&gt;
-                                                &lt;/div&gt;
-                                                &lt;/div&gt;
-                                                &lt;/td&gt;
-                                                &lt;td&gt;
-                                                &lt;p&gt;2 October&lt;/p&gt;
-                                                &lt;/td&gt;
-                                                &lt;td&gt;
-                                                &lt;p&gt;32015&lt;/p&gt;
-                                                &lt;/td&gt;
-                                                &lt;td&gt;
-                                                &lt;img className="img-fluid" src={process.env.PUBLIC_URL + "/assets/images/dashboard/graph-2.png"} alt="" data-original-title="" title=""&gt;
-                                                &lt;/td&gt;
-                                                &lt;td&gt;
-                                                &lt;p&gt;$548526&lt;/p&gt;
-                                                &lt;/td&gt;
-                                                &lt;td&gt;
-                                                &lt;p&gt;Done&lt;/p&gt;
-                                                &lt;/td&gt;
-                                                &lt;/tr&gt;
-                                                &lt;tr&gt;
-                                                &lt;td&gt;
-                                                &lt;div className="media"&gt;
-                                                &lt;img className="img-fluid rounded-circle" src={process.env.PUBLIC_URL + "/assets/images/dashboard/product-3.png"} alt="" data-original-title="" title=""&gt;
-                                                &lt;div className="media-body"&gt;
-                                                &lt;span&gt;Beautiful Golden Tree plant&lt;/span&gt;
-                                                &lt;/div&gt;
-                                                &lt;/div&gt;
-                                                &lt;/td&gt;
-                                                &lt;td&gt;
-                                                &lt;p&gt;21 March&lt;/p&gt;
-                                                &lt;/td&gt;
-                                                &lt;td&gt;
-                                                &lt;p&gt;12548&lt;/p&gt;
-                                                &lt;/td&gt;
-                                                &lt;td&gt;
-                                                &lt;img className="img-fluid" src={process.env.PUBLIC_URL + "/assets/images/dashboard/graph-3.png"} alt="" data-original-title="" title=""&gt;
-                                                &lt;/td&gt;
-                                                &lt;td&gt;
-                                                &lt;p&gt;$589565&lt;/p&gt;
-                                                &lt;/td&gt;
-                                                &lt;td&gt;
-                                                &lt;p&gt;Done&lt;/p&gt;
-                                                &lt;/td&gt;
-                                                &lt;/tr&gt;
-                                                &lt;tr&gt;
-                                                &lt;td&gt;
-                                                &lt;div className="media"&gt;
-                                                &lt;img className="img-fluid rounded-circle" src={process.env.PUBLIC_URL + "/assets/images/dashboard/product-4.png"} alt="" data-original-title="" title=""&gt;
-                                                &lt;div className="media-body"&gt;
-                                                &lt;span&gt;Marco M Kely Handbeg&lt;/span&gt;
-                                                &lt;/div&gt;
-                                                &lt;/div&gt;
-                                                &lt;/td&gt;
-                                                &lt;td&gt;
-                                                &lt;p&gt;31 December&lt;/p&gt;
-                                                &lt;/td&gt;
-                                                &lt;td&gt;
-                                                &lt;p&gt;15495&lt;/p&gt;
-                                                &lt;/td&gt;
-                                                &lt;td&gt;
-                                                &lt;img className="img-fluid" src={process.env.PUBLIC_URL + "/assets/images/dashboard/graph-4.png"} alt="" data-original-title="" title=""&gt;
-                                                &lt;/td&gt;
-                                                &lt;td&gt;
-                                                &lt;p&gt;$125424 &lt;/p&gt;
-                                                &lt;/td&gt;
-                                                &lt;td&gt;
-                                                &lt;p&gt;Done&lt;/p&gt;
-                                                &lt;/td&gt;
-                                                &lt;/tr&gt;
-                                                &lt;tr&gt;
-                                                &lt;td&gt;
-                                                &lt;div className="media"&gt;
-                                                &lt;img className="img-fluid rounded-circle" src={process.env.PUBLIC_URL + "/assets/images/dashboard/product-5.png"} alt="" data-original-title="" title=""&gt;
-                                                &lt;div className="media-body"&gt;
-                                                &lt;span&gt;Being Human Branded T-Shirt&lt;/span&gt;
-                                                &lt;/div&gt;
-                                                &lt;/div&gt;
-                                                &lt;/td&gt;
-                                                &lt;td&gt;
-                                                &lt;p&gt;26 January&lt;/p&gt;
-                                                &lt;/td&gt;
-                                                &lt;td&gt;
-                                                &lt;p&gt;56625&lt;/p&gt;
-                                                &lt;/td&gt;
-                                                &lt;td&gt;
-                                                &lt;img className="img-fluid" src={process.env.PUBLIC_URL + "/assets/images/dashboard/graph-5.png"} alt="" data-original-title="" title=""&gt;
-                                                &lt;/td&gt;
-                                                &lt;td&gt;
-                                                &lt;p&gt;$112103&lt;/p&gt;
-                                                &lt;/td&gt;
-                                                &lt;td&gt;
-                                                &lt;p&gt;Done&lt;/p&gt;
-                                                &lt;/td&gt;
-                                                &lt;/tr&gt;
-                                                &lt;/tbody&gt;
-                                                &lt;/table&gt;
-                                                &lt;/div&gt;
-                                                &lt;/div&gt;
-                                                &lt;/div&gt;</code></pre>
-                                        </div>
-                                    </div>
+                                <div className="code-box-copy">
+                                    <button className="code-box-copy__btn btn-clipboard"
+                                        data-clipboard-target="#emplotee-status" title="Copy"><i
+                                            className="icofont icofont-copy-alt"></i></button>
+                                    <pre><code className="language-html" id="emplotee-status">&lt;div className="card"&gt;
+                                        &lt;div className="card-header pb-0 d-flex justify-content-between align-items-center"&gt;
+                                        &lt;h5&gt;EMPLOYEE STATUS&lt;/h5&gt;
+                                        &lt;div className="setting-list"&gt;
+                                        &lt;ul className="list-unstyled setting-option"&gt;
+                                        &lt;li&gt;
+                                        &lt;div className="setting-primary"&gt;&lt;i className="icon-settings"&gt;&lt;/i&gt;&lt;/div&gt;
+                                        &lt;/li&gt;
+                                        &lt;li&gt;&lt;i className="view-html fa fa-code font-primary"&gt;&lt;/i&gt;&lt;/li&gt;
+                                        &lt;li&gt;&lt;i className="icofont icofont-maximize full-card font-primary"&gt;&lt;/i&gt;&lt;/li&gt;
+                                        &lt;li&gt;&lt;i className="icofont icofont-minus minimize-card font-primary"&gt;&lt;/i&gt;&lt;/li&gt;
+                                        &lt;li&gt;&lt;i className="icofont icofont-refresh reload-card font-primary"&gt;&lt;/i&gt;&lt;/li&gt;
+                                        &lt;li&gt;&lt;i className="icofont icofont-error close-card font-primary"&gt;&lt;/i&gt;&lt;/li&gt;
+                                        &lt;/ul&gt;
+                                        &lt;/div&gt;
+                                        &lt;/div&gt;
+                                        &lt;div className="card-body"&gt;
+                                        &lt;div className="user-status table-responsive"&gt;
+                                        &lt;table className="table table-bordernone"&gt;
+                                        &lt;thead&gt;
+                                        &lt;tr&gt;
+                                        &lt;th scope="col"&gt;Name&lt;/th&gt;
+                                        &lt;th scope="col"&gt;Designation&lt;/th&gt;
+                                        &lt;th scope="col"&gt;Skill Level&lt;/th&gt;
+                                        &lt;th scope="col"&gt;Experience&lt;/th&gt;
+                                        &lt;/tr&gt;
+                                        &lt;/thead&gt;
+                                        &lt;tbody&gt;
+                                        &lt;tr&gt;
+                                        &lt;td className="bd-t-none u-s-tb"&gt;
+                                        &lt;div className="align-middle image-sm-size"&gt;&lt;img className="img-radius align-top m-r-15 rounded-circle" src="../assets/images/user/4.jpg" alt=""&gt;
+                                        &lt;div className="d-inline-block"&gt;
+                                        &lt;h6&gt;John Deo &lt;span className="text-muted"&gt;(14+ Online)&lt;/span&gt;&lt;/h6&gt;
+                                        &lt;/div&gt;
+                                        &lt;/div&gt;
+                                        &lt;/td&gt;
+                                        &lt;td&gt;Designer&lt;/td&gt;
+                                        &lt;td&gt;
+                                        &lt;div className="progress-showcase"&gt;
+                                        &lt;div className="progress" style="height: 8px"&gt;
+                                        &lt;div className="progress-bar bg-primary" role="progressbar" style="width: 30%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"&gt;&lt;/div&gt;
+                                        &lt;/div&gt;
+                                        &lt;/div&gt;
+                                        &lt;/td&gt;
+                                        &lt;td&gt;2 Year&lt;/td&gt;
+                                        &lt;/tr&gt;
+                                        &lt;tr&gt;
+                                        &lt;td className="bd-t-none u-s-tb"&gt;
+                                        &lt;div className="align-middle image-sm-size d-flex align-items-center"&gt;&lt;img className="img-radius align-top m-r-15 rounded-circle" src="../assets/images/user/1.jpg" alt=""&gt;
+                                        &lt;div className="d-inline-block"&gt;
+                                        &lt;h6&gt;Holio Mako &lt;span className="text-muted"&gt;(250+ Online)&lt;/span&gt;&lt;/h6&gt;
+                                        &lt;/div&gt;
+                                        &lt;/div&gt;
+                                        &lt;/td&gt;
+                                        &lt;td&gt;Developer&lt;/td&gt;
+                                        &lt;td&gt;
+                                        &lt;div className="progress-showcase"&gt;
+                                        &lt;div className="progress" style="height: 8px"&gt;
+                                        &lt;div className="progress-bar bg-secondary" role="progressbar" style="width: 70%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"&gt;&lt;/div&gt;
+                                        &lt;/div&gt;
+                                        &lt;/div&gt;
+                                        &lt;/td&gt;
+                                        &lt;td&gt;3 Year&lt;/td&gt;
+                                        &lt;/tr&gt;
+                                        &lt;tr&gt;
+                                        &lt;td className="bd-t-none u-s-tb"&gt;
+                                        &lt;div className="align-middle image-sm-size"&gt;&lt;img className="img-radius align-top m-r-15 rounded-circle" src="../assets/images/user/5.jpg" alt=""&gt;
+                                        &lt;div className="d-inline-block"&gt;
+                                        &lt;h6&gt;Mohsib lara&lt;span className="text-muted"&gt;(99+ Online)&lt;/span&gt;&lt;/h6&gt;
+                                        &lt;/div&gt;
+                                        &lt;/div&gt;
+                                        &lt;/td&gt;
+                                        &lt;td&gt;Tester&lt;/td&gt;
+                                        &lt;td&gt;
+                                        &lt;div className="progress-showcase"&gt;
+                                        &lt;div className="progress" style="height: 8px"&gt;
+                                        &lt;div className="progress-bar bg-primary" role="progressbar" style=                                            width: 60 % " aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"&gt;&lt;/div&gt;
+                                        & lt;/ div & gt;
+                                        &lt;/div&gt;
+                                        &lt;/td&gt;
+                                        &lt;td&gt;5 Month&lt;/td&gt;
+                                        &lt;/tr&gt;
+                                        &lt;tr&gt;
+                                        &lt;td className="bd-t-none u-s-tb"&gt;
+                                        &lt;div className="align-middle image-sm-size"&gt;&lt;img className="img-radius align-top m-r-15 rounded-circle" src="../assets/images/user/6.jpg" alt=""&gt;
+                                        &lt;div className="d-inline-block"&gt;
+                                        &lt;h6&gt;Hileri Soli &lt;span className="text-muted"&gt;(150+ Online)&lt;/span&gt;&lt;/h6&gt;
+                                        &lt;/div&gt;
+                                        &lt;/div&gt;
+                                        &lt;/td&gt;
+                                        &lt;td&gt;Designer&lt;/td&gt;
+                                        &lt;td&gt;
+                                        &lt;div className="progress-showcase"&gt;
+                                        &lt;div className="progress" style="height: 8px"&gt;
+                                        &lt;div className="progress-bar bg-secondary" role="progressbar" style=
+                                        width: 30 % " aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"&gt;&lt;/div&gt;
+                                        & lt;/ div & gt;
+                                        &lt;/div&gt;
+                                        &lt;/td&gt;
+                                        &lt;td&gt;3 Month&lt;/td&gt;
+                                        &lt;/tr&gt;
+                                        &lt;tr&gt;
+                                        &lt;td className="bd-t-none u-s-tb"&gt;
+                                        &lt;div className="align-middle image-sm-size"&gt;&lt;img className="img-radius align-top m-r-15 rounded-circle" src="../assets/images/user/7.jpg" alt=""&gt;
+                                        &lt;div className="d-inline-block"&gt;
+                                        &lt;h6&gt;Pusiz bia &lt;span className="text-muted"&gt;(14+ Online)&lt;/span&gt;&lt;/h6&gt;
+                                        &lt;/div&gt;
+                                        &lt;/div&gt;
+                                        &lt;/td&gt;
+                                        &lt;td&gt;Designer&lt;/td&gt;
+                                        &lt;td&gt;
+                                        &lt;div className="progress-showcase"&gt;
+                                        &lt;div className="progress" style="height: 8px"&gt;
+                                        &lt;div className="progress-bar bg-primary" role="progressbar" style=
+                                        width: 90 % " aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"&gt;&lt;/div&gt;
+                                        & lt;/ div & gt;
+                                        &lt;/div&gt;
+                                        &lt;/td&gt;
+                                        &lt;td&gt;5 Year&lt;/td&gt;
+                                        &lt;/tr&gt;
+                                        &lt;/tbody&gt;
+                                        &lt;/table&gt;
+                                        &lt;/div&gt;
+                                        &lt;/div&gt;
+                                        &lt;/div&gt;</code></pre>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div className="col-xl-4 box-col-12 des-xl-100">
-                        <div className="row">
-                            <div className="col-xl-12 box-col-6 des-xl-50">
-                                <div className="card">
-                                    <div className="card-header">
-                                        <div className="header-top d-sm-flex align-items-center">
-                                            <h5>User Activations</h5>
-                                            <div className="center-content">
-                                                <p>Yearly User 24.65k</p>
-                                            </div>
-                                            <div className="setting-list">
-                                                <ul className="list-unstyled setting-option">
-                                                    <li>
-                                                        <div className="setting-primary"><i
-                                                            className="icon-settings"></i></div>
-                                                    </li>
-                                                    <li><i className="view-html fa fa-code font-primary"></i></li>
-                                                    <li><i className="icofont icofont-maximize full-card
-                                  font-primary"></i></li>
-                                                    <li><i className="icofont icofont-minus minimize-card
-                                  font-primary"></i></li>
-                                                    <li><i className="icofont icofont-refresh reload-card
-                                  font-primary"></i></li>
-                                                    <li><i className="icofont icofont-error close-card
-                                  font-primary"></i></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="card-body p-0">
-                                        <div id="user-activation-dash-2"></div>
-                                        <div className="code-box-copy">
-                                            <button className="code-box-copy__btn btn-clipboard"
-                                                data-clipboard-target="#user-activations"
-                                                title="Copy"><i className="icofont icofont-copy-alt"></i></button>
-                                            <pre><code className="language-html" id="user-activations">&lt;div className="card"&gt;
-                                                &lt;div className="card-header"&gt;
-                                                &lt;div className="header-top d-sm-flex align-items-center"&gt;
-                                                &lt;h5&gt;User Activations&lt;/h5&gt;
-                                                &lt;div className="center-content"&gt;
-                                                &lt;p&gt;Yearly User 24.65k&lt;/p&gt;
-                                                &lt;/div&gt;
-                                                &lt;div className="setting-list"&gt;
-                                                &lt;ul className="list-unstyled setting-option"&gt;
-                                                &lt;li&gt;
-                                                &lt;div className="setting-primary"&gt;
-                                                &lt;i className="icon-settings"&gt;&lt;/i&gt;
-                                                &lt;/div&gt;
-                                                &lt;/li&gt;
-                                                &lt;li&gt;
-                                                &lt;i className="view-html fa fa-code font-primary"&gt;&lt;/i&gt;
-                                                &lt;/li&gt;
-                                                &lt;li&gt;
-                                                &lt;i className="icofont icofont-maximize full-card font-primary"&gt;&lt;/i&gt;
-                                                &lt;/li&gt;
-                                                &lt;li&gt;
-                                                &lt;i className="icofont icofont-minus minimize-card font-primary"&gt;&lt;/i&gt;
-                                                &lt;/li&gt;
-                                                &lt;li&gt;
-                                                &lt;i className="icofont icofont-refresh reload-card font-primary"&gt;&lt;/i&gt;
-                                                &lt;/li&gt;
-                                                &lt;li&gt;
-                                                &lt;i className="icofont icofont-error close-card font-primary"&gt;&lt;/i&gt;
-                                                &lt;/li&gt;
-                                                &lt;/ul&gt;
-                                                &lt;/div&gt;
-                                                &lt;/div&gt;
-                                                &lt;/div&gt;
-                                                &lt;div className="card-body p-0"&gt;
-                                                &lt;div id="user-activation-dash-2"&gt;&lt;/div&gt;
-                                                &lt;/div&gt;
-                                                &lt;/div&gt;</code></pre>
-                                        </div>
-                                    </div>
+                    <div className="col-sm-12 col-lg-6 col-xl-4 xl-50 col-md-12
+                box-col-6">
+                        <div className="card height-equal">
+                            <div className="calender-widget">
+                                <div className="cal-img"></div>
+                                <div className="cal-date">
+                                    <h5>25<br />Apr</h5>
+                                </div>
+                                <div className="cal-desc text-center card-body">
+                                    <h6 className="f-w-600">I must explain to you how? </h6>
+                                    <p>Denouncing pleasure and praising pain was born and I
+                                        will give you a complete account of the system, and
+                                        expound the actual teachings of the great explorer of
+                                        the truth,Letraset sheets.</p>
                                 </div>
                             </div>
-                            <div className="col-xl-12 box-col-6 des-xl-50">
-                                <div className="card trasaction-sec">
-                                    <div className="card-header">
-                                        <div className="header-top d-sm-flex align-items-center">
-                                            <h5>Transaction</h5>
-                                            <div className="center-content">
-                                                <p>5878 Suceessfull Transaction</p>
-                                            </div>
-                                            <div className="setting-list">
-                                                <ul className="list-unstyled setting-option">
-                                                    <li>
-                                                        <div className="setting-secondary"><i
-                                                            className="icon-settings"> </i></div>
-                                                    </li>
-                                                    <li><i className="view-html fa fa-code
-                                  font-secondary"></i></li>
-                                                    <li><i className="icofont icofont-maximize full-card
-                                  font-secondary"></i></li>
-                                                    <li><i className="icofont icofont-minus minimize-card
-                                  font-secondary"></i></li>
-                                                    <li><i className="icofont icofont-refresh reload-card
-                                  font-secondary"></i></li>
-                                                    <li><i className="icofont icofont-error close-card
-                                  font-secondary"></i></li>
-                                                </ul>
-                                            </div>
-                                        </div>
+                        </div>
+                    </div>
+                    <div className="col-sm-12 col-lg-6 col-xl-8 xl-50 col-md-12
+                box-col-6">
+                        <div className="card height-equal">
+                            <div className="card-header pb-0 d-flex justify-content-between
+                    align-items-center">
+                                <h5>Contact Us</h5>
+                                <div className="setting-list">
+                                    <ul className="list-unstyled setting-option">
+                                        <li>
+                                            <div className="setting-primary"><i className="icon-settings"></i></div>
+                                        </li>
+                                        <li><i className="view-html fa fa-code font-primary"></i></li>
+                                        <li><i className="icofont icofont-maximize full-card
+                            font-primary"></i></li>
+                                        <li><i className="icofont icofont-minus minimize-card
+                            font-primary"></i></li>
+                                        <li><i className="icofont icofont-refresh reload-card
+                            font-primary"></i></li>
+                                        <li><i className="icofont icofont-error close-card
+                            font-primary"></i></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div className="contact-form card-body">
+                                <form className="theme-form">
+                                    <div className="form-icon"><i className="icofont
+                          icofont-envelope-open"></i></div>
+                                    <div className="mb-3">
+                                        <label htmlFor="exampleInputName">Your Name</label>
+                                        <input className="form-control" id="exampleInputName"
+                                            type="text" placeholder="John Dio" />
                                     </div>
-                                    <div className="transaction-totalbal">
-                                        <h2> $2,09,352k <span className="ms-3"> <a className="btn-arrow
-                              arrow-secondary" href="#"><i
-                                                className="toprightarrow-secondary fa fa-arrow-up
-                                me-2"></i>98.54%</a></span></h2>
-                                        <p>Total Balance</p>
+                                    <div className="mb-3">
+                                        <label className="col-form-label" htmlFor="exampleInputEmail1">Email</label>
+                                        <input className="form-control" id="exampleInputEmail1"
+                                            type="email" placeholder="Demo@gmail.com" />
                                     </div>
-                                    <div className="card-body p-0">
-                                        <div id="chart-3dash"></div>
-                                        <div className="code-box-copy">
-                                            <button className="code-box-copy__btn btn-clipboard"
-                                                data-clipboard-target="#transaction" title="Copy"><i
-                                                    className="icofont icofont-copy-alt"></i></button>
-                                            <pre><code className="language-html" id="transaction">&lt;div className="card trasaction-sec"&gt;
-                                                &lt;div className="card-header"&gt;
-                                                &lt;div className="header-top d-sm-flex align-items-center"&gt;
-                                                &lt;h5&gt;Transaction&lt;/h5&gt;
-                                                &lt;div className="center-content"&gt;
-                                                &lt;p&gt;5878 Suceessfull Transaction&lt;/p&gt;
-                                                &lt;/div&gt;
-                                                &lt;div className="setting-list"&gt;
-                                                &lt;ul className="list-unstyled setting-option"&gt;
-                                                &lt;li&gt;
-                                                &lt;div className="setting-secondary"&gt;
-                                                &lt;i className="icon-settings"&gt; &lt;/i&gt;
-                                                &lt;/div&gt;
-                                                &lt;/li&gt;
-                                                &lt;li&gt;
-                                                &lt;i className="view-html fa fa-code font-secondary"&gt;&lt;/i&gt;
-                                                &lt;/li&gt;
-                                                &lt;li&gt;
-                                                &lt;i className="icofont icofont-maximize full-card font-secondary"&gt;&lt;/i&gt;
-                                                &lt;/li&gt;
-                                                &lt;li&gt;
-                                                &lt;i className="icofont icofont-minus minimize-card font-secondary"&gt;&lt;/i&gt;
-                                                &lt;/li&gt;
-                                                &lt;li&gt;
-                                                &lt;i className="icofont icofont-refresh reload-card font-secondary"&gt;&lt;/i&gt;
-                                                &lt;/li&gt;
-                                                &lt;li&gt;
-                                                &lt;i className="icofont icofont-error close-card font-secondary"&gt;&lt;/i&gt;
-                                                &lt;/li&gt;
-                                                &lt;/ul&gt;
-                                                &lt;/div&gt;
-                                                &lt;/div&gt;
-                                                &lt;/div&gt;
-                                                &lt;div className="transaction-totalbal"&gt;
-                                                &lt;h2&gt; $2,09,352k
-                                                &lt;span className="ms-3"&gt;
-                                                &lt;a className="btn-arrow arrow-secondary" href="#"&gt;
-                                                &lt;i className="toprightarrow-secondary fa fa-arrow-up me-2"&gt;&lt;/i&gt;98.54%
-                                                &lt;/a&gt;
-                                                &lt;/span&gt;
-                                                &lt;/h2&gt;
-                                                &lt;p&gt;Total Balance&lt;/p&gt;
-                                                &lt;/div&gt;
-                                                &lt;div className="card-body p-0"&gt;
-                                                &lt;div id="chart-3dash"&gt;&lt;/div&gt;
-                                                &lt;/div&gt;
-                                                &lt;/div&gt;</code></pre>
-                                        </div>
+                                    <div className="mb-3">
+                                        <label className="col-form-label" htmlFor="exampleInputEmail1">Message</label>
+                                        <textarea className="form-control textarea" rows="3"
+                                            cols="50" placeholder="Your Message"></textarea>
                                     </div>
+                                    <div className="text-sm-end">
+                                        <button className="btn btn-primary">SEND IT</button>
+                                    </div>
+                                </form>
+                                <div className="code-box-copy">
+                                    <button className="code-box-copy__btn btn-clipboard"
+                                        data-clipboard-target="#contact-us" title="Copy"><i
+                                            className="icofont icofont-copy-alt"></i></button>
+                                    <pre><code className="language-html" id="contact-us">&nbsp;&lt;div className="card height-equal"&gt;
+                                        &lt;div className="card-header pb-0 d-flex justify-content-between align-items-center"&gt;
+                                        &lt;h5&gt;Contact Us&lt;/h5&gt;
+                                        &lt;div className="setting-list"&gt;
+                                        &lt;ul className="list-unstyled setting-option"&gt;
+                                        &lt;li&gt;
+                                        &lt;div className="setting-primary"&gt;&lt;i className="icon-settings"&gt;&lt;/i&gt;&lt;/div&gt;
+                                        &lt;/li&gt;
+                                        &lt;li&gt;&lt;i className="view-html fa fa-code font-primary"&gt;&lt;/i&gt;&lt;/li&gt;
+                                        &lt;li&gt;&lt;i className="icofont icofont-maximize full-card font-primary"&gt;&lt;/i&gt;&lt;/li&gt;
+                                        &lt;li&gt;&lt;i className="icofont icofont-minus minimize-card font-primary"&gt;&lt;/i&gt;&lt;/li&gt;
+                                        &lt;li&gt;&lt;i className="icofont icofont-refresh reload-card font-primary"&gt;&lt;/i&gt;&lt;/li&gt;
+                                        &lt;li&gt;&lt;i className="icofont icofont-error close-card font-primary"&gt;&lt;/i&gt;&lt;/li&gt;
+                                        &lt;/ul&gt;
+                                        &lt;/div&gt;
+                                        &lt;/div&gt;
+                                        &lt;div className="contact-form card-body"&gt;
+                                        &lt;form className="theme-form"&gt;
+                                        &lt;div className="form-icon"&gt;&lt;i className="icofont icofont-envelope-open"&gt;&lt;/i&gt;&lt;/div&gt;
+                                        &lt;div className="mb-3"&gt;
+                                        &lt;label htmlFor="exampleInputName"&gt;Your Name&lt;/label&gt;
+                                        &lt;input className="form-control" id="exampleInputName" type="text" placeholder="John Dio"&gt;
+                                        &lt;/div&gt;
+                                        &lt;div className="mb-3"&gt;
+                                        &lt;label className="col-form-label" htmlFor="exampleInputEmail1"&gt;Email&lt;/label&gt;
+                                        &lt;input className="form-control" id="exampleInputEmail1" type="email" placeholder="Demo@gmail.com"&gt;
+                                        &lt;/div&gt;
+                                        &lt;div className="mb-3"&gt;
+                                        &lt;label className="col-form-label" htmlFor="exampleInputEmail1"&gt;Message&lt;/label&gt;
+                                        &lt;textarea className="form-control textarea" rows="3" cols="50" placeholder="Your Message"&gt;&lt;/textarea&gt;
+                                        &lt;/div&gt;
+                                        &lt;div className="text-sm-end"&gt;
+                                        &lt;button className="btn btn-primary"&gt;SEND IT&lt;/button&gt;
+                                        &lt;/div&gt;
+                                        &lt;/form&gt;
+                                        &lt;/div&gt;
+                                        &lt;/div&gt;</code></pre>
                                 </div>
                             </div>
                         </div>
