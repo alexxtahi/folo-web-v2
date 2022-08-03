@@ -17,7 +17,7 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={AuthMiddleware.makePrivate(<App />)} />
+        <Route path="/" element={AuthMiddleware.makePrivateRoute(<App />)} />
         <Route path="/login" element={<LoginView />} />
         <Route path="/reset-password" element={<ResetPasswordView />} />
         {/* No match route */}

@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import Alert from "../../components/Alert";
 import Btn from "../../components/Btn";
 import Loader from "../../components/Loader";
-import AuthMiddleware from "../../middleware/AuthMiddleware";
 import User from "../../models/User";
 import { apiEndpoints } from "../../utils/constants";
 
