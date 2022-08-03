@@ -1,6 +1,51 @@
 
+import { useState } from "react";
 import * as FeatherIcon from "react-feather";
+import User from "../models/User";
+import Btn from "./Btn";
+import { apiEndpoints } from "../utils/constants";
 function Header() {
+    // Properties
+    const [logoutBtnPressed, setLogoutBtnPressed] = useState(false);
+    const [errorHappend, setErrorHappend] = useState(false);
+    // Methods
+    const logout = async (event) => { // Send login request to server
+        // Configs
+        setLogoutBtnPressed(true);
+        event.preventDefault();
+        const url = apiEndpoints.auth.logout;
+        // Send request
+        await fetch(
+            url,
+            {
+                method: 'POST',
+                headers: {
+                    'Content-type': 'application/json',
+                    'Authorization': User.authUser.accessToken
+                },
+            })
+            .then(response => response.json())
+            .then(jsonData => {
+                // Check the response
+                console.log(jsonData); //! debug
+                if (jsonData.success) {
+                    // Remove authenticated user datas and redirect to the login view
+                    User.authUser = null;
+                    localStorage.removeItem('authUser');
+                    window.location.replace('/login');
+                    // console.log(User.authUser); //! debug
+                } else {
+                    setErrorHappend(true);
+                }
+            }).catch(error => {
+                // Show error alert
+                setErrorHappend(true);
+                console.log(error); //! debug
+            });
+        // Enable logout button
+        setLogoutBtnPressed(false);
+    }
+    // Render
     return (
         // < !--Page Header Start-- >
         <div className="page-main-header">
@@ -141,9 +186,17 @@ function Header() {
                                     href="#">See All </a></li>
                             </ul>
                         </li>
+                        {/* Logout Button */}
                         <li className="onhover-dropdown p-0">
-                            <button className="btn btn-primary-light" type="button"><a
-                                href="login_two.html"><FeatherIcon.LogOut />Log out</a></button>
+                            <Btn
+                                text="Se déconnecter"
+                                btnStyle="with-previous-icon"
+                                previousIcon={<FeatherIcon.LogOut />}
+                                bootstrapType="btn-primary-light"
+                                type="button"
+                                isPressed={logoutBtnPressed}
+                                onClick={logout}
+                            />
                         </li>
                     </ul>
                 </div >

@@ -10,7 +10,7 @@ import NoMatchView from './views/NoMatchView';
 import AuthMiddleware from './middleware/AuthMiddleware';
 
 // Auth middleware call
-// AuthMiddleware.checkAuthState();
+AuthMiddleware.checkAuthState();
 // DOM Render
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

@@ -5,8 +5,8 @@ class AuthMiddleware {
     // Methods
     // Check authentication status
     static checkAuthState() {
-        // console.log('current path: ' + window.location.pathname); //! debug
-        // console.log('authenticated user: ' + User.authUser); //! debug
+        console.log('current path: ' + window.location.pathname); //! debug
+        console.log('authenticated user: ' + User.authUser); //! debug
         if (window.location.pathname === '/login' && User.authUser !== null) // If user is already logged in...
             window.location.replace('/');
         if (window.location.pathname !== '/login' && User.authUser === null) // If user isn't logged in...
