@@ -7,7 +7,6 @@ class Annonce {
         this.subtitle = json.subtitle ?? null;
         this.type = json.type ?? null;
         this.content = json.content ?? null;
-        // TODO: Correct date format
         this.dateEnreg = new Date(json.date_enreg) ?? null;
         this.datePub = new Date(json.date_publication) ?? null;
         this.image = json.image ?? null;
@@ -16,8 +15,8 @@ class Annonce {
         this.isPublished = json.is_published ?? null;
     }
     // Methods
-    static fromArray(annonceList) {
-        return annonceList.map(json => new Annonce(json));
+    static fromArray(array) {
+        return array.map(json => new Annonce(json));
     }
     getStringDatePub() {
         return this.datePub.toLocaleDateString();

@@ -40,7 +40,7 @@ function LoginView() {
                 // Check the response
                 if (jsonData.success) {
                     // Store authenticated user datas
-                    User.authUser = new User(jsonData, jsonData.access_token);
+                    User.authUser = new User(jsonData.user, jsonData.access_token);
                     localStorage.setItem('authUser', JSON.stringify(User.authUser));
                     window.location.replace('/');
                     console.log(User.authUser); //! debug

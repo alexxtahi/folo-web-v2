@@ -1,6 +1,6 @@
 class User {
     constructor(json, accessToken = null) {
-        this.accessToken = json.access_token ?? null;
+        this.accessToken = accessToken ?? null;
         this.id = json.id ?? null;
         this.name = json.name ?? null;
         this.lastname = json.lastname ?? null;

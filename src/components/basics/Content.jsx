@@ -2,9 +2,11 @@ import { useEffect, useState } from "react";
 import * as FeatherIcon from "react-feather";
 import { apiEndpoints } from "../../utils/constants";
 import User from "../../models/User";
+import Student from "../../models/Student";
 import DashCard from "../dashboard/DashCard";
 import AnnoncePreviewBox from "../dashboard/AnnoncePreviewBox";
 import Annonce from "../../models/Annonce";
+import BestStudentsTable from "../dashboard/BestStudentsTable";
 
 function Content() {
     // Properties
@@ -17,6 +19,7 @@ function Content() {
         totalClasses: 0,
         totalParents: 0,
         annonces: [],
+        bestStudents: [],
     });
     // Methods
     const getDashboardDatas = async () => { // Get the dashboard datas from the server
@@ -45,6 +48,7 @@ function Content() {
                         totalClasses: jsonData.total_class_sections,
                         totalParents: jsonData.total_parents,
                         annonces: Annonce.fromArray(jsonData.annonces),
+                        bestStudents: Student.fromArray(jsonData.best_students),
                     });
                 } else {
                     setErrorHappend(true);
@@ -135,7 +139,10 @@ function Content() {
                             </div>
                         </div>
                     </div>
+                    {/* Annonces */}
                     <AnnoncePreviewBox annonces={dashboardDatas.annonces} />
+                    {/* Best Students */}
+                    <BestStudentsTable bestStudents={dashboardDatas.bestStudents} />
                     {/* Place other components here */}
                 </div>
             </div>

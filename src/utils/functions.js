@@ -8,7 +8,7 @@ export function getDaysInMonth(year, month) {
 };
 
 export function getDaysInYear(year) {
-    return ((year % 4 === 0 && year % 100 > 0) || year % 400 == 0) ? 366 : 365;
+    return ((year % 4 === 0 && year % 100 > 0) || year % 400 === 0) ? 366 : 365;
 }
 
 export function dateDiff(date1, date2, resultFormat) {

@@ -61,8 +61,8 @@ function Header() {
                         className="img-fluid" src={process.env.PUBLIC_URL + "/assets/images/logo/dark-logo.png"}
                         alt="" /></a></div>
                     <div className="toggle-sidebar">
-                        <FeatherIcon.AlignCenter className="status_toggle middle"
-                            id="sidebar-toggle" /></div>
+                        <FeatherIcon.Menu className="status_toggle middle" id="sidebar-toggle" />
+                    </div>
                 </div>
                 <div className="left-menu-header col">
                     <ul>
