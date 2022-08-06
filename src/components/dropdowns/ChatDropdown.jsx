@@ -5,7 +5,7 @@ function ChatDropdown() {
 
     // Render
     return (
-        <li className="onhover-dropdown"><FeatherIcon.MessageSquare />
+        <li className="onhover-dropdown"><FeatherIcon.MessageCircle />
             <ul className="chat-dropdown onhover-show-div">
                 <li>
                     <div className="media"><img className="img-fluid rounded-circle

@@ -1,12 +1,12 @@
 
 import { useState } from "react";
 import * as FeatherIcon from "react-feather";
-import User from "../models/User";
-import Btn from "./Btn";
-import { apiEndpoints } from "../utils/constants";
-import FlagDropdown from "./dropdowns/FlagDropdown";
-import ChatDropdown from "./dropdowns/ChatDropdown";
-import NotificationDropdown from "./dropdowns/NotificationDropdown";
+import User from "../../models/User";
+import Btn from "../Btn";
+import { apiEndpoints } from "../../utils/constants";
+import FlagDropdown from "../dropdowns/FlagDropdown";
+import ChatDropdown from "../dropdowns/ChatDropdown";
+import NotificationDropdown from "../dropdowns/NotificationDropdown";
 // Component
 function Header() {
     // Properties

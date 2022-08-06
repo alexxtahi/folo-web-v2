@@ -1,17 +1,6 @@
-import { useState } from "react";
 import * as FeatherIcon from "react-feather";
 function FlagDropdown() {
     // Properties
-    const [languages, setLanguages] = useState([
-        {
-            name: "English",
-            selected: false,
-        },
-        {
-            name: "Français",
-            selected: true,
-        }
-    ]);
     // Render
     return (
         <li className="onhover-dropdown">

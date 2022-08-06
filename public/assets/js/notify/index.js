@@ -8,5 +8,5 @@ var notify = $.notify('<i class="fa fa-bell-o"></i><strong>Loading</strong> page
 });
 
 setTimeout(function() {
-    notify.update('message', '<i class="fa fa-bell-o"></i><strong>Loading</strong> Inner Data.');
+    notify.update('message', '<i class="fa fa-bell-o"></i><strong>Loading</strong> Inner Data......');
 }, 1000);

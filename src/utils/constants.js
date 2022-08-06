@@ -4,5 +4,8 @@ export const apiEndpoints = {
     auth: {
         login: `${SERVER_URL}/auth/login`,
         logout: `${SERVER_URL}/auth/logout`,
-    }
+    },
+    dashboard: {
+        home: `${SERVER_URL}/dashboard`,
+    },
 };

@@ -1,5 +1,5 @@
 import * as FeatherIcon from "react-feather";
-import User from "../models/User";
+import User from "../../models/User";
 
 function SideBar() {
     return (

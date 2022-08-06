@@ -1,8 +1,7 @@
-import Content from "../components/Content";
-import Footer from "../components/Footer";
-import Header from "../components/Header";
-import PreLoader from "../components/PreLoader";
-import SideBar from "../components/SideBar";
+import Content from "../components/basics/Content";
+import Footer from "../components/basics/Footer";
+import Header from "../components/basics/Header";
+import SideBar from "../components/basics/SideBar";
 
 function HomeView() {
     return (
