@@ -1,16 +1,17 @@
+// Get the date of today
 export function getTodayDate() {
     let today = new Date();
     return today;
 }
-
-export function getDaysInMonth(year, month) {
+// Get the number of days in a month
+export function getDaysInMonth(year = getTodayDate().getFullYear(), month = getTodayDate().getMonth()) {
     return new Date(year, month, 0).getDate();
 };
-
-export function getDaysInYear(year) {
+// Get the number of days in a year
+export function getDaysInYear(year = getTodayDate().getFullYear()) {
     return ((year % 4 === 0 && year % 100 > 0) || year % 400 === 0) ? 366 : 365;
 }
-
+// Get the difference between two dates
 export function dateDiff(date1, date2, resultFormat) {
     const today = getTodayDate();
     const daysInMonth = getDaysInMonth(today.getFullYear(), today.getMonth());
@@ -56,4 +57,8 @@ export function dateDiff(date1, date2, resultFormat) {
             if (results.months < 12) return results.months + ' mo'; // less than 1y
             else if (results.months >= 12) return results.years + ' ans'; // more than 1y
     }
+}
+// Active sidebar button when the current page is the same as the button
+export function activeSidebarButton(btnPath) {
+    return btnPath === window.location.pathname ? 'active' : '';
 }

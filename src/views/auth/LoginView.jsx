@@ -42,7 +42,7 @@ function LoginView() {
                     // Store authenticated user datas
                     User.authUser = new User(jsonData.user, jsonData.access_token);
                     localStorage.setItem('authUser', JSON.stringify(User.authUser));
-                    window.location.replace('/');
+                    window.location.replace('/home');
                     console.log(User.authUser); //! debug
                 } else {
                     setErrorHappend(true);

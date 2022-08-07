@@ -1,5 +1,6 @@
 import * as FeatherIcon from "react-feather";
 import User from "../../models/User";
+import { activeSidebarButton } from "../../utils/functions";
 
 function SideBar() {
     return (
@@ -39,30 +40,30 @@ function SideBar() {
                             </li>
                             <li className="sidebar-main-title">
                                 <div>
-                                    <h6>Général </h6>
+                                    <h6>Général</h6>
                                 </div>
                             </li>
-                            <li className="dropdown"><a className="nav-link menu-title"
-                                href="/"><FeatherIcon.Home /><span>Tableau de bord</span></a>
+                            <li className="dropdown"><a className={"nav-link menu-title " + activeSidebarButton('/home')}
+                                href="/home"><FeatherIcon.Home /><span>Tableau de bord</span></a>
                             </li>
-                            <li className="dropdown"><a className="nav-link menu-title"
-                                href="/"><FeatherIcon.MessageCircle /><span>Chat</span></a>
+                            <li className="dropdown"><a className={"nav-link menu-title " + activeSidebarButton('/chat')}
+                                href="/chat"><FeatherIcon.MessageCircle /><span>Chat</span></a>
                             </li>
-                            <li className="dropdown"><a className="nav-link menu-title"
-                                href="/"><FeatherIcon.Bell /><span>Notifications</span></a>
+                            <li className="dropdown"><a className={"nav-link menu-title " + activeSidebarButton('/notifs')}
+                                href="/notifs"><FeatherIcon.Bell /><span>Notifications</span></a>
                             </li>
                             <li className="sidebar-main-title">
                                 <div>
                                     <h6>Administration</h6>
                                 </div>
                             </li>
-                            <li className="dropdown"><a className="nav-link menu-title"
-                                href="#"><FeatherIcon.Info /><span>Annonces</span></a>
+                            <li className="dropdown"><a className={"nav-link menu-title " + activeSidebarButton('/annonces')}
+                                href="/annonces"><FeatherIcon.Info /><span>Annonces</span></a>
                             </li>
-                            <li className="dropdown"><a className="nav-link menu-title"
+                            <li className="dropdown"><a className={"nav-link menu-title " + activeSidebarButton('/home')}
                                 href="/"><FeatherIcon.Calendar /><span>Emploi du temps</span></a>
                             </li>
-                            <li className="dropdown"><a className="nav-link menu-title"
+                            <li className="dropdown"><a className={"nav-link menu-title " + activeSidebarButton('/home')}
                                 href="/"><FeatherIcon.DollarSign /><span>Paiements</span></a>
                             </li>
                             <li className="sidebar-main-title">
@@ -71,25 +72,25 @@ function SideBar() {
                                 </div>
                             </li>
 
-                            <li className="dropdown"><a className="nav-link menu-title"
+                            <li className="dropdown"><a className={"nav-link menu-title " + activeSidebarButton('/home')}
                                 href="#"><FeatherIcon.Clipboard /><span>Classes</span></a>
                             </li >
-                            <li className="dropdown"><a className="nav-link menu-title"
+                            <li className="dropdown"><a className={"nav-link menu-title " + activeSidebarButton('/home')}
                                 href="#"><FeatherIcon.Bookmark /><span>Sections</span></a>
                             </li >
-                            <li className="dropdown"><a className="nav-link menu-title"
+                            <li className="dropdown"><a className={"nav-link menu-title " + activeSidebarButton('/home')}
                                 href="/"><FeatherIcon.CheckSquare /><span>Listes de présences</span></a>
                             </li >
-                            <li className="dropdown"><a className="nav-link menu-title"
+                            <li className="dropdown"><a className={"nav-link menu-title " + activeSidebarButton('/home')}
                                 href="#"><FeatherIcon.User /><span>Elèves</span></a>
                             </li >
-                            <li className="dropdown"><a className="nav-link menu-title"
+                            <li className="dropdown"><a className={"nav-link menu-title " + activeSidebarButton('/home')}
                                 href="#"><FeatherIcon.Book /><span>Matières</span></a>
                             </li >
-                            <li className="dropdown"><a className="nav-link menu-title"
+                            <li className="dropdown"><a className={"nav-link menu-title " + activeSidebarButton('/home')}
                                 href="#"><FeatherIcon.FileText /><span>Notes</span></a>
                             </li >
-                            <li className="dropdown"><a className="nav-link menu-title"
+                            <li className="dropdown"><a className={"nav-link menu-title " + activeSidebarButton('/home')}
                                 href="#"><FeatherIcon.Edit /><span>Examens</span></a>
                             </li >
                             <li className="sidebar-main-title">
@@ -97,10 +98,10 @@ function SideBar() {
                                     <h6>Extras scolaire</h6>
                                 </div>
                             </li>
-                            <li className="dropdown"> <a className="nav-link menu-title"
+                            <li className="dropdown"> <a className={"nav-link menu-title " + activeSidebarButton('/home')}
                                 href="#"><FeatherIcon.MapPin /><span>Dortoirs</span></a>
                             </li >
-                            <li className="dropdown"> <a className="nav-link menu-title"
+                            <li className="dropdown"> <a className={"nav-link menu-title " + activeSidebarButton('/home')}
                                 href="#"><FeatherIcon.Star /><span>Événements</span></a>
                             </li >
                             <li className="sidebar-main-title">
@@ -108,10 +109,10 @@ function SideBar() {
                                     <h6>Configurations</h6>
                                 </div>
                             </li>
-                            <li className="dropdown"> <a className="nav-link menu-title"
+                            <li className="dropdown"> <a className={"nav-link menu-title " + activeSidebarButton('/home')}
                                 href="#"><FeatherIcon.Users /><span>Utilisateurs</span></a>
                             </li >
-                            <li className="dropdown"> <a className="nav-link menu-title"
+                            <li className="dropdown"> <a className={"nav-link menu-title " + activeSidebarButton('/home')}
                                 href="#"><FeatherIcon.Settings /><span>Options</span></a>
                             </li >
                         </ul >

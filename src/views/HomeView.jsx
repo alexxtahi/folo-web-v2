@@ -8,12 +8,13 @@ import AnnoncePreviewBox from "../components/dashboard/AnnoncePreviewBox";
 import Annonce from "../models/Annonce";
 import BestStudentsTable from "../components/dashboard/BestStudentsTable";
 import DashStats from "../components/dashboard/DashStats";
-
+import ShortcutBox from "../components/dashboard/ShortcutsBox";
+// Component
 function HomeView() {
     // Properties
     const today = new Date();
     const [errorHappend, setErrorHappend] = useState(false);
-    const [dashboardDatas, setDashboardDatas] = useState({
+    const [viewDatas, setViewDatas] = useState({
         currentSession: '',
         totalStudents: 0, totalTeachers: 0, totalClasses: 0, totalParents: 0,
         totalAnnonces: 0, totalUsers: 0,
@@ -22,7 +23,7 @@ function HomeView() {
 
     });
     // Methods
-    const getDashboardDatas = async () => { // Get the dashboard datas from the server
+    const getHomeViewDatas = async () => { // Get the dashboard datas from the server
         // Configs
         const url = apiEndpoints.dashboard.home;
         // Send request
@@ -41,7 +42,7 @@ function HomeView() {
                 console.log('datas: ' + jsonData); //! debug
                 if (jsonData.success) {
                     // Load dashboard datas
-                    setDashboardDatas({
+                    setViewDatas({
                         currentSession: jsonData.current_session,
                         totalStudents: jsonData.total_students,
                         totalTeachers: jsonData.total_teachers,
@@ -66,8 +67,8 @@ function HomeView() {
     }
     // Hooks
     useEffect(() => {
-        // Get the dashboard datas when the component is mounted
-        getDashboardDatas();
+        // Get the dashboard datas when the component is mounted/updated
+        getHomeViewDatas();
     }, []);
     // Render
     return (
@@ -78,29 +79,11 @@ function HomeView() {
                         <div className="col-sm-6">
                             <h3>Tableau de bord</h3>
                             <ol className="breadcrumb">
-                                <li className="breadcrumb-item active">Session {dashboardDatas.currentSession}</li>
+                                <li className="breadcrumb-item active">Session {viewDatas.currentSession}</li>
                             </ol>
                         </div>
-                        <div className="col-sm-6">
-                            {/* <!-- Bookmark Start--> */}
-                            <div className="bookmark">
-                                <ul>
-                                    <li>
-                                        <a href="#" datacontainer="body" databstoggle="popover" dataplacement="top" title=""
-                                            dataoriginaltitle="Tables">
-                                            <FeatherIcon.Star />
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" datacontainer="body" databstoggle="popover" dataplacement="top" title=""
-                                            dataoriginaltitle="Tables">
-                                            <FeatherIcon.Users />
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                            {/* <!-- Bookmark Ends--> */}
-                        </div>
+                        {/* Shortcuts */}
+                        <ShortcutBox />
                     </div>
                 </div>
             </div>
@@ -109,10 +92,10 @@ function HomeView() {
                 <div className="row">
                     {/* Cards */}
                     <DashCard
-                        totalStudents={dashboardDatas.totalStudents}
-                        totalTeachers={dashboardDatas.totalTeachers}
-                        totalClasses={dashboardDatas.totalClasses}
-                        totalParents={dashboardDatas.totalParents}
+                        totalStudents={viewDatas.totalStudents}
+                        totalTeachers={viewDatas.totalTeachers}
+                        totalClasses={viewDatas.totalClasses}
+                        totalParents={viewDatas.totalParents}
                     />
                     <div className="col-xl-6 xl-100 box-col-12">
                         <div className="card">
@@ -145,16 +128,16 @@ function HomeView() {
                         </div>
                     </div>
                     {/* Annonces */}
-                    <AnnoncePreviewBox annonces={dashboardDatas.annonces} />
+                    <AnnoncePreviewBox annonces={viewDatas.annonces} />
                     {/* Other Stats */}
                     <DashStats
-                        totalAnnonces={dashboardDatas.totalAnnonces}
-                        totalUsers={dashboardDatas.totalUsers}
-                        moneyReceived={dashboardDatas.moneyReceived}
-                        moneyToPay={dashboardDatas.moneyToPay}
+                        totalAnnonces={viewDatas.totalAnnonces}
+                        totalUsers={viewDatas.totalUsers}
+                        moneyReceived={viewDatas.moneyReceived}
+                        moneyToPay={viewDatas.moneyToPay}
                     />
                     {/* Best Students */}
-                    <BestStudentsTable bestStudents={dashboardDatas.bestStudents} />
+                    <BestStudentsTable bestStudents={viewDatas.bestStudents} />
 
                     {/* Place other components here */}
                 </div>

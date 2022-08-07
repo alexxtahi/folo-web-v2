@@ -8,4 +8,7 @@ export const apiEndpoints = {
     dashboard: {
         home: `${SERVER_URL}/dashboard`,
     },
+    annonces: {
+        home: `${SERVER_URL}/advertisements`,
+    }
 };
