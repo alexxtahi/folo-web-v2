@@ -1,12 +1,12 @@
 import './App.css';
-import HomeView from './views/HomeView';
+import BasicLayout from './views/BasicLayout';
 
 
 
 function App() {
   return (
     <div>
-      <HomeView />
+      <BasicLayout />
     </div>
   );
 }

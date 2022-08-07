@@ -19,17 +19,9 @@ function BestStudentsTable(props) {
                     </div>
                 </td>
                 <td>{student.classSection.name}</td>
-                <td>
-                    <div className="progress-showcase">
-                        <div className="progress" style={{ height: 8 }}>
-                            <div className="progress-bar bg-primary"
-                                role="progressbar" style={{ width: '30%' }}
-                                aria-valuenow="50" aria-valuemin="0"
-                                aria-valuemax="100"></div>
-                        </div>
-                    </div>
-                </td>
-                <td>2 Year</td>
+                {/* TODO: Finish this */}
+                <td>18/20</td>
+                <td>Mathématiques</td>
             </tr>
         );
     })
