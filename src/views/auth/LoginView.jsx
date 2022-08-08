@@ -13,7 +13,7 @@ function LoginView() {
     const [password, setPassword] = useState("testeur");
     const [remember, setRemember] = useState(false);
     const [loginBtnPressed, setLoginBtnPressed] = useState(false);
-    const [errorHappend, setErrorHappend] = useState(false);
+    const [errorHappens, setErrorHappens] = useState(false);
     // Methods
     const login = async (event) => { // Send login request to server
         // Configs
@@ -45,12 +45,12 @@ function LoginView() {
                     window.location.replace('/home');
                     console.log(User.authUser); //! debug
                 } else {
-                    setErrorHappend(true);
+                    setErrorHappens(true);
                 }
 
             }).catch(error => {
                 // Show error alert
-                setErrorHappend(true);
+                setErrorHappens(true);
                 console.log(error); //! debug
             });
         // Enable login button
@@ -79,7 +79,7 @@ function LoginView() {
                     <div className="col-12">
                         <div className="login-card">
                             <form className="theme-form login-form" id="login-form" onSubmit={login}>
-                                {errorHappend ? <Alert message="Une erreur est survenue." onCloseBtnClick={() => setErrorHappend(false)} /> : null}
+                                {errorHappens ? <Alert message="Une erreur est survenue." type="light" onCloseBtnClick={() => setErrorHappens(false)} /> : null}
                                 <h4>FOLO Education</h4>
                                 <h6>Bon retour parmi nous ! Connectez vous ici.</h6>
                                 <div className="form-group">

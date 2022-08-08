@@ -11,7 +11,7 @@ import NotificationDropdown from "../dropdowns/NotificationDropdown";
 function Header() {
     // Properties
     const [logoutBtnPressed, setLogoutBtnPressed] = useState(false);
-    const [errorHappend, setErrorHappend] = useState(false);
+    const [errorHappens, setErrorHappens] = useState(false);
     // Methods
     const logout = async (event) => { // Send login request to server
         // Configs
@@ -39,11 +39,11 @@ function Header() {
                     window.location.replace('/login');
                     // console.log(User.authUser); //! debug
                 } else {
-                    setErrorHappend(true);
+                    setErrorHappens(true);
                 }
             }).catch(error => {
                 // Show error alert
-                setErrorHappend(true);
+                setErrorHappens(true);
                 console.log(error); //! debug
             });
         // Enable logout button
@@ -55,10 +55,10 @@ function Header() {
         <div className="page-main-header">
             <div className="main-header-right row m-0">
                 <div className="main-header-left">
-                    <div className="logo-wrapper"><a href="index.html"><img
-                        className="img-fluid" src={process.env.PUBLIC_URL + "/assets/images/logo/logo.png"} alt="" /></a></div>
-                    <div className="dark-logo-wrapper"><a href="index.html"><img
-                        className="img-fluid" src={process.env.PUBLIC_URL + "/assets/images/logo/dark-logo.png"}
+                    <div className="logo-wrapper"><a href="/home"><img
+                        className="img-fluid header-logo" src={process.env.PUBLIC_URL + "/assets/images/logo/folo-splash-logo-black.png"} alt="" /></a></div>
+                    <div className="dark-logo-wrapper"><a href="/home"><img
+                        className="img-fluid header-logo" src={process.env.PUBLIC_URL + "/assets/images/logo/folo-splash-logo-black.png"}
                         alt="" /></a></div>
                     <div className="toggle-sidebar">
                         <FeatherIcon.Menu className="status_toggle middle" id="sidebar-toggle" />

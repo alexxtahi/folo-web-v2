@@ -13,7 +13,7 @@ import ShortcutBox from "../components/dashboard/ShortcutsBox";
 function HomeView() {
     // Properties
     const today = new Date();
-    const [errorHappend, setErrorHappend] = useState(false);
+    const [errorHappens, setErrorHappens] = useState(false);
     const [viewDatas, setViewDatas] = useState({
         currentSession: '',
         totalStudents: 0, totalTeachers: 0, totalClasses: 0, totalParents: 0,
@@ -57,11 +57,11 @@ function HomeView() {
 
                     });
                 } else {
-                    setErrorHappend(true);
+                    setErrorHappens(true);
                 }
             }).catch(error => {
                 // Show error alert
-                setErrorHappend(true);
+                setErrorHappens(true);
                 console.log(error); //! debug
             });
     }

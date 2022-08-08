@@ -9,7 +9,7 @@ import UserType from "../models/UserType";
 // Component
 function AnnonceView() {
     // Properties
-    const [errorHappend, setErrorHappend] = useState(false);
+    const [errorHappens, setErrorHappens] = useState({ state: false, message: '' });
     const [viewDatas, setViewDatas] = useState({
         currentSession: '',
         annonces: [], userTypes: [],
@@ -41,11 +41,11 @@ function AnnonceView() {
                         userTypes: UserType.fromArray(jsonData.user_types),
                     });
                 } else {
-                    setErrorHappend(true);
+                    setErrorHappens({ state: true, message: jsonData.message });
                 }
             }).catch(error => {
                 // Show error alert
-                setErrorHappend(true);
+                setErrorHappens({ state: true, message: 'Une erreur est survenue.' });
                 console.log(error); //! debug
             });
     }
@@ -77,7 +77,7 @@ function AnnonceView() {
                     {/* Form */}
                     <AnnonceForm userTypes={viewDatas.userTypes} />
                     {/* Table */}
-                    <AnnonceTable annonces={viewDatas.annonces} />
+                    <AnnonceTable annonces={viewDatas.annonces} userTypes={viewDatas.userTypes} />
                     {/* Place other components here */}
                 </div>
             </div>

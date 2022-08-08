@@ -11,6 +11,8 @@ class AuthMiddleware {
             window.location.replace('/');
         if (window.location.pathname !== '/login' && User.authUser === null) // If user isn't logged in...
             window.location.replace('/login');
+        if (window.location.pathname === '/' && User.authUser !== null) // If user isn't logged in...
+            window.location.replace('/home');
     }
     // Check status of a given route
     static makePrivateRoute(component) {

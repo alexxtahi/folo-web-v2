@@ -60,11 +60,11 @@ function SideBar() {
                             <li className="dropdown"><a className={"nav-link menu-title " + activeSidebarButton('/annonces')}
                                 href="/annonces"><FeatherIcon.Info /><span>Annonces</span></a>
                             </li>
-                            <li className="dropdown"><a className={"nav-link menu-title " + activeSidebarButton('/home')}
-                                href="/"><FeatherIcon.Calendar /><span>Emploi du temps</span></a>
+                            <li className="dropdown"><a className={"nav-link menu-title " + activeSidebarButton('/timetables')}
+                                href="/timetables"><FeatherIcon.Calendar /><span>Emploi du temps</span></a>
                             </li>
-                            <li className="dropdown"><a className={"nav-link menu-title " + activeSidebarButton('/home')}
-                                href="/"><FeatherIcon.DollarSign /><span>Paiements</span></a>
+                            <li className="dropdown"><a className={"nav-link menu-title " + activeSidebarButton('/payments')}
+                                href="/payments"><FeatherIcon.DollarSign /><span>Paiements</span></a>
                             </li>
                             <li className="sidebar-main-title">
                                 <div>
@@ -72,48 +72,48 @@ function SideBar() {
                                 </div>
                             </li>
 
-                            <li className="dropdown"><a className={"nav-link menu-title " + activeSidebarButton('/home')}
-                                href="#"><FeatherIcon.Clipboard /><span>Classes</span></a>
+                            <li className="dropdown"><a className={"nav-link menu-title " + activeSidebarButton('/classes')}
+                                href="/classes"><FeatherIcon.Clipboard /><span>Classes</span></a>
                             </li >
-                            <li className="dropdown"><a className={"nav-link menu-title " + activeSidebarButton('/home')}
-                                href="#"><FeatherIcon.Bookmark /><span>Sections</span></a>
+                            <li className="dropdown"><a className={"nav-link menu-title " + activeSidebarButton('/sections')}
+                                href="/sections"><FeatherIcon.Bookmark /><span>Sections</span></a>
                             </li >
-                            <li className="dropdown"><a className={"nav-link menu-title " + activeSidebarButton('/home')}
-                                href="/"><FeatherIcon.CheckSquare /><span>Listes de présences</span></a>
+                            <li className="dropdown"><a className={"nav-link menu-title " + activeSidebarButton('/checklist')}
+                                href="/checklist"><FeatherIcon.CheckSquare /><span>Listes de présences</span></a>
                             </li >
-                            <li className="dropdown"><a className={"nav-link menu-title " + activeSidebarButton('/home')}
-                                href="#"><FeatherIcon.User /><span>Elèves</span></a>
+                            <li className="dropdown"><a className={"nav-link menu-title " + activeSidebarButton('/students')}
+                                href="/students"><FeatherIcon.User /><span>Elèves</span></a>
                             </li >
-                            <li className="dropdown"><a className={"nav-link menu-title " + activeSidebarButton('/home')}
-                                href="#"><FeatherIcon.Book /><span>Matières</span></a>
+                            <li className="dropdown"><a className={"nav-link menu-title " + activeSidebarButton('/subjects')}
+                                href="/subjects"><FeatherIcon.Book /><span>Matières</span></a>
                             </li >
-                            <li className="dropdown"><a className={"nav-link menu-title " + activeSidebarButton('/home')}
-                                href="#"><FeatherIcon.FileText /><span>Notes</span></a>
+                            <li className="dropdown"><a className={"nav-link menu-title " + activeSidebarButton('/marks')}
+                                href="/marks"><FeatherIcon.FileText /><span>Notes</span></a>
                             </li >
-                            <li className="dropdown"><a className={"nav-link menu-title " + activeSidebarButton('/home')}
-                                href="#"><FeatherIcon.Edit /><span>Examens</span></a>
+                            <li className="dropdown"><a className={"nav-link menu-title " + activeSidebarButton('/exams')}
+                                href="/exams"><FeatherIcon.Edit /><span>Examens</span></a>
                             </li >
                             <li className="sidebar-main-title">
                                 <div>
                                     <h6>Extras scolaire</h6>
                                 </div>
                             </li>
-                            <li className="dropdown"> <a className={"nav-link menu-title " + activeSidebarButton('/home')}
-                                href="#"><FeatherIcon.MapPin /><span>Dortoirs</span></a>
+                            <li className="dropdown"> <a className={"nav-link menu-title " + activeSidebarButton('/dorms')}
+                                href="/dorms"><FeatherIcon.MapPin /><span>Dortoirs</span></a>
                             </li >
-                            <li className="dropdown"> <a className={"nav-link menu-title " + activeSidebarButton('/home')}
-                                href="#"><FeatherIcon.Star /><span>Événements</span></a>
+                            <li className="dropdown"> <a className={"nav-link menu-title " + activeSidebarButton('/events')}
+                                href="/events"><FeatherIcon.Star /><span>Événements</span></a>
                             </li >
                             <li className="sidebar-main-title">
                                 <div>
                                     <h6>Configurations</h6>
                                 </div>
                             </li>
-                            <li className="dropdown"> <a className={"nav-link menu-title " + activeSidebarButton('/home')}
-                                href="#"><FeatherIcon.Users /><span>Utilisateurs</span></a>
+                            <li className="dropdown"> <a className={"nav-link menu-title " + activeSidebarButton('/users')}
+                                href="/users"><FeatherIcon.Users /><span>Utilisateurs</span></a>
                             </li >
-                            <li className="dropdown"> <a className={"nav-link menu-title " + activeSidebarButton('/home')}
-                                href="#"><FeatherIcon.Settings /><span>Options</span></a>
+                            <li className="dropdown"> <a className={"nav-link menu-title " + activeSidebarButton('/settings')}
+                                href="/settings"><FeatherIcon.Settings /><span>Options</span></a>
                             </li >
                         </ul >
                     </div >
