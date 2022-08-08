@@ -42,8 +42,8 @@ function AnnonceTable(props) {
                                         overflow: 'hidden',
                                         textOverflow: 'ellipsis'
                                     }}>
-                                        <button class="btn btn-primary btn-xs" type="button" style={{ marginRight: 5 }}><FeatherIcon.Edit /></button>
-                                        <button class="btn btn-danger btn-xs" type="button"><FeatherIcon.Trash /></button>
+                                        <button className="btn btn-primary btn-xs" type="button" style={{ marginRight: 5 }}><FeatherIcon.Edit /></button>
+                                        <button className="btn btn-danger btn-xs" type="button"><FeatherIcon.Trash /></button>
 
                                     </td>
                                 </tr>

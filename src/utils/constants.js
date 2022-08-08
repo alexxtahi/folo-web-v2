@@ -10,5 +10,6 @@ export const apiEndpoints = {
     },
     annonces: {
         home: `${SERVER_URL}/advertisements`,
+        post: `${SERVER_URL}/advertisements/add`,
     }
 };
